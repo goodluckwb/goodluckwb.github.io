@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WeiBin的个人主页</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./source/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="top">
+        <div id="toptitle">
+            <a href=""><img src="./image/ico_tuijian.gif" alt=""></a>
+            <ul class="topleftul">
+                <li>连接1</li>
+                <li>连接2</li>
+                <li>连接3</li>
+                <li>连接4</li>
+                <li>连接5</li>
+            </ul>
+            <ul class="toprightul">
+                <li>地图</li>
+                <li>全息</li>
+            </ul>
+
+        </div>
+    </div>
+    <div id="go-to-top"></div>
+    <div></div>
+    <header>
+        <h1>心随你的步调</h1>
+        <h4>一个平凡人的自语</h4>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <span class="fas fa-home home"></span>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">文章</a>
+            </li>
+            <li>
+                <a id="hobby" href="#">视频</a>
+            </li>
+
+            <li class="menu-item">
+                <a href="#">爱好</a>
+                <span class="fas fa-angle-down others"></span>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="/zd423">原创文章</a>
+                    </li>
+                    <li>
+                        <a href="/multimedia">精品转载</a>
+                    </li>
+                    <li>
+                        <a href="/browser">网页设计</a>
+                    </li>
+                    <li>
+                        <a href="/image">游戏相关</a>
+                    </li>
+                    <li>
+                        <a href="/work">办公相关</a>
+                    </li>
+                    <li>
+                        <a href="/down">视频特效</a>
+                    </li>
+                    <li>
+                        <a href="/softtool">3D建模</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">图像</a>
+            </li>
+            <li>
+                <a href="#">关于</a>
+            </li>
+            <li>
+                <form action="#" method="POST">
+                    <input class="search-input" type="text" name="search" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="搜索">
+                </form>
+            </li>
+        </ul>
+    </nav>
+    <div id="main">
+        <div id="lside">
+            <div id="lsidetop">
+                <div class="lstopl">
+                    <ul>
+                        <li>
+                            <a href="#">网页设计</a>
+                            <i class="fas fa-angle-right lstopicon"></i>
+                        </li>
+                        <li>
+                            <a href="#">工程建模</a>
+                            <i class="fas fa-angle-right lstopicon"></i>
+                        </li>
+                        <li>
+                            <a href="#">视频制作</a>
+                            <i class="fas fa-angle-right lstopicon"></i>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="lstopr">
+                    <div class="lstopr1">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="lstopr2">
+                        <ul>
+                            <li class="lstopr2-1 fas fa-angle-double-left"></li>
+                            <li class="lstopr2-2 fas fa-angle-double-right"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="imgshow">
+                <div id="leftshow">
+                    <ul>
+                        <li onmouseover="show('img[0]');">图片1&nbsp;&nbsp;
+                            <img src="./image/02.jpg" alt="" style="display: block">
+                        </li>
+                        <li onmouseover="show('img[1]');">图片2&nbsp;&nbsp;
+                            <img src="./image/03.jpg" alt="" style="display: none">
+                        </li>
+                        <li onmouseover="show('img[2]');">图片3&nbsp;&nbsp;
+                            <img src="./image/01.jpg" alt="" style="display: none">
+                            
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div id="rightshow">                   
+                    <div>今日热点</div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./image/06.jpg" alt="">
+                            </a>
+                            <h2>微软发布了19H1预览版18204</h2>
+                            <p>
+                                也有望在Windows 10下一版本中添加备受期待的Sets窗口管理界面。
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./image/07.jpg" alt="">
+                            </a>
+                            <h2>诺基亚X6国际版即将登陆海外市场</h2>
+                            <p>
+                                诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏，
+                                后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池，
+                                支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
+                            </p>
+                        </li>
+                    </ul>   
+                </div>
+            </div>
+            <div id="imgbox">
+                <div class="imgzoom">
+                    <img src="./image/03.jpg" alt="">
+                </div>
+                <div class="imgzoom">
+                    <img src="./image/04.jpg" alt="">
+                </div>
+                <div class="imgl2r">
+                    <p>这是会
+                        <strong>移动的</strong>
+                    </p>
+                    <img src="./image/05.jpg" alt="">
+                </div>
+            </div>
+            
+            <table class="standard">
+                <tbody>
+                    <tr>
+                        <th>Table的应用</th>
+                        <th>具有自适应的宽高</th>
+                    </tr>
+                    <tr>
+                        <td>个人爱好</td>
+                        <td> 学习代码编程，创建3D模型，视频与特效编辑。</td>
+                    </tr>
+                    <tr>
+                        <td>热门游戏</td>
+                        <td>王者荣耀，绝地求生，英雄联盟，</td>
+                    </tr>
+                </tbody>
+            </table>
+           
+            <article>
+                <h2>
+                    <a href="#">第一次Git错误的解决方法</a>
+                </h2>
+                <div class="fas fa-address-book">
+                    2018/7/22 auticle
+                </div>
+                <div class="artmain">
+                    <p>
+                        1，直接在你git的命令行窗口输入：<span> remote remove origin</span>.<br>
+                        2，把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。<br>                       
+                        3，重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。
+                           这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格，会得到Bad escape character ‘ygen’.的错误。<br>                        
+                        4，删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。    
+                        输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件，然后全部复制到key粘贴即可。                        
+                        大功告成，测试<span>ssh -T git@github.com</span>。
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h2>
+                    <a href="#">凉州词</a>
+                </h2>
+                <div class="fas fa-address-book">
+                    2018/7/22 auticle
+                </div>
+                <div class="artmain">
+                    <p>
+                        葡萄美酒夜光杯，欲饮琵琶马上催。
+                        <br> 醉卧沙场君莫笑，古来征战几人回？
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h2>
+                    <a href="#">枫桥夜泊</a>
+                </h2>
+                <div class="fas fa-address-book">
+                    2018/7/22 auticle
+                </div>
+                <div class="artmain">
+                    <p>
+                        月落乌啼霜满天，江枫渔火对愁眠。
+                        <br> 姑苏城外寒山寺，夜半钟声到客船。
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h2>
+                    <a href="#">送杜少府之任蜀州</a>
+                </h2>
+                <div class="fas fa-address-book">
+                    2018/7/22 auticle
+                </div>
+                <div class="artmain">
+                    <p>
+                        城阙辅三秦，风烟望五津。
+                        <br> 与君离别意，同是宦游人。
+                        <br> 海内存知己，天涯若比邻。
+                        <br> 无为在歧路，儿女共沾巾。
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div id="rside">   
+            <div class="rtswitch"></div>
+            <div class='rtswcontent'> 
+                这是一个正在准备的项目。
+            </div >
+            <div style="clear: both"></div>
+            <aside>
+                <h4>热门文章</h4>
+                <ul>
+                    <li>
+                        <a href="#">文章列表</a>
+                        <span class="littleicon">新</span>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                </ul>
+            </aside>
+            <aside>
+                <h4>热门评论</h4>
+                <ul>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                </ul>
+            </aside>
+            <aside>
+                <h4>粉丝提问</h4>
+                <ul>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                    <li>
+                        <a href="#">文章列表</a>
+                    </li>
+                </ul>
+            </aside>
+
+        </div>
+
+    </div>
+    <footer>
+        <span>WeiBin&copy; 版权所有,&nbsp;2018-2020,&nbsp;All Rights Reserved.</span>
+    </footer>
+</body>
+<script src="./js/main.js"></script>
+</html>
