@@ -8,7 +8,6 @@ img,input,select{vertical-align:middle}
 code,kbd,pre,samp{font-family:courier new,courier,monospace}
 small{font-size:12px}ol,ul{list-style:none}
 a,a:hover{text-decoration:none}
-a:hover{color:#ff7227 }
 sup{vertical-align:text-top}sub{vertical-align:text-bottom}
 fieldset,img{border:0}
 table{border-collapse:collapse;border-spacing:0}
@@ -27,7 +26,7 @@ body{
     background-color: antiquewhite;
 }
 #top{
-    width: 1280px;
+   
     height: 40px;
     background: #222222;
     z-index: 1000;
@@ -43,21 +42,26 @@ body{
     position:fixed;
     width: 100%;
     box-sizing: border-box;
-    background: #00abc5;
+    background: white;
     z-index: 999;
     padding:0 10%;
 }
     #toptitle a{
         float: left;
         display: block;
-        height: 40px;
-        background: #eb018a;
+        width: 100px;
+        height: 40px;   
+    }
+    #toptitle a img{
+        /* border: 2px solid red; */
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
     #toptitle ul{
         font-size: 16px;
         display: block;
         height: 40px;
-        background: #eb018a;
+       
         
 
     }
@@ -75,6 +79,8 @@ body{
         float: left;
         line-height: 40px;
         padding: 0 20px;
+        margin-right: 2px;
+        background: #eb018a;
     }
 #go-to-top{
     position: fixed;
@@ -82,7 +88,7 @@ body{
     right: 10px; 
     width: 35px;
     opacity: 0.9;
-    z-index: 999;
+    z-index: 1000;
 }
     .gototop{
         position: relative;
@@ -100,7 +106,7 @@ body{
             width: 35px;
             
         }
-            .gototop-up{
+            #gototop-up{
                 background: url(../image/toolbars.png) -48px 100px;
                 
             }
@@ -111,7 +117,7 @@ header{
     height: 150px;
     padding: 30px 0px;
     box-sizing: border-box;
-    background-image: url(../image/headerbg.jpg)
+    background-image: url(../image/headerl.jpg);
 }
     
     header h1,header h4{
@@ -133,7 +139,7 @@ strong{
 
 nav{
     
-    background: black;
+    background:rgb(150, 200, 30);
     height: 60px;
     margin: 0 auto;
     
@@ -157,7 +163,8 @@ nav{
         line-height: 60px;
     }
     nav li:hover{
-        background: #3f3f3f;
+        background: #eb018a;
+        
     }
     
     nav .home{
@@ -395,10 +402,10 @@ article{
     padding: 40px;
     background: white;
     margin-bottom: 20px;
-    border-top: 5px solid #1985bd;
+    border-top: 5px solid #00abc5;
 }
     article h2{
-        color: #1985bd;
+        color: #00abc5;
         font-size: 20px;
         
     }
@@ -409,7 +416,7 @@ article{
         border-radius: 4px;
     }
     article a{
-        color: #1985bd;
+        color: #00abc5;
     }
   
     article:first-child{

@@ -20,3 +20,7 @@ function show(test){
     }
 }
 setTimeout('show()',3000);
+
+function scrolltop(){
+    document.body.scrollTop=document.documentElement.scrollTop=0;
+}
