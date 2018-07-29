@@ -8,6 +8,7 @@ img,input,select{vertical-align:middle}
 code,kbd,pre,samp{font-family:courier new,courier,monospace}
 small{font-size:12px}ol,ul{list-style:none}
 a,a:hover{text-decoration:none}
+a:hover{color:#ff7227}
 sup{vertical-align:text-top}sub{vertical-align:text-bottom}
 fieldset,img{border:0}
 table{border-collapse:collapse;border-spacing:0}
@@ -27,10 +28,10 @@ body{
 }
 #top{
     
-    height: 40px;
-    background: #222222;
+    height: 30px;
+ 
     z-index: 1000;
-    color: rgb(255, 255, 255,.9);
+   
 }
 #top::after{
     display:block;
@@ -39,32 +40,36 @@ body{
 }
 
 #toptitle{
+    
     position:fixed;
     width: 100%;
     box-sizing: border-box;
-    background: white;
+    background:#3F3F3F;
     z-index: 999;
     padding:0 10%;
-    border-top:5px solid rgb(150, 200, 30,.9) ;
+    /* border-top:5px solid rgb(150, 200, 30,.9) ; */
 }
     #toptitle a{
+       
         float: left;
         display: block;
         width: 100px;
-        height: 40px;   
+        height: 30px;   
     }
     #toptitle a img{
-        /* border: 2px solid red; */
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        width: 90%;
+        display: block;
+        border-color: #3F3F3F;
+        border-width: 0 5px 5px;
+        border-style: solid;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
     #toptitle ul{
+        color: white;
         font-size: 16px;
         display: block;
-        height: 40px;
-       
-        
-
+        height: 25px;
     }
         .topleftul{
             float: left;
@@ -78,7 +83,7 @@ body{
         display:block;
         height: 100%;
         float: left;
-        line-height: 40px;
+        line-height: 25px;
         padding: 0 20px;
         margin-right: 2px;
         background: #eb018a;
@@ -142,7 +147,7 @@ strong{
 
 nav{
     
-    background:rgb(150, 200, 30,.9);
+    background:#3F3F3F;
     height: 60px;
     margin: 0 auto;
     
@@ -166,7 +171,7 @@ nav{
         line-height: 60px;
     }
     nav li:hover{
-        background: #eb018a;
+        background: rgb(255,255,255,.3);
         
     }
     
@@ -362,7 +367,7 @@ aside{
     background: white;
     padding: 20px;
     margin-bottom: 20px;
-    border-top: 5px solid rgb(150, 200, 30,.9);
+    border-top: 5px solid #00abc5;
 }
     aside h4{
         padding: 4px;
@@ -410,19 +415,17 @@ article{
     border-top: 5px solid #00abc5;
 }
     article h2{
-        color: #00abc5;
+        
         font-size: 20px;
         
     }
     article span{
         padding: 0 4px;
-        border:rgb(150, 200, 30,.9);
-        background: rgb(150, 200, 30,.9);
+        border:#00abc5;
+        background: #00abc5;
         border-radius: 4px;
     }
-    article a{
-        color: #00abc5;
-    }
+  
   
     article:first-child{
         margin-top: 20px;
