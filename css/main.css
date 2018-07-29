@@ -191,16 +191,17 @@ nav{
         height: 0px;
         line-height: 14px; 
     }
-    nav >ul >li:last-child{
+    #navsearch{
         float: right;
-        padding: 0 10px;
-        line-height: 40px;
+        position: relative;
+        right: 10%;
+
     }
     .search-input {
         float: left;
         border-radius: 2px 0 0 2px;
         border: 0;
-        margin-top: 15px;
+        margin: 15px 0;
         font-size: 13px;
         line-height: 22px;
         padding: 4px 8px;
