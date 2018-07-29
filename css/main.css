@@ -26,11 +26,11 @@ body{
     background-color: antiquewhite;
 }
 #top{
-   
+    
     height: 40px;
     background: #222222;
     z-index: 1000;
-    color: white;
+    color: rgb(255, 255, 255,.9);
 }
 #top::after{
     display:block;
@@ -45,6 +45,7 @@ body{
     background: white;
     z-index: 999;
     padding:0 10%;
+    border-top:5px solid rgb(150, 200, 30,.9) ;
 }
     #toptitle a{
         float: left;
@@ -120,18 +121,19 @@ header{
     background-image: url(../image/headerl.jpg);
 }
     
-    header h1,header h4{
+    header h1, h4{
         width: 1100px;
         margin: 0 auto;
     }
     header h1{
+        color: #2b333b;
         font-size:50px;
         line-height: 60px;
     }
     header h4{
         font-size:20px;
         line-height: 30px;
-        color: #3f3f3f;
+        color: rgb(255, 255, 255,.8);
     }
 strong{
     font-size: 1.3em;
@@ -139,7 +141,7 @@ strong{
 
 nav{
     
-    background:rgb(150, 200, 30);
+    background:rgb(150, 200, 30,.9);
     height: 60px;
     margin: 0 auto;
     
