@@ -43,9 +43,11 @@
             </li>
             <li>
                 <a href="#">文章</a>
+                <span class="fas fa-angle-down others"></span>
             </li>
             <li>
                 <a id="hobby" href="#">视频</a>
+                <span class="fas fa-angle-down others"></span>
             </li>
 
             <li class="menu-item">
@@ -78,9 +80,11 @@
             </li>
             <li>
                 <a href="#">图像</a>
+                <span class="fas fa-angle-down others"></span>
             </li>
             <li>
                 <a href="#">时间轴</a>
+                <span class="fas fa-angle-down others"></span>
             </li>
             <li>
                 <form action="#" method="POST">
@@ -215,7 +219,7 @@
                            这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格，会得到Bad escape character ‘ygen’.的错误。<br>                        
                         Step4，删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。    
                         输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件，然后全部复制粘贴到key即可。                        
-                        大功告成，测试<span>ssh -T git@github.com</span>。
+                        大功告成，测试<span>ssh -T git@github.com</span>。<br>
                         Step5，<span>echo "new Test" >> README.md</span><br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span>git init</span><br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span>git add README.md</span><br>
