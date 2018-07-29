@@ -209,13 +209,21 @@
                 </div>
                 <div class="artmain">
                     <p>
-                        1，直接在你git的命令行窗口输入：<span> remote remove origin</span>.<br>
-                        2，把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。<br>                       
-                        3，重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。
+                        Step1，直接在你git的命令行窗口输入：<span> remote remove origin</span>.<br>
+                        Step2，把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。<br>                       
+                        Step3，重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。
                            这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格，会得到Bad escape character ‘ygen’.的错误。<br>                        
-                        4，删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。    
-                        输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件，然后全部复制到key粘贴即可。                        
+                        Step4，删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。    
+                        输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件，然后全部复制粘贴到key即可。                        
                         大功告成，测试<span>ssh -T git@github.com</span>。
+                        Step5，<span>echo "new Test" >> README.md</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span>git init</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span>git add README.md</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span>git commit -m "first commit"</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span>git remote add origin your github address</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span>git push -u origin master</span><br>
+
+
                     </p>
                 </div>
             </article>
