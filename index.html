@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./source/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">   
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 
@@ -29,8 +28,21 @@
 
         </div>
     </div>
-    <div id="go-to-top"></div>
-    <div></div>
+    <div id="go-to-top">
+        <div class="gototop">
+            <i class=""></i> 
+        </div>
+        <div class="gototop">
+            <i class=""></i>
+        </div>
+        <div class="gototop">
+            <i class=""></i>
+        </div>
+        <div class="gototop">
+            <i class="gototop-up"></i>
+        </div>
+        
+    </div>
     <header>
         <h1>心随你的步调</h1>
         <h4>一个平凡人的自语</h4>
@@ -212,23 +224,22 @@
                     2018/7/22 auticle
                 </div>
                 <div class="artmain">
-                    <p>
-                        Step1，直接在你git的命令行窗口输入：<span> remote remove origin</span>.<br>
-                        Step2，把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。<br>                       
-                        Step3，重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。
-                           这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格，会得到Bad escape character ‘ygen’.的错误。<br>                        
-                        Step4，删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。    
-                        输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件，然后全部复制粘贴到key即可。                        
-                        大功告成，测试<span>ssh -T git@github.com</span>。<br>
-                        Step5，<span>echo "new Test" >> README.md</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span>git init</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span>git add README.md</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span>git commit -m "first commit"</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span>git remote add origin your github address</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span>git push -u origin master</span><br>
-
-
-                    </p>
+                    <pre>
+Step1.直接在你git的命令行窗口输入：<span> remote remove origin</span>.
+Step2.把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。                     
+Step3.重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。
+      这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格，
+      会得到Bad escape character ‘ygen’.的错误。                        
+Step4.删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。    
+      输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件，
+      然后全部复制粘贴到key即可.测试<span>ssh -T git@github.com</span>。
+Step5.<span>echo "new Test" >> README.md</span>
+      <span>git init</span>
+      <span>git add README.md</span>
+      <span>git commit -m "first commit"</span>
+      <span>git remote add origin git:github.com/yourname.git</span>
+      <span>git push -u origin master</span>
+                    </pre>
                 </div>
             </article>
             <article>
@@ -307,7 +318,7 @@
                 </ul>
             </aside>
             <aside>
-                <h4>热门评论</h4>
+                <h4>最新发表</h4>
                 <ul>
                     <li>
                         <a href="#">文章列表</a>

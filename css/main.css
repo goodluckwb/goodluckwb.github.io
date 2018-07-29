@@ -79,15 +79,31 @@ body{
 #go-to-top{
     position: fixed;
     bottom: 100px;
-    right: 20px;
-    height: 50px;
-    width: 50px;
-    background: #e4cece;
-    border:1px solid #00abc5;
-    border-radius: 4px;
+    right: 10px; 
+    width: 35px;
     opacity: 0.9;
     z-index: 999;
 }
+    .gototop{
+        position: relative;
+        height: 35px;
+        margin-bottom: 1px;
+        cursor: pointer;
+        background-color: #7a6e6e;
+        border-radius: 3px 0 0 3px;
+
+    }
+        .gototop i{
+
+            display:block;
+            height: 35px;
+            width: 35px;
+            
+        }
+            .gototop-up{
+                background: url(../image/toolbars.png) -48px 100px;
+                
+            }
 
 header{
     
