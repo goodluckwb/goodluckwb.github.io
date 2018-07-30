@@ -9,6 +9,7 @@ code,kbd,pre,samp{font-family:'宋体',courier new,courier,monospace}
 small{font-size:12px}ol,ul{list-style:none}
 a,a:hover{text-decoration:none}
 a:hover{color:#EB8D01}
+a{color:black}
 sup{vertical-align:text-top}sub{vertical-align:text-bottom}
 fieldset,img{border:0}
 table{border-collapse:collapse;border-spacing:0}
@@ -25,7 +26,7 @@ table{border-collapse:collapse;border-spacing:0}
 } 
 body{
     /* background-color: antiquewhite; */
-    background-color: #e9e9e9;
+    background-color: #f9f9f9;
 }
 h2{
     color: #eb018a;
@@ -36,7 +37,9 @@ h2{
     border-left: 5px solid #eb018a;
     font: 18px/28px "微软雅黑",'黑体',sans-serif;
 }
-
+p{
+    pading:10px 0;
+}
 #top{   
     height: 30px;
     z-index: 1000;  
@@ -293,6 +296,7 @@ nav{
     height: 200px; 
     margin-top: 20px;
 }
+    /* 左边切换菜单 */
     .lstopl{
         float: left;
         box-sizing: border-box;
@@ -336,19 +340,26 @@ nav{
                     box-sizing: border-box;
                     font-size: 16px;
                 }
+                /* 左边切换菜单结束 */
     .lstopr{
         float: left;
         box-sizing: border-box;
         width: 80%;
         height: 100%; 
         position: relative;
+        /* border: 1px solid gray; */
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
     }
-        .lstopr div{
-            background: rgb(255,255,255,.5)
+
+        .lstopr div img{
+            display: block;
+            width: 100%;
+            
         }
-        .lstopr1{
-            height: 100%;
-        }
+        /* 一下为图片切换按钮 */
+
         .lstopr1 ul{
             background: rgb(0, 0, 0,.2);
             width: 58px;
@@ -392,8 +403,7 @@ nav{
                 font-size: 30px;
                 padding: 0 15px;
                 color: white;
-                box-sizing: border-box;
-                
+                box-sizing: border-box;                
             }
             .lstopr2 ul .lstopr2-1{
                 float: left; 
@@ -401,7 +411,10 @@ nav{
             .lstopr2 ul .lstopr2-2{
                 float: right;
             }
-
+            .lstopr1,.lstopr2{
+                z-index: 10;
+            }
+            /* 图片切换按钮完成 */
 #rside{
     width: 275px;
     float: right;
@@ -409,7 +422,7 @@ nav{
 
 aside{
     
-    background: rgb(255,255,255,.5);
+    background: linear-gradient(rgba(255,255,255,0.5) ,rgba(255, 200, 200, 0.5));
     padding: 20px;
     margin-bottom: 20px;
     border-top: 5px solid #01B1EB;
@@ -418,7 +431,7 @@ aside{
     aside a{
         display:inline-block;
         padding: 0 10px;
-        font:16px/26px "宋体","新宋体",serif;  
+        font:14px/26px "宋体","新宋体",serif;  
         color: #01B1EB;
     }
     aside li a::before{
@@ -461,8 +474,8 @@ article{
 
     article span{
         padding: 0 4px;
-        border:#01B1EB;
-        background: #01B1EB;
+        background: #F4DFDF;
+        border-color: #EABFBF;
         border-radius: 4px;
     }
   
@@ -515,91 +528,28 @@ footer{
     box-sizing: border-box;
 }
 
-
-
-#leftshow{
-    float:left;
-    width: 50%;
-    /* border: 1px solid gray; */
-    box-sizing: border-box;
-    overflow: hidden;
-    margin: 20px 0;
-    height: 300px;
-    padding: 10px ;
-    /* border-bottom: 5px solid #eb018a; 
-    background: rgb(255,255,255,.5);  */
-}
-    #leftshow ul{
-        position: relative;
-    }
-    #leftshow img{
-        position: absolute;
-        top: 40px;
-        left: 0px;
-    }
-    #leftshow li{
-        float: left; 
-        height: 30px;
-        font-size: 16px;
-        line-height: 30px;
-        padding-left: 10px;
-        background: #eb018a;
-        margin-right: 2px;
-        color: white;
-        transform: all;
-    }
-    #leftshow li:hover{
-        color:yellow;
-        background:gray;
-        /* border-right:1px solid  white; */
-        transition: all .3s ease-in-out;
-    }
-#rightshow{
+#focus{
     float:right;
-    width: 50%;
+    width: 100%;
     height: 300px;
     /* border: 1px solid gray; */
     box-sizing: border-box;
-    margin: 20px 0;
+    margin: 10px 0;
+    padding: 10px 20px ;
+    background: linear-gradient( rgba(255,255,255,0.5) ,rgba(167, 236, 245, 0.719));
 }
-    
-    #rightshow ul{
-        display: block;
+    #focus-img{
         float: left;
-        overflow: hidden; 
-        /* border: 1px solid gray; */
-        margin: 20px 0;
+        margin: 10px;
+        
     }
-    #rightshow li{
-        padding-right: 15px;
-        position: relative;
-        display: block;
-       
-        margin-bottom: 20px;
-        overflow: hidden;
+    #focus img{
+        width: 300px;
     }
-    #rightshow img{
-        width: 80px;
-    }
-    #rightshow a{
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-     
-    #rightshow h3{
-        padding-left: 98px;
-        display: inline-block;
-        margin: 0;
-        text-overflow: ellipsis;
+    #focus-content{
+        width: 40%;
+        float: left;
         font-size: 16px;
-    }
-    #rightshow p{
-        display:block;
-        padding-left:98px ;
-        text-overflow: ellipsis;
-        font-size: 14px;
     }
 #imgbox{
     padding:  20px;
@@ -672,7 +622,7 @@ footer{
     padding: 10px 10px;
     width: 100%;
     height: 150px;
-    background: rgb(255,255,255,.5);
+    background: linear-gradient(rgba(255,255,255,0.5) ,rgba(255, 200, 200, 0.5));
     float: left;
     box-sizing: border-box;
     border-top: 5px solid #eb018a;   

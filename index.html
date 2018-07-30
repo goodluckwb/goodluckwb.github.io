@@ -134,71 +134,35 @@
                             <li></li>
                         </ul>
                     </div>
+                    <!-- 底部按钮完成 -->
                     <div class="lstopr2">
                         <ul>
                             <li class="lstopr2-1 fas fa-angle-double-left"></li>
                             <li class="lstopr2-2 fas fa-angle-double-right"></li>
                         </ul>
                     </div>
+                    <!-- 两侧切换图标结束 -->
+                    <!-- 一下为图片内容部分 -->
+                    <div id="">
+                        <img src="./image/04.jpg" alt="">
+                    </div>
                 </div>
-                <!-- 图标结束 -->
 
-            </div>
-            <div id="imgshow">
-                <div id="leftshow">
-                    <ul>
-                        <li onmouseover="show('img[0]');">图片1&nbsp;&nbsp;
-                            <img src="./image/02.jpg" alt="" style="display: block">
-                        </li>
-                        <li onmouseover="show('img[1]');">图片2&nbsp;&nbsp;
-                            <img src="./image/03.jpg" alt="" style="display: none">
-                        </li>
-                        <li onmouseover="show('img[2]');">图片3&nbsp;&nbsp;
-                            <img src="./image/01.jpg" alt="" style="display: none">
-
-                        </li>
-                    </ul>
-
+            </div>    
+            <div id="focus">
+                <h2 >今日热点</h2>
+                <div id="focus-img">
+                    <a href="#">
+                        <img src="./image/07.jpg" alt=""> 
+                    </a>
                 </div>
-                <div id="rightshow">
-                    <h2 >今日热点</h2>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="./image/06.jpg" alt="">
-                            </a>
-                            <h3>微软发布了19H1预览版18204</h3>
-                            <p>
-                                也有望在Windows 10下一版本中添加备受期待的Sets窗口管理界面。
-                            </p>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./image/07.jpg" alt="">
-                            </a>
-                            <h3>诺基亚X6国际版即将登陆海外市场</h3>
-                            <p>
-                                诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
-                            </p>
-                        </li>
-                    </ul>
+                <div id="focus-content">                   
+                    <h3>诺基亚X6国际版即将登陆海外市场</h3>
+                    <p>
+                        诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
+                    </p>               
                 </div>
             </div>
-            <div id="imgbox">
-                <div class="imgzoom">
-                    <img src="./image/03.jpg" alt="">
-                </div>
-                <div class="imgzoom">
-                    <img src="./image/04.jpg" alt="">
-                </div>
-                <div class="imgl2r">
-                    <p>这是会
-                        <strong>移动的</strong>
-                    </p>
-                    <img src="./image/05.jpg" alt="">
-                </div>
-            </div>
-
             <table>
                 <tbody>
                     <tr>
@@ -223,23 +187,23 @@
                 <div class="fas fa-address-book">
                     2018/7/22 auticle
                 </div>
-                <div class="artmain">
-                    <pre>
-Step1.直接在你git的命令行窗口输入：<span> remote remove origin</span>.
-Step2.把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。                     
-Step3.重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。
-      这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格，
-      会得到Bad escape character ‘ygen’.的错误。                        
-Step4.删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。    
-      输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件，
-      然后全部复制粘贴到key即可.测试<span>ssh -T git@github.com</span>。
-Step5.<span>echo "new Test" >> README.md</span>
-      <span>git init</span>
-      <span>git add README.md</span>
-      <span>git commit -m "first commit"</span>
-      <span>git remote add origin 你的ssh地址</span>
-      <span>git push -u origin master</span>
-                    </pre>
+                <div class="artmain">                  
+                    <p>    Step1.直接在你git的命令行窗口输入：<span> remote remove origin</span>.</p>
+                    <p>    Step2.把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。</p>                     
+                    <p>    Step3.重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。
+                            这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格，
+                            会得到Bad escape character ‘ygen’.的错误。 </p>                       
+                    <p>    Step4.删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。    
+                            输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件，
+                            然后全部复制粘贴到key即可.</p>
+                    <p>    测试<span>ssh -T git@github.com</span>。</p>
+                    <p>    Step5.<span>echo "new Test" >> README.md</span></p>
+                    <p>    <span>git init</span></p>
+                    <p>    <span>git add README.md</span></p>
+                    <p>    <span>git commit -m "first commit"</span></p>
+                    <p>    <span>git remote add origin 你的ssh地址</span></p>
+                    <p>    <span>git push -u origin master</span></p>
+                    
                 </div>
             </article>
             <article>
