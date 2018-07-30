@@ -26,29 +26,31 @@
                     <a href="#">所有分类</a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="/wb">原创文章</a>
+                            <a href="#">原创文章</a>
                         </li>
                         <li>
-                            <a href="/multimedia">精品转载</a>
+                            <a href="#">精品转载</a>
                         </li>
                         <li>
-                            <a href="/browser">网页设计</a>
+                            <a href="#">平面设计</a>
                         </li>
                         <li>
-                            <a href="/image">游戏相关</a>
+                            <a href="#">游戏相关</a>
                         </li>
                         <li>
-                            <a href="/work">办公相关</a>
+                            <a href="#">办公相关</a>
                         </li>
                         <li>
-                            <a href="/down">视频特效</a>
+                            <a href="#">视频特效</a>
                         </li>
                         <li>
-                            <a href="/softtool">3D建模</a>
+                            <a href="#">三维建模</a>
+                        </li>
+                        <li>
+                            <a href="#">音乐分享</a>
                         </li>
                     </ul>                           
                 </li>
-                <li><a  href="#">全息</a></li>
             </ul>
 
         </div>
@@ -70,7 +72,7 @@
     </div>
     <header>
         <h1>心随你的步调</h1>
-        <h4>一个平凡人的自语</h4>
+        <h4><i>一个平凡人的自语</i></h4>
     </header>
     <nav>
         <ul>
@@ -80,34 +82,32 @@
             </li>
             <li>
                 <a href="#">文章</a>
-                <span class="fas fa-angle-down others"></span>
+                <span class="fas fa-angle-down home"></span>
             </li>
             <li>
                 <a  href="#">视频</a>
-                <span class="fas fa-angle-down others"></span>
+                <span class="fas fa-angle-down home"></span>
             </li>
             <li>
                 <a href="#">图像</a>
-                <span class="fas fa-angle-down others"></span>
+                <span class="fas fa-angle-down home"></span>
             </li>
             <li>
                 <a href="#">时间轴</a>
-                <span class="fas fa-angle-down others"></span>
+                <span class="fas fa-angle-down home"></span>
             </li>
-            <li>
-                <div >
-                    <form action="#" method="POST">
-                        <input class="search-input" type="text" name="search" placeholder="请输入关键字">
-                        <input class="search-submit" type="submit" value="搜索">
-                    </form>
-                </div>
-            </li>
-        </ul>
-
+        </ul>         
+            <div id="search">
+                <form action="#" method="POST">
+                    <input class="search-input" type="text" name="search" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="搜索">
+                </form>
+            </div>
     </nav>
     <div id="main">
         <div id="lside">
             <div id="lsidetop">
+                <!-- 切换菜单 -->
                 <div class="lstopl">
                     <ul>
                         <li>
@@ -122,9 +122,10 @@
                             <a href="#">视频制作</a>
                             <i class="fas fa-angle-right lstopicon"></i>
                         </li>
-
                     </ul>
                 </div>
+                <!-- 切换菜单结束 -->
+                <!-- 下面的代码是图片滚动的图标 -->
                 <div class="lstopr">
                     <div class="lstopr1">
                         <ul>
@@ -140,6 +141,8 @@
                         </ul>
                     </div>
                 </div>
+                <!-- 图标结束 -->
+
             </div>
             <div id="imgshow">
                 <div id="leftshow">
@@ -158,13 +161,13 @@
 
                 </div>
                 <div id="rightshow">
-                    <div>今日热点</div>
+                    <h2 >今日热点</h2>
                     <ul>
                         <li>
                             <a href="#">
                                 <img src="./image/06.jpg" alt="">
                             </a>
-                            <h2>微软发布了19H1预览版18204</h2>
+                            <h3>微软发布了19H1预览版18204</h3>
                             <p>
                                 也有望在Windows 10下一版本中添加备受期待的Sets窗口管理界面。
                             </p>
@@ -173,7 +176,7 @@
                             <a href="#">
                                 <img src="./image/07.jpg" alt="">
                             </a>
-                            <h2>诺基亚X6国际版即将登陆海外市场</h2>
+                            <h3>诺基亚X6国际版即将登陆海外市场</h3>
                             <p>
                                 诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
                             </p>
@@ -196,7 +199,7 @@
                 </div>
             </div>
 
-            <table class="standard">
+            <table>
                 <tbody>
                     <tr>
                         <th>Table的应用</th>
@@ -204,11 +207,11 @@
                     </tr>
                     <tr>
                         <td>个人爱好</td>
-                        <td> 学习代码编程，创建3D模型，视频与特效编辑。</td>
+                        <td> 学习代码编程,平面设计,创建3D模型,视频与特效编辑.</td>
                     </tr>
                     <tr>
                         <td>热门游戏</td>
-                        <td>王者荣耀，绝地求生，英雄联盟，</td>
+                        <td>王者荣耀,绝地求生,英雄联盟</td>
                     </tr>
                 </tbody>
             </table>
@@ -240,9 +243,7 @@ Step5.<span>echo "new Test" >> README.md</span>
                 </div>
             </article>
             <article>
-                <h2>
-                    <a href="#">凉州词</a>
-                </h2>
+                <h2>凉州词</h2>
                 <div class="fas fa-address-book">
                     2018/7/22 auticle
                 </div>
@@ -254,9 +255,7 @@ Step5.<span>echo "new Test" >> README.md</span>
                 </div>
             </article>
             <article>
-                <h2>
-                    <a href="#">枫桥夜泊</a>
-                </h2>
+                <h2>枫桥夜泊</h2>
                 <div class="fas fa-address-book">
                     2018/7/22 auticle
                 </div>
@@ -268,9 +267,7 @@ Step5.<span>echo "new Test" >> README.md</span>
                 </div>
             </article>
             <article>
-                <h2>
-                    <a href="#">送杜少府之任蜀州</a>
-                </h2>
+                <h2>送杜少府之任蜀州</h2>
                 <div class="fas fa-address-book">
                     2018/7/22 auticle
                 </div>
@@ -286,9 +283,9 @@ Step5.<span>echo "new Test" >> README.md</span>
         </div>
         <div id="rside">
             <div class='musicbox'>
+                <h2 >音乐分享</h2>
                 <ul>
-                    <li class="musicbox-title">
-                        <h4 id="hotitem">音乐分享</h4>
+                    <li >
                         <h6>只要平凡&nbsp;-&nbsp;张杰&nbsp;张碧晨</h6>
                     </li>
                     <li>
@@ -300,7 +297,7 @@ Step5.<span>echo "new Test" >> README.md</span>
             </div>
             <div style="clear: both"></div>
             <aside>
-                <h4 >热门文章</h4>
+                <h2>热门文章</h2>
                 
                 <ul>
                     <li>
@@ -325,7 +322,7 @@ Step5.<span>echo "new Test" >> README.md</span>
                 </ul>
             </aside>
             <aside>
-                <h4>最新发表</h4>
+                <h2>最新发表</h2>
                 <ul>
                     <li>
                         <a href="#">文章列表</a>
@@ -348,7 +345,7 @@ Step5.<span>echo "new Test" >> README.md</span>
                 </ul>
             </aside>
             <aside>
-                <h4>热门视频</h4>
+                <h2>热门视频</h2>
                 <ul>
                     <li>
                         <a href="#">如何用Git管理版本</a>
@@ -376,7 +373,8 @@ Step5.<span>echo "new Test" >> README.md</span>
     </div>
     <footer>
         <span>WeiBin&copy; 版权所有,
-            <br>2018-2020,&nbsp;All Rights Reserved.</span>
+            <br>2018-2020<br>
+            All Rights Reserved.</span>
     </footer>
 </body>
 <script src="./js/main.js"></script>
