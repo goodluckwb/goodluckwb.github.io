@@ -6,28 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
-    <link rel="stylesheet" href="./css/main.css">   
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
 </head>
 
 <body>
     <div id="top">
         <div id="toptitle">
-            <a href=""><img src="./image/logo.png" alt="logo" width="100"></a>
+            <a href="">
+                <img src="./image/logo.png" alt="logo" width="100">
+            </a>
             <ul class="topleftul">
-                <li>goodluckwb</li>
-                <li>所有分类</li>         
+                <li><a href="#">Goodluckwb</a></li>               
             </ul>
             <ul class="toprightul">
-                <li>地图</li>
-                <li>全息</li>
+                <li class="menu-item">                       
+                    <span class="fas fa-angle-down others"></span>
+                    <a href="#">所有分类</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="/wb">原创文章</a>
+                        </li>
+                        <li>
+                            <a href="/multimedia">精品转载</a>
+                        </li>
+                        <li>
+                            <a href="/browser">网页设计</a>
+                        </li>
+                        <li>
+                            <a href="/image">游戏相关</a>
+                        </li>
+                        <li>
+                            <a href="/work">办公相关</a>
+                        </li>
+                        <li>
+                            <a href="/down">视频特效</a>
+                        </li>
+                        <li>
+                            <a href="/softtool">3D建模</a>
+                        </li>
+                    </ul>                           
+                </li>
+                <li><a  href="#">全息</a></li>
             </ul>
 
         </div>
     </div>
     <div id="go-to-top">
         <div class="gototop">
-            <i class=""></i> 
+            <i class=""></i>
         </div>
         <div class="gototop">
             <i class=""></i>
@@ -38,7 +66,7 @@
         <div class="gototop">
             <i id="gototop-up" onmousedown="scrolltop();"></i>
         </div>
-        
+
     </div>
     <header>
         <h1>心随你的步调</h1>
@@ -55,37 +83,8 @@
                 <span class="fas fa-angle-down others"></span>
             </li>
             <li>
-                <a id="hobby" href="#">视频</a>
+                <a  href="#">视频</a>
                 <span class="fas fa-angle-down others"></span>
-            </li>
-
-            <li class="menu-item">
-                <a href="#">爱好</a>
-                <span class="fas fa-angle-down others"></span>
-                <ul class="sub-menu">
-                    <li>
-                        <a href="/wb">原创文章</a>
-                    </li>
-                    <li>
-                        <a href="/multimedia">精品转载</a>
-                    </li>
-                    <li>
-                        <a href="/browser">网页设计</a>
-                    </li>
-                    <li>
-                        <a href="/image">游戏相关</a>
-                    </li>
-                    <li>
-                        <a href="/work">办公相关</a>
-                    </li>
-                    <li>
-                        <a href="/down">视频特效</a>
-                    </li>
-                    <li>
-                        <a href="/softtool">3D建模</a>
-                    </li>
-
-                </ul>
             </li>
             <li>
                 <a href="#">图像</a>
@@ -96,15 +95,15 @@
                 <span class="fas fa-angle-down others"></span>
             </li>
             <li>
-                <div id="navsearch">  
+                <div >
                     <form action="#" method="POST">
                         <input class="search-input" type="text" name="search" placeholder="请输入关键字">
                         <input class="search-submit" type="submit" value="搜索">
-                    </form>          
+                    </form>
                 </div>
             </li>
         </ul>
-        
+
     </nav>
     <div id="main">
         <div id="lside">
@@ -153,12 +152,12 @@
                         </li>
                         <li onmouseover="show('img[2]');">图片3&nbsp;&nbsp;
                             <img src="./image/01.jpg" alt="" style="display: none">
-                            
+
                         </li>
                     </ul>
-                    
+
                 </div>
-                <div id="rightshow">                   
+                <div id="rightshow">
                     <div>今日热点</div>
                     <ul>
                         <li>
@@ -176,12 +175,10 @@
                             </a>
                             <h2>诺基亚X6国际版即将登陆海外市场</h2>
                             <p>
-                                诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏，
-                                后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池，
-                                支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
+                                诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
                             </p>
                         </li>
-                    </ul>   
+                    </ul>
                 </div>
             </div>
             <div id="imgbox">
@@ -198,7 +195,7 @@
                     <img src="./image/05.jpg" alt="">
                 </div>
             </div>
-            
+
             <table class="standard">
                 <tbody>
                     <tr>
@@ -215,7 +212,7 @@
                     </tr>
                 </tbody>
             </table>
-           
+
             <article>
                 <h2>
                     第一次Git错误的解决方法
@@ -287,23 +284,24 @@ Step5.<span>echo "new Test" >> README.md</span>
                 </div>
             </article>
         </div>
-        <div id="rside">              
-            <div class='musicbox'> 
+        <div id="rside">
+            <div class='musicbox'>
                 <ul>
                     <li class="musicbox-title">
-                        <h4>音乐分享</h4>
+                        <h4 id="hotitem">音乐分享</h4>
                         <h6>只要平凡&nbsp;-&nbsp;张杰&nbsp;张碧晨</h6>
                     </li>
                     <li>
-                        <audio  controls="controls">
+                        <audio controls="controls">
                             <source src="http://www.ytmp3.cn/down/49821.mp3">
                         </audio>
                     </li>
                 </ul>
-            </div >
+            </div>
             <div style="clear: both"></div>
             <aside>
-                <h4>热门文章</h4>
+                <h4 >热门文章</h4>
+                
                 <ul>
                     <li>
                         <a href="#">文章列表</a>
@@ -377,8 +375,10 @@ Step5.<span>echo "new Test" >> README.md</span>
 
     </div>
     <footer>
-        <span>WeiBin&copy; 版权所有,<br>2018-2020,&nbsp;All Rights Reserved.</span>
+        <span>WeiBin&copy; 版权所有,
+            <br>2018-2020,&nbsp;All Rights Reserved.</span>
     </footer>
 </body>
 <script src="./js/main.js"></script>
+
 </html>

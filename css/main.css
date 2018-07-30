@@ -8,7 +8,7 @@ img,input,select{vertical-align:middle}
 code,kbd,pre,samp{font-family:'宋体',courier new,courier,monospace}
 small{font-size:12px}ol,ul{list-style:none}
 a,a:hover{text-decoration:none}
-a:hover{color:#ff7227}
+a:hover{color:#EB8D01}
 sup{vertical-align:text-top}sub{vertical-align:text-bottom}
 fieldset,img{border:0}
 table{border-collapse:collapse;border-spacing:0}
@@ -25,14 +25,11 @@ table{border-collapse:collapse;border-spacing:0}
 } 
 body{
     /* background-color: antiquewhite; */
-    background-color: #d8cfe9d7;
+    background-color: #e9e9e9;
 }
-#top{
-    
+#top{   
     height: 30px;
- 
-    z-index: 1000;
-   
+    z-index: 1000;  
 }
 #top::after{
     display:block;
@@ -41,7 +38,6 @@ body{
 }
 
 #toptitle{
-    
     position:fixed;
     width: 100%;
     box-sizing: border-box;
@@ -51,19 +47,19 @@ body{
     /* border-top:5px solid rgb(150, 200, 30,.9) ; */
 }
     #toptitle a{
-       
+        color: white;
         float: left;
         display: block;
-        width: 100px;
-        height: 30px;   
+        padding: 0 10px;
+        height: 30px;      
     }
     #toptitle a img{
-        width: 60%;
+        width: 60px;
         display: block;
-        background: white;
+        background: rgb(255, 255, 255);
         position: relative;
         top: 5px;
-        left: 20px;
+        left: 0px;
         box-shadow: 5px 5px 5px #222222;
         /* border-color: #3F3F3F;
         border-width: 0 5px 5px;
@@ -71,35 +67,62 @@ body{
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px; */
     }
-    #toptitle ul{
-        color: white;
-        font-size: 12px;
-        display: block;
-        height: 25px;
-        position: relative;
-        top:5px;
-    }
-        .topleftul{
+
+    .topleftul{
+           
             float: left;
+            line-height: 30px;
         }
-        .toprightul{
-            
-            float: right;
-            
+    .toprightul{
+            width: 200px;
+            position: relative;
+            float: right;        
         }
-    #toptitle li{
-        display:block;
-        /* height: 100%; */
+        .toprightul li{
+            margin: 0 auto;
+            line-height: 30px;
+            float: left;
+            /* border: 1px solid gray; */
+        }
+    .menu-item {
+        color: white;
         float: left;
-        line-height: 20px;
-        padding: 0 20px;
-        margin-right: 2px;
-        /* background: #eb018a;
-        border: 3px solid #eb018a;
-        border-radius: 5px;
-        box-sizing: border-box;
-        box-shadow:5px 5px 5px #222222; */
+        position: relative;
+        margin-right: 20px;
+        height: 30px;
     }
+    .menu-item:hover{
+        background: #2b333b;
+    }
+        .menu-item:hover .sub-menu {
+            display: block;  
+         }
+    .sub-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-radius: 0 0 4px 4px;
+        min-width: 220%;
+        z-index: 10;
+        display: none;
+        padding: 5px 0;
+        background: #2b333b;
+        line-height: 25px;
+        font-size: 14px;
+    }
+        .sub-menu li{
+            position: relative;
+        }
+            .sub-menu li a {
+                padding: 0px 12px;
+                color: #fff;
+                display: block;
+                line-height: 30px;
+            }
+            .sub-menu li a:hover {
+                background-color:#eb018a;
+                border-left: 5px solid #01B1EB;
+            }
 #go-to-top{
     position: fixed;
     bottom: 100px;
@@ -163,7 +186,7 @@ strong{
 
 nav{
     
-    background:#00abc5;
+    background:#01B1EB;
     height: 60px;
     margin: 0 auto;
     
@@ -186,8 +209,11 @@ nav{
         padding: 0 30px;
         line-height: 60px;
     }
+    nav a:hover{
+        color: aliceblue;
+    }
     nav li:hover{
-        background: rgb(255,255,255,.3);
+        background:#eb018a;
         
     }
     
@@ -205,22 +231,15 @@ nav{
         content: '';
         height: 0px;
         width: 0px;
-        right: 20px;
+        left: 10px;
         top: calc(50% - 8px);
         display: block;
     }
-    nav #hobby::before{
-        content: url(../image/tophot.gif);
-        display: block;
-        height: 0px;
-        line-height: 14px; 
+    
+    nav li:last-child{
+        float: right;
     }
-    #navsearch{
-        width: 200px; 
-        position: absolute;
-        left: 332px;
-        height: 60px;
-    }
+
     .search-input {
         float: left;
         border-radius: 15px 0 0 15px;
@@ -245,7 +264,8 @@ nav{
         cursor: pointer;
         margin: 15px 0;
     }
-   
+    
+      
 #main{
     width: 1100px;
     margin: 0 auto;
@@ -359,7 +379,7 @@ nav{
                 width: 60px;
                 height: 100%;
                 float: left;
-                background: #00abc5;
+                background: #01B1EB;
                 line-height: 40px;
                 font-size: 30px;
                 padding: 0 15px;
@@ -380,10 +400,11 @@ nav{
 }
 
 aside{
+    
     background: rgb(255,255,255,.5);
     padding: 20px;
     margin-bottom: 20px;
-    border-top: 5px solid #00abc5;
+    border-top: 5px solid #01B1EB;
 }
     aside h4{
         padding: 0px 10px;
@@ -397,7 +418,7 @@ aside{
         display:inline-block;
         padding: 0 10px;
         font:16px/26px "宋体","新宋体",serif;  
-        color: #00abc5;
+        color: #01B1EB;
     }
     aside li a::before{
         content:"";
@@ -428,16 +449,16 @@ article{
     padding: 40px;
     background: rgb(255,255,255,.5);
     margin-bottom: 20px;
-    border-top: 5px solid #00abc5;
+    border-top: 5px solid #01B1EB;
 }
     article h2{     
         font-size: 20px; 
-        color: #00abc5;
+        color: #01B1EB;
     }
     article span{
         padding: 0 4px;
-        border:#00abc5;
-        background: #00abc5;
+        border:#01B1EB;
+        background: #01B1EB;
         border-radius: 4px;
     }
   
@@ -446,7 +467,7 @@ article{
         margin-top: 20px;
     }
 .littleicon{
-    background: #ff7227;
+    background: #EB8D01;
     border-radius: 3px;
     color: white;
     margin: 0 10px;
@@ -502,42 +523,6 @@ footer{
 }
 
 
-.menu-item {
-    float: left;
-    position: relative;
-    margin-right: 1px;
-    height: 60px;
-}
-    .menu-item:hover .sub-menu {
-        display: block;
-     }
-.sub-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    border-radius: 0 0 4px 4px;
-    max-width: 128px;
-    z-index: 10;
-    display: none;
-    padding: 4px 0;
-    background-color: #3f3f3f;
-    line-height: 18px;
-    font-size: 14px;
-}
-    .sub-menu li {
-        float: none;
-        margin-right: 0;
-    }
-        .sub-menu li a {
-            padding: 5px 12px;
-            color: #fff;
-            display: block;
-            line-height: 20px;
-        }
-        .sub-menu li a:hover {
-            background-color: #00abc5;
-            border-left: 5px solid #f719e4;
-        }
 
 #leftshow{
     float:left;
@@ -704,6 +689,7 @@ footer{
     
 }
 .musicbox-title{
+    position: relative;
     padding: 0 40px ;    
     height: 60px;
     /* border-left: 5px solid #eb018a; */
@@ -713,10 +699,19 @@ footer{
 .musicbox h4{
     font-size: 16px;
     
-    color: #00abc5;
+    color: #01B1EB;
 }
 .musicbox audio{
     height: 30px;
     width: 100%;
     
+}
+#hotitem::after{
+    content: url(../image/tophot.gif);
+    display: block;
+    height: 0px;
+    line-height: 14px; 
+    position: absolute;
+    left: 160px;
+    top:  0px;
 }
