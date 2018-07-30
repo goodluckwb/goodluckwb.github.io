@@ -1,6 +1,11 @@
 This is weibin’s person homepage.
 Update history
 
+v1.07
+1,更改顶部颜色为黑色,减少宽度.
+2,更换logo图片.
+3,精简css文件.
+
 v1.06
 1,减少网页颜色运用,看上去更协调.
 2,优化边框逻辑,上下边框为绿色,左为紫红色.

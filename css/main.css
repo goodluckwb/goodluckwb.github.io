@@ -5,7 +5,7 @@ body{cursor:default;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:g
 body,button,input,select,textarea{font:12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB"}
 address,cite,dfn,em,var{font-style:normal}
 img,input,select{vertical-align:middle}
-code,kbd,pre,samp{font-family:courier new,courier,monospace}
+code,kbd,pre,samp{font-family:'宋体',courier new,courier,monospace}
 small{font-size:12px}ol,ul{list-style:none}
 a,a:hover{text-decoration:none}
 a:hover{color:#ff7227}
@@ -24,7 +24,8 @@ table{border-collapse:collapse;border-spacing:0}
     font-style:normal; 
 } 
 body{
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    background-color: #d8cfe9d7;
 }
 #top{
     
@@ -134,7 +135,7 @@ header{
     height: 150px;
     padding: 50px 0 10px;
     box-sizing: border-box;
-    background-image: url(../image/headerl.jpg);
+    background-image: url(../image/headerl.png);
     
 }
     
@@ -162,7 +163,7 @@ strong{
 
 nav{
     
-    background:#3F3F3F;
+    background:#00abc5;
     height: 60px;
     margin: 0 auto;
     
@@ -222,7 +223,7 @@ nav{
     }
     .search-input {
         float: left;
-        border-radius: 2px 0 0 2px;
+        border-radius: 15px 0 0 15px;
         border: 0;
         margin: 15px 0;
         font-size: 13px;
@@ -235,8 +236,8 @@ nav{
     }
     .search-submit{
         float: left;
-        background-color: #00abc5;
-        border-radius: 0 2px 2px 0;
+        background-color: #eb018a;
+        border-radius: 0 15px 15px 0;
         height: 30px;
         color: #eee;
         padding: 0 10px;
@@ -385,18 +386,18 @@ aside{
     border-top: 5px solid #00abc5;
 }
     aside h4{
-        padding: 4px;
-        color:white;
-        font: 20px/25px "微软雅黑",'黑体',sans-serif;
+        padding: 0px 10px;
+        font: 18px/28px "微软雅黑",'黑体',sans-serif;
         margin-bottom: 20px;
-        background: linear-gradient(to right,#333,rgb(255,255,255,.5));
+        /* color:white;
+        background: linear-gradient(to right,#333,rgb(255,255,255,.5)); */
         border-left: 5px solid #eb018a;
     }
     aside a{
         display:inline-block;
         padding: 0 10px;
-        color:gray;
         font:16px/26px "宋体","新宋体",serif;  
+        color: #00abc5;
     }
     aside li a::before{
         content:"";
@@ -407,7 +408,7 @@ aside{
         left: -5px;
         border-width:5px;
         border-style: solid;
-        border-color: #eb018a transparent transparent;
+        border-color:  transparent transparent transparent #eb018a;
         box-sizing: border-box;
     }
     
@@ -431,7 +432,7 @@ article{
 }
     article h2{     
         font-size: 20px; 
-        color: black; 
+        color: #00abc5;
     }
     article span{
         padding: 0 4px;
@@ -467,7 +468,7 @@ article{
 }
 table{
     font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
-    border-collapse: collapse;
+    
     font-size: 1rem;
     background: rgb(255,255,255,.5);
     width: 100%;
@@ -492,7 +493,7 @@ td{
 }
 footer{
     height: 160px;
-    background: #222222;
+    background: rgb(0, 0, 0,.5);
     font-size: 16px; 
     text-align: center; 
     color: white;
@@ -547,8 +548,8 @@ footer{
     margin: 20px 0;
     height: 300px;
     padding: 10px ;
-    /* border-bottom: 5px solid #eb018a;  */
-    background: rgb(255,255,255,.5);
+    /* border-bottom: 5px solid #eb018a; 
+    background: rgb(255,255,255,.5);  */
 }
     #leftshow ul{
         position: relative;
@@ -572,7 +573,7 @@ footer{
     #leftshow li:hover{
         color:yellow;
         background:gray;
-        border-right:3px solid  white;
+        /* border-right:1px solid  white; */
         transition: all .3s ease-in-out;
     }
 #rightshow{
@@ -690,22 +691,32 @@ footer{
         transform: translate3d(0,0,0);
         opacity:1;
     }
-.rtswitch{
-    margin-top:20px;
-    height: 40px;
-    border: 1px solid gray;
-    background: rgb(255,255,255,.5);
-    box-sizing: border-box;
-}
 
-.rtswcontent{
-    margin-bottom:20px;
-    padding: 0px 10px;
+.musicbox{
+    margin:20px 0;
+    padding: 10px 10px;
     width: 100%;
-    height: 140px;
-    border: 1px solid gray;
+    height: 150px;
     background: rgb(255,255,255,.5);
     float: left;
     box-sizing: border-box;
+    border-top: 5px solid #eb018a;
+    
 }
-
+.musicbox-title{
+    padding: 0 40px ;    
+    height: 60px;
+    /* border-left: 5px solid #eb018a; */
+    text-align: center;
+    line-height: 30px;
+}
+.musicbox h4{
+    font-size: 16px;
+    
+    color: #00abc5;
+}
+.musicbox audio{
+    height: 30px;
+    width: 100%;
+    
+}
