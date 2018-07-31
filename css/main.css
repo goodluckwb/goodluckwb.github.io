@@ -134,7 +134,7 @@ p{
             }
             .sub-menu li a:hover {
                 background-color:#eb018a;
-                border-left: 5px solid #01B1EB;
+                /* border-left: 5px solid #01B1EB; */
             }
 #go-to-top{
     position: fixed;

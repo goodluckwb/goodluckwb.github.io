@@ -30,11 +30,10 @@ var iframe=document.getElementById("player");
 
 function changechannel(test){   
         if (test=="channel[0]"){
-            iframe.src="http://liveshare.huya.com/11352944/huyacoop.swf";
-            
+            iframe.src="http://player.cntv.cn/standard/live_HLSDRM20180618.swf?ChannelID=cctv5&amp;videoTVChannel=cctv5&amp;P2PChannelID=pd://cctv_p2p_hdcctv5&amp;VideoName=cctv5&amp;channelID=cctv5&amp;BannerWidth=600&amp;BannerInterval=20&amp;playBackType=common&amp;ruleVisible=true&amp;languageXml=&amp;configURL=http://player.cntv.cn/flashplayer/config/WebHDSPlayerConfig.xml&amp;referrer=&amp;fingerprint=Fingerprint&amp;wmode=opaque&amp;quality=high";            
         }else if (test=="channel[1]"){
-            iframe.src="http://liveshare.huya.com/11342384/huyacoop.swf";
+            iframe.src="http://liveshare.huya.com/11352944/huyacoop.swf";
         }else if (test=="channel[2]"){
-            iframe.src="http://player.cntv.cn/standard/live_HLSDRM20180618.swf?ChannelID=cctv5&amp;videoTVChannel=cctv5&amp;P2PChannelID=pd://cctv_p2p_hdcctv5&amp;VideoName=cctv5&amp;channelID=cctv5&amp;BannerWidth=600&amp;BannerInterval=20&amp;playBackType=common&amp;ruleVisible=true&amp;languageXml=&amp;configURL=http://player.cntv.cn/flashplayer/config/WebHDSPlayerConfig.xml&amp;referrer=&amp;fingerprint=Fingerprint&amp;wmode=opaque&amp;quality=high";
+            iframe.src="http://liveshare.huya.com/11342384/huyacoop.swf";
         }
 }
