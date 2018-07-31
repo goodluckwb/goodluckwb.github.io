@@ -8,7 +8,7 @@ img,input,select{vertical-align:middle}
 code,kbd,pre,samp{font-family:'微软雅黑','宋体',courier new,courier,monospace}
 small{font-size:12px}ol,ul{list-style:none}
 a,a:hover{text-decoration:none}
-a:hover{color:#EB8D01}
+a:hover{color:#01B1EB}
 a{color:black}
 sup{vertical-align:text-top}sub{vertical-align:text-bottom}
 fieldset,img{border:0}
@@ -67,11 +67,11 @@ p{
         height: 30px;      
     }
     #toptitle a img{
-        width: 60px;
+        width: 80px;
         display: block;
-        background: rgb(255, 255, 255);
+        background:rgba(255, 255, 255, 0.8);
         position: relative;
-        top: 5px;
+        top: -2px;
         left: 0px;
         box-shadow: 5px 5px 5px #222222;
         /* border-color: #3F3F3F;
@@ -171,7 +171,7 @@ header{
     height: 150px;
     padding: 50px 0 10px;
     box-sizing: border-box;
-    background-image: url(../image/headerl.png);
+    background-image: url(../image/headerl2.jpg);
     
 }
     
@@ -198,8 +198,8 @@ strong{
 }
 
 nav{
-    
-    background:#01B1EB;
+    background: #01B1EB;
+    /* background:linear-gradient(#00EDFF,#01B1EB); */
     height: 60px;
     padding: 0 8%;
     
@@ -315,7 +315,7 @@ nav{
             height: 20px;
             position: absolute;
             bottom: 20px;
-            left: calc(50% - 35px); 
+            left: calc(50% - 55px); 
             border-radius: 10px;
             padding: 5px;
             box-sizing: border-box;
@@ -561,7 +561,7 @@ footer{
 .musicbox{
     position:relative;
     margin:20px 0;
-    padding: 10px 10px;
+    padding: 10px 20px;
     width: 100%;
     height: 150px;
     background: linear-gradient(rgba(255,255,255,0.5) ,rgba(255, 200, 200, 0.5));
@@ -584,7 +584,7 @@ footer{
     height: 0px;
     line-height: 14px; 
     position: absolute;
-    left: 100px;
+    left: 120px;
     top:  18px;
 }
 
@@ -613,14 +613,16 @@ footer{
 /* 电视直播 */
 .channel{
     float: left;
-   
 }
 .channeltab{
     cursor: pointer;
+ 
 }
+
+
 .videoiframe{
-    width: 900px;
-    height: 600px;
+    width: 960px;
+    height:540px;
     display: block;
     float: right;
     margin-bottom: 20px;

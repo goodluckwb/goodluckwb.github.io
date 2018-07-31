@@ -31,6 +31,7 @@ var iframe=document.getElementById("player");
 function changechannel(test){   
         if (test=="channel[0]"){
             iframe.src="http://liveshare.huya.com/11352944/huyacoop.swf";
+            
         }else if (test=="channel[1]"){
             iframe.src="http://liveshare.huya.com/11342384/huyacoop.swf";
         }else if (test=="channel[2]"){
