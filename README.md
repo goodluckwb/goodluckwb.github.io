@@ -1,6 +1,8 @@
 This is weibin’s person homepage.
-Update history
 
+Update history
+v1.10.1
+1,优化页脚.
 v1.10
 1,增加时间线以及其他子页面框架.
 2,调整block悬停状态边框和背景变化统一.
