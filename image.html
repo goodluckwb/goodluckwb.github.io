@@ -108,11 +108,45 @@
                 </form>
             </div>
     </nav>
-    <div id="main">
-       <div id="wrapper">           
-            这是图片子页面,准备制作中...
-       </div>
+    
+    <div id="wrapper">           
+        <div id="bigimg">
+            <img src="./image/07.jpg" alt="" width="100%">
+        </div>
+        <div id="imgtitle">
+            <h2 onclick="">精美图片</h2>
+        </div>
+        <figure id="imglist">
+            <ul >
+                <li class="imgl2r"><img src="./image/08.jpg" alt="">
+                    <p>扬帆,出征</p>
+                </li>
+                <li class="imgl2r"><img src="./image/01.jpg" alt="">
+                    <p>夏日,吃瓜就是爱啊</p>
+                </li>
+                <li class="imgl2r"><img src="./image/02.jpg" alt="">
+                    <p>舒服的思念</p>
+                </li>
+                <li class="imgl2r"><img src="./image/03.jpg" alt="">
+                    <p>赤热,并没有</p>
+                </li>
+                <li class="imgl2r"><img src="./image/04.jpg" alt="">
+                    <p>蓝天,白云</p>
+                </li>
+                <li class="imgl2r"><img src="./image/05.jpg" alt="">
+                    <p>希望,也许</p>
+                </li>
+                <li class="imgl2r"><img src="./image/06.jpg" alt="">
+                    <p>听说你很倔</p>
+                </li>
+                <li class="imgl2r"><img src="./image/07.jpg" alt="">
+                    <p>看到就渴了</p>
+                </li>
+                
+            </ul>   
+        </figure>
     </div>
+    
     <footer>
             <div class="footer_top">
                 <h3>
@@ -129,5 +163,30 @@
             </div>
         </footer>
 </body>
-<script src="./js/main.js"></script>
+<script>
+    //图片主页用大图滚动
+var k=0;
+var imgsrc=new Array();
+imgsrc[0]="./image/01.jpg";
+imgsrc[1]="./image/02.jpg";
+imgsrc[2]="./image/03.jpg";
+imgsrc[3]="./image/04.jpg";
+imgsrc[4]="./image/05.jpg";
+function scrollImg(){
+    if(k>imgsrc.length-1){
+        k=0;
+    }
+    for(var i=0;i<imgsrc.length;i++){
+        if(i==k){
+            d=document.getElementById("bigimg").firstElementChild;
+            d.src=imgsrc[i];
+            
+        }
+    }
+    k++;
+}
+setInterval("scrollImg()",5000);
+
+</script>
+<script src="./js/jquery-3.3.1.js"></script>
 </html>

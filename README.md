@@ -1,6 +1,10 @@
 This is weibin’s person homepage.
 
 Update history
+v1.11
+1,增加js代码部分,图片切换,totop顶部隐藏.
+2完善图片主页.
+
 v1.10.1
 1,优化页脚.
 v1.10

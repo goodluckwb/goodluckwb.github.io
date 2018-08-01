@@ -21,6 +21,11 @@
 // }
 // setTimeout('show()',3000);
 // 返回顶部按钮
+document.onscroll =function(){
+var totop=document.getElementById("go-to-top");
+var sc=document.documentElement.scrollTop || document.body.scrollTop;
+   totop.style.display=sc>100?"block":"none";
+}
 function scrolltop(){
     document.body.scrollTop=document.documentElement.scrollTop=0;
 }
@@ -37,3 +42,38 @@ function changechannel(test){
             iframe.src="http://liveshare.huya.com/11342384/huyacoop.swf";
         }
 }
+
+//图片轮播
+
+var imgul=document.getElementsByClassName('imgturn')[0];
+var preous=document.getElementById("preous");
+var next=document.getElementById("next");
+var nav=document.getElementById("imgicon");
+
+
+
+preous.onclick=function(){
+    var left=parseInt(imgul.offsetLeft);
+    if(left==-2400){
+        left=800;
+    }
+    var offset=left-800;
+    imgul.style.left=offset+"px";
+    
+}
+next.onclick=function(){
+    var left=parseInt(imgul.offsetLeft);
+    if(left>=0){
+        left=-3200;
+    }
+    var offset=left+800;
+    imgul.style.left=offset+"px";
+}
+var timer;
+function play(){
+    timer=setInterval(function(){
+        next.onclick();
+    },2000)
+}
+play();
+

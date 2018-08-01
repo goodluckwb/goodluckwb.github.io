@@ -115,27 +115,31 @@
                 <!-- 下面的代码是图片滚动的图标 -->
                 <div class="lstop">
                     <div class="lstop1">
-                        <ul>
+                        <ul id="imgicon">
+                            <li class="current"></li>
                             <li></li>
                             <li></li>
                             <li></li>
-                            <li></li>
-                            <li></li>
+                        
                         </ul>
                     </div>
                     <!-- 底部按钮完成 -->
                     <div class="lstop2">
                         <ul>
-                            <li class="lstop2-1 fas fa-angle-double-left"></li>
-                            <li class="lstop2-2 fas fa-angle-double-right"></li>
+                            <li id="preous" class="lstop2-1 fas fa-angle-double-left"></li>
+                            <li id="next" class="lstop2-2 fas fa-angle-double-right"></li>
                         </ul>
                     </div>
                     <!-- 两侧切换图标结束 -->
                     <!-- 一下为图片内容部分 -->
-                    <div id="imgbox">
-                        <div class="imgzoom">
-                            <img  src="./image/04.jpg" alt="">
-                        </div>
+                    <div id="imgbox">                       
+                        <ul class="imgturn">
+                            <li class="imgzoom"><img  src="./image/01.jpg" alt=""></li>
+                            <li class="imgzoom"><img  src="./image/02.jpg" alt=""></li>
+                            <li class="imgzoom"><img  src="./image/03.jpg" alt=""></li>                       
+                            <li class="imgzoom"><img  src="./image/04.jpg" alt=""></li>
+                        </ul>
+                                               
                     </div>
                 </div>
 

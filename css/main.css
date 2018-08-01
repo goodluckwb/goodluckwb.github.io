@@ -143,6 +143,7 @@ p{
     width: 35px;
     opacity: 0.9;
     z-index: 1000;
+    display: block;
 }
     .gototop{
         position: relative;
@@ -302,20 +303,112 @@ nav{
         float: left;
         box-sizing: border-box;
         width: 100%;
-        height: 100%; 
+        height: 300px; 
         position: relative;
         /* border: 1px solid gray; */
         border-radius: 10px;
         overflow: hidden;
     }
-        /* 一下为图片切换按钮 */
+         
+    #imgbox{
+        position: relative;
+        /* background: rgb(255,255,255,.5);
+        border-top:5px solid #eb018a; */
+        height: 100%;
+    }
+    #imgbox ul{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3500px;
+        height: 300px;
+        box-sizing: border-box;
+    }
+    #imgbox ul li{
+        float: left;
+        
+    }
+    .imgturn{
+        position: relative;
+        display: block;
+        float: left;
+        width: 100%;
+        box-sizing: border-box;    
+    }
+    /* 图片缩放 */
+        .imgzoom{
+            position: relative;
+            display: block;
+            float: left;
+            box-sizing: border-box;
+        }
+        #imgbox img{
+            width: 800px;       
+            transition:all .3s ease-in-out;      
+        }
+        .imgzoom:hover img{
+            transform: scale(1.1);   
+        }
+        #imgbox::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /* 图片滑动 */
+        .imgl2r{
+            position: relative;
+            display: block;
+            float: left;
+            /* border: 1px solid #eb018a; */
+            /* width: 300px; */
+            margin:0px 10px 10px 0px;
+            overflow:hidden;
+            /* box-sizing: border-box; */
+            
+        }
+        .imgl2r img{
+            opacity: 0.7;
+            transform: translate3d(-20px,0,0) ;
+            transition: all .35s ease-in-out;
+            border: 0px;
+            box-sizing: border-box;
+        }
+        .imgl2r:hover img{
+            transform: translate3d(0,0,0) ;
+            opacity: 1;
+            border-top: 10px solid #eb018a;
+        }
+        .imgl2r p{
+            padding: 0 10px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 240px;
+            left: 0px;
+            z-index: 100;
+            font-size: 30px;
+            line-height: 60px;
+            color: rgb(7, 7, 7);
+            transform: translate3d(0,60px,0);
+            transition: all .35s ease-in-out;
+            opacity: 0;
+            background: #ffffff;
+        }
+        .imgl2r:hover p{
+            background: #ffffffbb;
+            transform: translate3d(0,0,0);
+            transition-delay: .15s;
+            opacity:1;
+        }
+    /* 图片滑动结束 */
+    /* 一下为图片切换按钮 */
 
         .lstop1 ul{
             background: #eb018a8f;
             height: 20px;
             position: absolute;
             bottom: 20px;
-            left: calc(50% - 55px); 
+            left: calc(50% - 45px); 
             border-radius: 10px;
             padding: 5px;
             box-sizing: border-box;
@@ -326,9 +419,18 @@ nav{
             width: 10px;
             height: 10px;
             float: left;
-            border-radius: 50%;
-            margin:0 5px;
+            border-radius: 5px;
+            margin:0 5px;            
+        }
+        .lstop1 li.current{
+            background: #eb018a;
             
+            transition: all .2s;
+            width: 20px;
+            margin: 0;
+        }
+        .lstop1 li.hidden{
+            background: #eb018a8f;
         }
         .lstop2 ul{
             display: none; 
@@ -476,79 +578,19 @@ td{
 }
     #focus-img{
         float: left;
-        margin: 50px 10px 10px;
+        /* margin: 50px 10px 10px; */
         
     }
     #focus img{
-        width: 300px;
+        width: 320px;
     }
     #focus-content{
         width: 450px;
         float: right;
         font-size: 16px;
-        padding-top: 20px;
-    }
-    
-#imgbox{
-    position: relative;
-    /* background: rgb(255,255,255,.5);
-    border-top:5px solid #eb018a; */
-    
-}
-    .imgzoom{
-        position: relative;
-        display: block;
-        float: left;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    #imgbox img{       
-        transition:all .3s ease-in-out;      
-    }
-    .imgzoom:hover img{
-        transform: scale(1.1);   
-    }
-    #imgbox::after{
-        content: "";
-        display: block;
-        clear: both;
-    }
-    .imgl2r{
-        position: relative;
-        display: block;
-        float: left;
-        border: 1px solid #eb018a;
-        width: 340px;
-        margin:10px 0px 10px 0px;
-        overflow:hidden;
-        box-sizing: border-box;
         
     }
-    .imgl2r img{
-        opacity: 0.7;
-        transform: translate3d(-20px,0,0) ;
-        transition: all .3s ease-in-out;
-    }
-    .imgl2r:hover img{
-        transform: translate3d(0,0,0) ;
-        opacity: 1;
-    }
-    .imgl2r p{
-        display: block;
-        position: absolute;
-        top: 120px;
-        left: 20px;
-        z-index: 100;
-        font-size: 40px;
-        color: white;
-        transform: translate3d(0,30px,0);
-        transition: all .3s ease-in-out;
-        opacity: 0;
-    }
-    .imgl2r:hover p{
-        transform: translate3d(0,0,0);
-        opacity:1;
-    }
+    
 
 .musicbox{
     position:relative;
@@ -583,6 +625,8 @@ td{
 
 #wrapper{
     width: 100%;
+    overflow: hidden;
+   
 }
 .current_nav{
     font-size: 14px;
@@ -707,3 +751,45 @@ footer{
         border-radius: 0 0 4px 4px ;
         
     }
+
+#bigimg{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+#bigimg img{
+    position: relative;
+    
+}
+#imgtitle{
+    height: 50px;
+    padding:0 10%;
+    line-height: 50px;
+    font-size: 18px;
+}
+#imglist{
+    box-sizing: border-box;
+    margin: 0px 10%;
+    background: linear-gradient( rgba(255,255,255,0.5) ,rgba(167, 236, 245, 0.719));
+    
+}
+#imglist ul{
+    padding: 0 10px 0 20px;
+}
+#imglist::after{
+    content: "";
+    height: 20px;
+    display:block;
+    clear:both;
+}
+#imglist li{
+    width: 480px;
+   
+    overflow: hidden;
+}
+#imglist img{
+    position: relative;
+    display: inline-block;
+    height: 350px;
+    max-width: 600px;
+}
