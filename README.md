@@ -1,6 +1,9 @@
 This is weibin’s person homepage.
 
 Update history
+
+v1.12
+1,修改鼠标聚焦底部阴影.
 v1.11
 1,增加js代码部分,图片切换,totop顶部隐藏.
 2完善图片主页.

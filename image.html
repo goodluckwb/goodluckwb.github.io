@@ -55,7 +55,7 @@
 
         </div>
     </div>
-    <div id="go-to-top">
+    <div id="go-to-top" style="display: none;">
         <div class="gototop">
             <i class=""></i>
         </div>
@@ -161,32 +161,8 @@
                 </span>
                 <div class="footer_line"></div>
             </div>
-        </footer>
+    </footer>
 </body>
-<script>
-    //图片主页用大图滚动
-var k=0;
-var imgsrc=new Array();
-imgsrc[0]="./image/01.jpg";
-imgsrc[1]="./image/02.jpg";
-imgsrc[2]="./image/03.jpg";
-imgsrc[3]="./image/04.jpg";
-imgsrc[4]="./image/05.jpg";
-function scrollImg(){
-    if(k>imgsrc.length-1){
-        k=0;
-    }
-    for(var i=0;i<imgsrc.length;i++){
-        if(i==k){
-            d=document.getElementById("bigimg").firstElementChild;
-            d.src=imgsrc[i];
-            
-        }
-    }
-    k++;
-}
-setInterval("scrollImg()",5000);
-
-</script>
+<script src="./js/main.js"></script>
 <script src="./js/jquery-3.3.1.js"></script>
 </html>

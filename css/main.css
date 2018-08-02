@@ -108,7 +108,8 @@ p{
         background: #2b333b;
     }
         .menu-item:hover .sub-menu {
-            display: block;  
+            display: block;
+            animation: hidden 0.3s ; 
          }
     .sub-menu {
         position: absolute;
@@ -136,6 +137,14 @@ p{
                 background-color:#eb018a;
                 /* border-left: 5px solid #01B1EB; */
             }
+@keyframes hidden{
+    0%{ opacity: 0; transform: translate(0px, -60px) }
+    100% {opacity: 1; transform: translate(0, 0) }
+}
+@keyframes nav{
+    0%{transform: translate(0,-60px)}
+    100%{transform: translate(0,0)}
+}
 #go-to-top{
     position: fixed;
     bottom: 100px;
@@ -260,23 +269,27 @@ nav{
         font-size: 13px;
         line-height: 22px;
         padding: 4px 8px;
-        background-color: #fff;
+        background: #f9f9f9;
         width: 140px;
         color: #b3b3b3;
-        
+        outline: none;
     }
     .search-submit{
         float: left;
-        background-color: #eb018a;
+        background: #f9f9f9;
         border-radius: 0 15px 15px 0;
         height: 30px;
-        color: #eee;
+        color: #b3b3b3;
         padding: 0 10px;
         border: 0;
         cursor: pointer;
         margin: 15px 0;
+        outline: none;
     }
-    
+    .search-submit:hover{
+        background:#eb018a;
+        color: #f9f9f9;
+    }
       
 #main{
     width: 1100px;
@@ -297,6 +310,9 @@ nav{
     height: 300px; 
     margin-top: 20px;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #b99696e5;
+    
 }
    
     .lstop{
@@ -306,8 +322,8 @@ nav{
         height: 300px; 
         position: relative;
         /* border: 1px solid gray; */
-        border-radius: 10px;
         overflow: hidden;
+       
     }
          
     #imgbox{
@@ -479,6 +495,7 @@ aside{
     padding: 20px;
     margin-bottom: 20px;
     border-top: 5px solid #01B1EB;
+    box-shadow: 5px 5px 5px #b99696e5;
 }
 
     aside a{
@@ -516,6 +533,7 @@ article{
     margin-bottom: 20px;
     border-top: 5px solid #01B1EB;
     font-size: 16px;
+    box-shadow: 5px 5px 5px #b99696e5;
 }
 .signature{
     font-size: 12px;
@@ -545,6 +563,7 @@ table{
     font-size: 1.5 rem;
     line-height: 2rem; 
     text-align: center;
+    box-shadow: 5px 5px 5px #b99696e5;
 }
 
 th{
@@ -569,25 +588,30 @@ td{
 #focus{
     float:right;
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
     /* border: 1px solid gray; */
     box-sizing: border-box;
     margin: 10px 0;
-    padding: 10px 10px ;
+    padding: 5px 5px ;
     background: linear-gradient( rgba(255,255,255,0.5) ,rgba(167, 236, 245, 0.719));
+    box-shadow: 5px 5px 5px #b99696e5;
+}
+#focus h3{
+    font-size: 18px;
 }
     #focus-img{
         float: left;
+        display: inline-block;
         /* margin: 50px 10px 10px; */
         
     }
     #focus img{
-        width: 320px;
+        width: 350px;
+        margin-right: 10px;
     }
     #focus-content{
-        width: 450px;
-        float: right;
         font-size: 16px;
+        margin: 5px;
         
     }
     
@@ -601,7 +625,8 @@ td{
     background: linear-gradient(rgba(255,255,255,0.5) ,rgba(255, 200, 200, 0.5));
     float: left;
     box-sizing: border-box;
-    border-top: 5px solid #01B1EB;   
+    border-top: 5px solid #01B1EB;
+    box-shadow: 5px 5px 5px #b99696e5;   
 }
 .musicbox h6{
     font-size: 14px;
@@ -622,7 +647,63 @@ td{
     left: 120px;
     top:  18px;
 }
-
+.su_button_circle{
+    background-color: red;
+    border-radius: 1000px;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 10px;
+    height: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    pointer-events: none;
+    /*animation-timing-function: ease-in-out; */
+    
+  }
+ 
+  @keyframes explode {
+    0% {
+      width: 0px;
+      height: 0px;
+      margin-left: 0px;
+      margin-top: 0px;
+      background-color: rgba(42, 53, 80,0.2);
+    }
+    100% {
+      width: 400px;
+      height: 400px;
+      margin-left: -200px;
+      margin-top: -200px;
+      background-color: rgba(20, 180, 87,0.8);
+    }
+  }
+  
+  @keyframes desplode {
+    0% {
+      width: 400px;
+      height: 400px;
+      margin-left: -200px;
+      margin-top: -200px;
+      background-color: rgba(20, 180, 87,0.8);
+    }
+    100% {
+      width: 0px;
+      height: 0px;
+      margin-left: 0px;
+      margin-top: 0px;
+      background-color: rgba(129, 80, 108,0.6);
+    }
+  }
+  .explode-circle {
+    animation: explode 0.5s forwards;
+ 
+ }
+ 
+ .desplode-circle{
+    animation: desplode 0.5s forwards;
+ }
+ 
 #wrapper{
     width: 100%;
     overflow: hidden;
@@ -666,8 +747,18 @@ td{
 }
 
 .musicbox:hover,aside:hover,article:hover{
-border-top: 5px solid #eb018a;
-background: linear-gradient(white,#eb018a77)
+    border-top: 5px solid #eb018a;
+    /* background: linear-gradient(white,#f16bb980); */
+    /* border-radius: 10px; */
+    box-shadow: 10px 10px 5px #b99696e5;
+    transform: translate3d(5,5,10);
+    transition: all .2s;
+    
+}
+table:hover,#lsidetop:hover,#focus:hover{
+    box-shadow: 10px 10px 5px #b99696e5;
+    transform: translate3d(5,5,10);
+    transition: all .2s;    
 }
 
 footer{
@@ -759,6 +850,9 @@ footer{
 }
 #bigimg img{
     position: relative;
+    width: 110%;
+    top: -50%;
+    left: -10%;
     
 }
 #imgtitle{
