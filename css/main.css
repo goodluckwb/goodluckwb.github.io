@@ -1,6 +1,6 @@
 /* init*/
 blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,
-input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}
+input,legend,li,ol,p,pre,td,textarea,th,ul,table,tr{margin:0;padding:0}
 body{cursor:default;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body,button,input,select,textarea{font:12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB"}
 address,cite,dfn,em,var{font-style:normal}
@@ -886,4 +886,34 @@ footer{
     display: inline-block;
     height: 350px;
     max-width: 600px;
+}
+#tab2, #tab3 {
+    width: 60px;
+}
+#tab1 input {
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    background: rgb(248, 209, 233);
+    outline: none;
+    margin: 0;
+}
+
+#tab1 [type=text] {
+    width: 250px;
+    height: 50px;
+    text-align: right;
+    font-size: 30px;
+}
+#jisuanqi{
+    display: none;
+    position: absolute;
+    width: 100px;
+    right: 270px;
+    top: 25px;
+    
+}
+#jisuanqi table,#jisuanqi tr,#jisuanqi td{
+    padding: 0px;
+    margin: 5px;
 }

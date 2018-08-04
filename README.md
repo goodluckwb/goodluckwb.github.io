@@ -2,6 +2,8 @@ This is weibin’s person homepage.
 
 Update history
 
+v1.13
+1,增加一个小计算器部件.
 v1.12
 1,修改鼠标聚焦底部阴影.
 v1.11
