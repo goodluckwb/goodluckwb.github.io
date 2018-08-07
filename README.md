@@ -1,7 +1,12 @@
 This is weibin’s person homepage.
 
 Update history
-
+v1.14
+1,增加图片轮播代码
+2,更改标题样式.
+3,颜色搭配优化.
+4,优化子菜单弹出样式.
+5,增加totop的动画提示.
 v1.13
 1,增加一个小计算器部件.
 v1.12

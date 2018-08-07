@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
 </head>
-
 <body>
     <div id="top">
         <div id="toptitle">
@@ -33,7 +31,6 @@
                                         <input type="button" value="清除" onclick="txtnum.value=0;result=0;">
                                         <input type="button" value="退格" onclick="backspace()">
                                     </td>
-                        
                                 </tr>
                                 <tr>
                                     <td>
@@ -86,7 +83,6 @@
                                     </td>
                                     <td>
                                         <table id="tab3">
-                        
                                             <tr>
                                                 <td>
                                                     <input type="button" value="7"
@@ -205,7 +201,6 @@
                     </ul>                           
                 </li>
             </ul>
-
         </div>
     </div>
     <div id="go-to-top" style="display: none;">
@@ -220,8 +215,9 @@
         </div>
         <div class="gototop">
             <i id="gototop-up" onmousedown="scrolltop();"></i>
+            <span class='totoptip'>返回顶部</span>
+            
         </div>
-
     </div>
     <header>
         <h1>心随你的步调</h1>
@@ -264,39 +260,45 @@
     <div id="main">
         <div id="lside">
             <div id="lsidetop">
-               
                 <!-- 下面的代码是图片滚动的图标 -->
-                <div class="lstop">
-                    <div class="lstop1">
-                        <ul id="imgicon">
-                            <li class="current"></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        
-                        </ul>
-                    </div>
-                    <!-- 底部按钮完成 -->
-                    <div class="lstop2">
-                        <ul>
-                            <li id="preous" class="lstop2-1 fas fa-angle-double-left"></li>
-                            <li id="next" class="lstop2-2 fas fa-angle-double-right"></li>
-                        </ul>
-                    </div>
-                    <!-- 两侧切换图标结束 -->
-                    <!-- 一下为图片内容部分 -->
-                    <div id="imgbox">                       
-                        <ul class="imgturn">
-                            <li class="imgzoom"><img  src="./image/01.jpg" alt=""></li>
-                            <li class="imgzoom"><img  src="./image/02.jpg" alt=""></li>
-                            <li class="imgzoom"><img  src="./image/03.jpg" alt=""></li>                       
-                            <li class="imgzoom"><img  src="./image/04.jpg" alt=""></li>
-                        </ul>
-                                               
-                    </div>
+                <div class="lstop1">
+                    <ul id="imgicon">
+                        <li class="current"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
-
-            </div>    
+                <!-- 底部按钮完成 -->
+                <div class="lstop2">
+                    <ul>
+                        <li id="previous" class="lstop2-1 fas fa-angle-double-left"></li>
+                        <li id="next" class="lstop2-2 fas fa-angle-double-right"></li>
+                    </ul>
+                </div>
+                <!-- 两侧切换图标结束 -->
+                <!-- 一下为图片内容部分 -->
+                <div id="imgbox">
+                    <ul id="imgturn">
+                    
+                        <li class="imgzoom">
+                            <img src="./image/01.jpg" alt="">
+                        </li>
+                        <li class="imgzoom">
+                            <img src="./image/02.jpg" alt="">
+                        </li>
+                        <li class="imgzoom">
+                            <img src="./image/03.jpg" alt="">
+                        </li>
+                        <li class="imgzoom">
+                            <img src="./image/04.jpg" alt="">
+                        </li>
+                        <li class="imgzoom">
+                            <img src="./image/01.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>            
+            </div>
             <div id="focus">
                 <h2 >今日热点</h2>
                 <div id="focus-img">
@@ -309,9 +311,7 @@
                     诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
                     诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
                     诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
-                    
                 </p>               
-                
             </div>
             <table>
                 <tbody>
@@ -329,7 +329,6 @@
                     </tr>
                 </tbody>
             </table>
-
             <article>
                 <h2>
                     第一次Git错误的解决方法
@@ -353,8 +352,6 @@
                     <p>    <span>git commit -m "first commit"</span></p>
                     <p>    <span>git remote add origin 你的ssh地址</span></p>
                     <p>    <span>git push -u origin master</span></p>
-                    
-                    
                 </div>
             </article>
             <article>
@@ -398,9 +395,7 @@
         </div>
         <div id="rside">
             <div class='musicbox'>
-                <span class="su_button_circle">
                 </span>
-                
                 <h2 >音乐分享</h2>
                 <ul>
                     <li >
@@ -416,7 +411,6 @@
             <div style="clear: both"></div>
             <aside>
                 <h2>热门文章</h2>
-                
                 <ul>
                     <li>
                         <a href="#">文章列表</a>
@@ -441,7 +435,7 @@
             </aside>
             <aside>
                 <h2>最新发表</h2>
-                <ul>
+                 <ul>
                     <li>
                         <a href="#">文章列表</a>
                     </li>
@@ -486,9 +480,7 @@
                 </ul>
             </aside>
         </div>
-
     </div>
-    
     <footer>
         <div class="footer_top">
             <h3>
