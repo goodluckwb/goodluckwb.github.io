@@ -9,6 +9,219 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        #max {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #max::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #wrapper {
+            width: 80%;
+            /* background: #333; */
+            margin: 0 auto;
+        }
+
+        #wrapper div {
+            float: left;
+            width: 54%;
+            /* background: red; */
+        }
+
+        #wrapper div:nth-child(2n) {
+            float: right;
+        }
+
+        .timeline-content {
+            display: block;
+            padding: 0 100px 30px 20px;
+            position: relative;
+            /* overflow: hidden; */
+            /* border: 1px solid red; */
+            
+        }
+
+        .timeline-content::after {
+            content: "";
+            width: 80px;
+            height: 100%;
+            border-radius: 40px ;
+            background: #8c51c7;
+            position: absolute;
+            top: 15px;
+            right: 0px;
+            box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637);
+        }
+
+        .timeline-content::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            border-radius: 50% ;
+            background: #fff;
+            border: 10px solid #8c51c7;
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            transform: rotate(45deg);
+            box-sizing: border-box;
+            box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637);
+        }
+
+        #wrapper div:nth-child(2n)::before {
+            left: 25px;
+            right: auto;
+            border-color: #faa400;
+        }
+
+        #wrapper div:nth-child(2n)::after {
+            right: auto;
+            left: 4px;
+            background: #faa400;
+        }
+
+        #wrapper div:nth-child(3n)::before {
+            border-color: #e86c44;
+        }
+
+        #wrapper div:nth-child(3n)::after {
+            background: #e86c44;
+        }
+
+        #wrapper div:nth-child(4n)::before {
+            border-color: #45a137;
+        }
+
+        #wrapper div:nth-child(4n)::after {
+            background: #45a137;
+        }
+
+        #wrapper div:nth-child(2n) {
+            padding: 0 20px 30px 100px;
+        }
+
+        .year {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: 800;
+            color: #fff;
+            position: absolute;
+            line-height: 40px;
+            top: 50%;
+            right: 4px;
+            z-index: 1;
+            transform: rotate(90deg) translateX(-50%);
+        }
+
+        #wrapper div:nth-child(2n) .year {
+            right: auto;
+            left: 4px;
+        }
+
+        #wrapper div:first-child {
+            margin-top: 60px;
+        }
+
+        #wrapper div:last-child {
+            margin-bottom: 60px;
+        }
+
+        #wrapper h3 {
+            font: 22px/30px "微软雅黑";
+            font-weight: 800;
+            background: #8c51c7;
+            padding: 10px 20px 0;
+            color: aliceblue;
+            margin-top: 20px;
+            box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637);
+        }
+
+        #wrapper div:nth-child(2n) h3 {
+            background: #faa400;
+            text-align: right;
+        }
+
+        #wrapper div:nth-child(3n) h3 {
+            background: #e86c44;
+        }
+
+        #wrapper div:nth-child(4n) h3 {
+            background: #45a137;
+        }
+
+        #wrapper p {
+            font: 16px/25px "微软雅黑";
+            padding: 10px 20px 40px;
+            border: 4px solid #8c51c7;
+            border-radius: 0 0 50px 50px;
+            border-top: 10px solid #8c51c7;
+            letter-spacing: 1px;
+            box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637);
+        }
+
+        #wrapper div:nth-child(2n) p {
+            border-color: #faa400;
+        }
+
+        #wrapper div:nth-child(3n) p {
+            border-color: #e86c44;
+        }
+
+        #wrapper div:nth-child(4n) p {
+            border-color: #45a137;
+        }
+
+        .timeline-content i {
+            /* display: inline; */
+            float: right;
+            font-size: 14px;
+        }
+
+        #wrapper div:nth-child(2n) i {
+            float: left;
+        }
+
+
+
+        @media only screen and (max-width: 767px) {
+            #wrapper div {
+                width: 100%;
+                float: none;
+            }
+            .timeline-content::before {
+                right: auto;
+                left: 25px;
+            }
+            .timeline-content::after {
+                left: 4px;
+                right: auto;
+            }
+            #wrapper div:nth-child(2n) {
+                float: none;
+                /* width: 80%; */
+            }
+            .timeline-content {
+                /* width: 80%; */
+                display: block;
+                padding: 0 100px 30px 100px;
+            }
+            .year {
+                left: 4px;
+                right: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -18,10 +231,12 @@
                 <img src="./image/logonew.png" alt="logo" width="100">
             </a>
             <ul class="topleftul">
-                <li><a href="#">Goodluckwb</a></li>               
+                <li>
+                    <a href="#">Goodluckwb</a>
+                </li>
             </ul>
             <ul class="toprightul">
-                <li class="menu-item">                       
+                <li class="menu-item">
                     <span class="fas fa-angle-down others"></span>
                     <a href="#">所有分类</a>
                     <ul class="sub-menu">
@@ -49,10 +264,9 @@
                         <li>
                             <a href="#">音乐分享</a>
                         </li>
-                    </ul>                           
+                    </ul>
                 </li>
             </ul>
-
         </div>
     </div>
     <div id="go-to-top" style="display: none;">
@@ -69,11 +283,12 @@
             <i id="gototop-up" onmousedown="scrolltop();"></i>
             <span class='totoptip'>返回顶部</span>
         </div>
-
     </div>
     <header>
         <h1>心随你的步调</h1>
-        <h4><i>一个平凡人的自语</i></h4>
+        <h4>
+            <i>一个平凡人的自语</i>
+        </h4>
     </header>
     <nav>
         <ul>
@@ -101,34 +316,87 @@
                 <a href="./timeline.html">时间线</a>
                 <span class="fas fa-angle-down home"></span>
             </li>
-        </ul>         
-            <div id="search">
-                <form action="#" method="POST">
-                    <input class="search-input" type="text" name="search" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="搜索">
-                </form>
-            </div>
+        </ul>
+        <div id="search">
+            <form action="#" method="POST">
+                <input class="search-input" type="text" name="search" placeholder="请输入关键字">
+                <input class="search-submit" type="submit" value="搜索">
+            </form>
+        </div>
     </nav>
-    <div id="main">
-       <div id="wrapper">           
-            这是时间线,准备制作中.
-       </div>
+    <div id="max">
+        <div id="wrapper">
+            <!-- <div class='content'> -->
+                <div class='timeline-content'>
+                    <span class="year">2018</span>
+                    <h3>开发历程
+                        <i>8月8日</i>
+                    </h3>
+                    <p> 今天加入了这个时间线,有BUG,目前响应式设计不完善,窗口变化图标会错位^_*, 后续努力改进.
+                    </p>
+                </div>
+            <!-- </div> -->
+            <!-- <div class='content'> -->
+                <div class='timeline-content'>
+                    <span class="year">2018</span>
+                    <h3>开发历程
+                        <i>8月7日</i>
+                    </h3>
+                    <p>更新到v1.14版本,完善首页图片轮播代码,变更了颜色搭配.
+
+                    </p>
+                </div>
+            <!-- </div> -->
+            <!-- <div class='content'> -->
+                <div class='timeline-content'>
+                    <span class="year">2018</span>
+                    <h3>开发历程
+                        <i>8月3日</i>
+                    </h3>
+                    <p>增加一个小计算器,更改子菜单弹出动画和Totop弹出提示.</p>
+                </div>
+            <!-- </div> -->
+            <!-- <div class='content'> -->
+                <div class='timeline-content'>
+                    <span class="year">2018</span>
+                    <h3>开发历程
+                        <i>7月28日</i>
+                    </h3>
+                    <p>增加了电视,方便自己观看体育频道*_*,增加块元素的阴影效果.更改 标题栏效果.
+                    </p>
+                </div>
+            <!-- </div> -->
+            <!-- <div class='content'> -->
+                <div class='timeline-content'>
+                    <span class="year">2018</span>
+                    <h3>开发历程
+                        <i>7月22日</i>
+                    </h3>
+                    <p> 这是我的第一个网页开发,希望以后继续保持,开发更多更好的作品. 我的作品地址:</br><a href="https://goodluckwb.github.io" target="_blank">goodluckwb.github.io</a>
+                         <a href="https://goodluckwb.gitee.io" target="_blank">goodluckwb.gitee.io</a></br>这2个地方更新.
+                    </p>
+                </div>
+            <!-- </div> -->
+        </div>
     </div>
     <footer>
-            <div class="footer_top">
-                <h3>
-                    <span>WeiBin</span> 
-                </h3>    
-            </div>
-            <div class="footer_bottom">
-                <span>
-                版权所有,
-                2018-2020
-                All Rights Reserved.
-                </span>
-                <div class="footer_line"></div>
-            </div>
-        </footer>
+        <div class="footer_top">
+            <h3>
+                <span>WeiBin</span>
+            </h3>
+        </div>
+        <div class="footer_bottom">
+            <span>
+                版权所有, 2018-2020 All Rights Reserved.
+            </span>
+            <div class="footer_line"></div>
+        </div>
+    </footer>
+    <script>
+        var w = document.getElementById('wrapper');
+        console.log(w.children)
+    </script>
+    <script src="./js/main.js"></script>
 </body>
-<script src="./js/main.js"></script>
+
 </html>

@@ -51,7 +51,7 @@ p{
     width: 100%;
     box-sizing: border-box;
     background:#eb018a;
-    z-index: 999;
+    z-index: 1000;
     padding:0 10%;
 }
     #toptitle a{
@@ -68,7 +68,7 @@ p{
         position: relative;
         top: -2px;
         left: 0px;
-        box-shadow: 5px 5px 5px #222222;
+        box-shadow: 5px 5px 5px #2b333b;
         /* border-color: #3F3F3F;
         border-width: 0 5px 5px;
         border-style: solid;
@@ -222,11 +222,13 @@ p{
                         }
             
 header{
-    background: white;
+   
     height: 150px;
     padding: 50px 0 10px;
     box-sizing: border-box;
-    background-image: url(../image/headerl2.jpg);
+    background: url(../image/headerl2.jpg);
+    width: 100%;
+    overflow: hidden;
 }
     header h1,header h4{
         display: block;
@@ -327,8 +329,8 @@ nav{
         color: #f9f9f9;
     }
 #main{
-    width: 1100px;
-    margin: 0 auto;
+    /* width: 1100px; */
+    margin: 0 5%;
 }
     #main::after{
         content: "";
@@ -512,7 +514,7 @@ nav{
             }
             /* 图片切换按钮完成 */
 #rside{
-    width: 275px;
+    width: 300px;
     float: right;
 }
 aside{
@@ -723,10 +725,7 @@ td{
  .desplode-circle{
     animation: desplode 0.5s forwards;
  }
-#wrapper{
-    width: 100%;
-    overflow: hidden;
-}
+
 .current_nav{
     font-size: 14px;
     padding: 10px;
