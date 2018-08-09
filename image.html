@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+    <script src="./js/jquery-3.3.1.min.js"></script>
 </head>
 
 <body onload='imgSwicth()'>
@@ -103,17 +104,17 @@
             </li>
         </ul>         
             <div id="search">
-                <form action="#" method="POST">
-                    <input class="search-input" type="text" name="search" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="搜索">
+                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
+                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="百度">
                 </form>
             </div>
     </nav>
     
+    <div id="bigimg">
+        <img src="./image/07.jpg" alt="" width="100%">
+    </div>
     <div id="wrapper">           
-        <div id="bigimg">
-            <img src="./image/07.jpg" alt="" width="100%">
-        </div>
         <div id="imgtitle">
             <h2 onclick="">精美图片</h2>
         </div>
@@ -165,5 +166,5 @@
     </footer>
 </body>
 <script src="./js/main.js"></script>
-<script src="./js/jquery-3.3.1.js"></script>
+
 </html>

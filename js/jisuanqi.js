@@ -2,12 +2,12 @@ var boo=false;//判断按钮是否被按下
         var result=0;//存储数据
         var ope;//记录前一个计算符
         //定义全局函数
-        function $(x){
+        function A(x){
             return document.getElementById(x);
         }
         //输入框数字叠加处理
        function num(num){
-           var txt=$('txtnum');
+           var txt=A('txtnum');
            //是否有按钮被按下
            if(boo){
                txt.value=num;
@@ -24,7 +24,7 @@ var boo=false;//判断按钮是否被按下
        }
        //输入框小数点的输入
        function dec(){
-           var txt=$('txtnum');
+           var txt=A('txtnum');
            //去重
            if(txt.value.indexOf('.')==-1){
                txt.value+='.';
@@ -33,7 +33,7 @@ var boo=false;//判断按钮是否被按下
        }
        //计算功能
        function compute(op){
-           var onum=$('txtnum').value;
+           var onum=A('txtnum').value;
            if(onum==''){onum=0}
            boo=true;
           switch (ope) {
@@ -66,16 +66,16 @@ var boo=false;//判断按钮是否被按下
                 result=parseFloat(onum);
                   break;
           }
-           $('txtnum').value=result; 
+           A('txtnum').value=result; 
            ope=op;
        }
        //取反
        function zf(){
-            $('txtnum').value*=-1;
+            A('txtnum').value*=-1;
        }
        //退格
        function backspace(){
-           var txt=$('txtnum');
+           var txt=A('txtnum');
            txt.value=txt.value.substring(0,txt.value.length-1);
            if(txt.value==''){
                txt.value=0;
@@ -90,7 +90,7 @@ var boo=false;//判断按钮是否被按下
        }
        //三角函数
        function math(op){
-           var onum=$('txtnum').value;
+           var onum=A('txtnum').value;
            boo=true;
            with(Math){
                switch (op) {
@@ -110,15 +110,6 @@ var boo=false;//判断按钮是否被按下
                    default:result=parseFloat(onum); break;
                }
            }
-           $('txtnum').value=result;
+           A('txtnum').value=result;
        }
     
-//文档中显示与隐藏
-function showJsq(){
-    var div=$('jisuanqi');
-   if( div.style.display=='block'){
-       div.style.display='none';
-   }else{
-       div.style.display="block";
-   }
-}

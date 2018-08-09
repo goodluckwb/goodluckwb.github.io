@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+	<script src="./js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <div id="top">
@@ -20,7 +21,7 @@
             </ul>
             <ul class="toprightul">
                 <li class="menu-item">
-                    <a href="#" onclick="showJsq();">计算器</a>
+                    <a id="click-jsq" href="javascript:void(0);" >计算器</a>
                     <div id="jisuanqi">
                         <table id="tab1">
                                 <tr class="trone">
@@ -172,7 +173,7 @@
                 </li>
                 <li class="menu-item">                       
                     <span class="fas fa-angle-down others"></span>
-                    <a href="#">所有分类</a>
+                    <a href="javascript:void(0);">所有分类</a>
                     <ul class="sub-menu">
                         <li>
                             <a href="#">原创文章</a>
@@ -251,9 +252,9 @@
             </li>
         </ul>         
             <div id="search">
-                <form action="#" method="POST">
-                    <input class="search-input" type="text" name="search" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="搜索">
+                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
+                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="百度">
                 </form>
             </div>
     </nav>
@@ -313,23 +314,9 @@
                     诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
                 </p>               
             </div>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>项目</th>
-                        <th>内容具体描述</th>
-                    </tr>
-                    <tr>
-                        <td>个人爱好</td>
-                        <td> 学习代码编程,平面设计,创建3D模型,视频与特效编辑.</td>
-                    </tr>
-                    <tr>
-                        <td>热门游戏</td>
-                        <td>王者荣耀,绝地求生,英雄联盟</td>
-                    </tr>
-                </tbody>
-            </table>
+            
             <article>
+                <i class="fas fa-angle-double-up"></i>
                 <h2>
                     第一次Git错误的解决方法
                 </h2>
@@ -355,6 +342,7 @@
                 </div>
             </article>
             <article>
+                <i class="fas fa-angle-double-up"></i>
                 <h2>凉州词</h2>
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
@@ -367,6 +355,7 @@
                 </div>
             </article>
             <article>
+                <i class="fas fa-angle-double-up"></i>
                 <h2>枫桥夜泊</h2>
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
@@ -379,6 +368,7 @@
                 </div>
             </article>
             <article>
+                <i class="fas fa-angle-double-up"></i>
                 <h2>送杜少府之任蜀州</h2>
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
@@ -395,11 +385,12 @@
         </div>
         <div id="rside">
             <div class='musicbox'>
-                </span>
+                <span></span>
                 <h2 >音乐分享</h2>
                 <ul>
                     <li >
-                        <h6>只要平凡&nbsp;-&nbsp;张杰&nbsp;张碧晨</h6>
+                        <h6>只要平凡-张杰,张碧晨</h6>
+
                     </li>
                     <li>
                         <audio controls="controls">
@@ -496,9 +487,19 @@
             <div class="footer_line"></div>
         </div>
     </footer>
-    <script src="./js/main.js"></script>
-    <script src="./js/jquery-3.3.1.js"></script>
+    
     <script src="./js/jisuanqi.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/imgturn.js"></script>
+    <script>
+        //计算器消隐与出现
+        
+        $('#click-jsq').click(function(){
+        $('#jisuanqi').slideToggle(500);
+        })
+        // $('#click-jsq').blur(function(){
+        // $('#jisuanqi').slideUp(500);
+        // })
+    </script>
 </body>
 </html>

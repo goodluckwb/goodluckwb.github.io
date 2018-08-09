@@ -1,0 +1,8 @@
+<i class="fas fa-angle-double-up"></i>
+<h2>AJAX异步处理网页文档</h3>
+<div class="fas fa-address-book signature">
+		2018/8/10 author
+</div>
+<div class="artmain">
+	<p>这个实验的文件,看看异步处理能否把文档加载进来.</p>
+</div>

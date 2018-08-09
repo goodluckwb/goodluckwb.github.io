@@ -2,6 +2,12 @@ This is weibin’s person homepage.
 
 Update history
 
+
+v1.15
+1,继续优化页面显示效果,去掉阴影,增加黑色背景.
+2,增加文章折叠和展开代码.
+3,测试一下AJAX能否工作.
+
 v1.14.1
 1,增加时间线页面,尚不完善.
 

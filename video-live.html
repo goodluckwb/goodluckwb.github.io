@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+    <script src="./js/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
@@ -103,9 +104,9 @@
             </li>
         </ul>         
             <div id="search">
-                <form action="#" method="POST">
-                    <input class="search-input" type="text" name="search" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="搜索">
+                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
+                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="百度">
                 </form>
             </div>
     </nav>
@@ -135,7 +136,7 @@
 
             </div>
            <div class="videoiframe">
-              <iframe name="play" width="100%" height="100%" id="player" 
+              <iframe name="play" width="100%" height="100%" id="player" controls="controls"
               src="http://player.cntv.cn/standard/live_HLSDRM20180618.swf?ChannelID=cctv5&amp;videoTVChannel=cctv5&amp;P2PChannelID=pd://cctv_p2p_hdcctv5&amp;VideoName=cctv5&amp;channelID=cctv5&amp;BannerWidth=600&amp;BannerInterval=20&amp;playBackType=common&amp;ruleVisible=true&amp;languageXml=&amp;configURL=http://player.cntv.cn/flashplayer/config/WebHDSPlayerConfig.xml&amp;referrer=&amp;fingerprint=Fingerprint&amp;wmode=opaque&amp;quality=high" border="0" frameborder="0" scrolling="auto" allowtransparency="true">
               </iframe> 
            </div>
@@ -156,6 +157,21 @@
                 <div class="footer_line"></div>
             </div>
         </footer>
+        <script>
+            // 直播切换频道
+            function changechannel(test){   
+                var channel=document.getElementsByClassName("channeltab");
+                var iframe=document.getElementById("player");
+                    if (test=="channel[0]"){
+                        iframe.src="http://player.cntv.cn/standard/live_HLSDRM20180618.swf?ChannelID=cctv5&amp;videoTVChannel=cctv5&amp;P2PChannelID=pd://cctv_p2p_hdcctv5&amp;VideoName=cctv5&amp;channelID=cctv5&amp;BannerWidth=600&amp;BannerInterval=20&amp;playBackType=common&amp;ruleVisible=true&amp;languageXml=&amp;configURL=http://player.cntv.cn/flashplayer/config/WebHDSPlayerConfig.xml&amp;referrer=&amp;fingerprint=Fingerprint&amp;wmode=opaque&amp;quality=high";            
+                    }else if (test=="channel[1]"){
+                        iframe.src="http://liveshare.huya.com/11352944/huyacoop.swf";
+                    }else if (test=="channel[2]"){
+                        iframe.src="http://liveshare.huya.com/11342384/huyacoop.swf";
+                    }
+            }
+
+        </script>
+        <script src="./js/main.js"></script>
 </body>
-<script src="./js/main.js"></script>
 </html>

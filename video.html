@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+    <script src="./js/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
@@ -103,15 +104,30 @@
             </li>
         </ul>         
             <div id="search">
-                <form action="#" method="POST">
-                    <input class="search-input" type="text" name="search" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="搜索">
+                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
+                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="百度">
                 </form>
             </div>
     </nav>
     <div id="main">
        <div id="wrapper">           
-            这是视频子页面,准备制作中...
+        <table>
+            <tbody>
+                <tr>
+                    <th>项目</th>
+                    <th>内容具体描述</th>
+                </tr>
+                <tr>
+                    <td>个人爱好</td>
+                    <td> 学习代码编程,平面设计,创建3D模型,视频与特效编辑.</td>
+                </tr>
+                <tr>
+                    <td>热门游戏</td>
+                    <td>王者荣耀,绝地求生,英雄联盟</td>
+                </tr>
+            </tbody>
+        </table>
        </div>
     </div>
     <footer>
@@ -129,6 +145,6 @@
                 <div class="footer_line"></div>
             </div>
         </footer>
+        <script src="./js/main.js"></script>
 </body>
-<script src="./js/main.js"></script>
 </html>
