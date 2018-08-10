@@ -1,8 +1,10 @@
-<i class="fas fa-angle-double-up"></i>
-<h2>AJAX异步处理网页文档</h3>
+<h2>AJAX异步处理网页文档</h2>
 <div class="fas fa-address-book signature">
 		2018/8/10 author
 </div>
+<div class="h2db"></div>
 <div class="artmain">
-	<p>这个实验的文件,看看异步处理能否把文档加载进来.</p>
+	<p>这是个实验性的文件,看看异步处理能否把文档加载进来.</p>
+	<p>经测试可用,这下好了啦,以后更新文章就方便太多了.</p>
+	<p>亲们可以直接点击右边的文章列表进行文章切换.</p>
 </div>

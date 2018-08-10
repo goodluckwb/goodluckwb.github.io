@@ -49,13 +49,20 @@ h2::after{
     box-sizing: border-box;
     z-index: 9;
 }
+.h2db{
+    width: 100%;
+    height: 3px;
+    background: #2d3f61;
+    position: relative;
+    top:-3px;
+}
 h3 {
     display: inline-block;
     font: 22px/30px "微软雅黑";
     font-weight: 800;
     /* background: #8c51c7; */
     padding: 10px 20px ;
-    color: #8c51c7;
+    color: #2d3f61;
     
     /* box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637); */
     
@@ -606,11 +613,12 @@ article{
     padding-top: 10px;
     /* background: linear-gradient(rgba(255,255,255,0.5) ,rgba(255, 200, 200, 0.5)); */
     margin-bottom: 20px;
-    border-bottom: 1px solid #ffe6ad;
+    /* border-bottom: 1px solid #ffe6ad; */
     font-size: 16px;   
     /* border: 1px solid red; */
     /* box-shadow: 5px 5px 5px #b99696e5; */
 }
+
 article i::before{
     /* font-family:"FontAwesome"; */
     /* content: "\f103"; */
@@ -623,11 +631,12 @@ article i::before{
     border-style: solid;
     position: absolute;
     right: 5px;
-    top:10px;
+    top:20px;
     border-width: 2px;
     z-index:100;
     font-size: 20px;
     text-align: center;
+    cursor: pointer;
 }
 .artmain{
     margin: 20px;
@@ -640,7 +649,7 @@ article p{
     color:#F3A92A;
     font-size: 12px;
     padding-left: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;  
 }
     article span{
         padding: 0 4px;
@@ -681,7 +690,7 @@ td{
     
     width: 100%;
     /* height: 300px; */
-    border-bottom: 2px solid #b3b3b3;
+    /* border-bottom: 2px solid #b3b3b3; */
     box-sizing: border-box;
     margin: 10px 0;
     padding: 0px;
@@ -714,7 +723,7 @@ td{
     box-sizing: border-box;
     /* border-top: 5px solid #01B1EB; */
     /* box-shadow: 5px 5px 5px #b99696e5;    */
-    border-bottom: 1px solid #01B1EB;
+    /* border-bottom: 1px solid #01B1EB; */
 }
 .musicbox h6{
     font: 800 14px/22px '宋体','微软雅黑';
@@ -733,8 +742,8 @@ td{
     height: 0px;
     line-height: 14px; 
     position: absolute;
-    left: 180px;
-    top:  30px;
+    right: 0px;
+    top:  50px;
 }
 .su_button_circle{
     background-color: red;
@@ -822,15 +831,15 @@ td{
     margin-bottom: 20px;
 }
 .musicbox:hover,aside:hover,article:hover{
-    /* border-top: 5px solid #eb018a; */
+    /* border-left: 5px solid gray; */
     /* background: linear-gradient(white,#f16bb980); */
     /* border-radius: 10px; */
-    box-shadow: 5px 5px 5px #b99696e5;
+    /* box-shadow: 5px 5px 5px #b99696e5; */
     transform: translate3d(5,5,10);
     transition: all .2s;
 }
 table:hover,#lsidetop:hover,#focus:hover{
-    box-shadow: 5px 5px 5px #b99696e5;
+    /* box-shadow: 5px 5px 5px #b99696e5; */
     transform: translate3d(5,5,10);
     transition: all .2s;    
 }

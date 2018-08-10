@@ -41,12 +41,11 @@ $(document).ready(function(){
         if($pp.css('display')=='block'){
 
             $pp.hide(500);
-            $(this).removeClass('fa-angle-double-up');
-            $(this).addClass('fa-angle-double-down');
+            $(this).removeClass('fa-angle-double-up').addClass('fa-angle-double-down');            
         }else{
             $pp.show(500);
-            $(this).removeClass('fa-angle-double-down');
-            $(this).addClass('fa-angle-double-up');
+            $(this).removeClass('fa-angle-double-down').addClass('fa-angle-double-up');
+            
         }
         
     })
