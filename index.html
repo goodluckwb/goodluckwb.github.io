@@ -20,155 +20,11 @@
                 <li><a href="#">goodluckwb</a></li>               
             </ul>
             <ul class="toprightul">
+                <li id="stock"></li>
                 <li class="menu-item">
                     <a id="click-jsq" href="javascript:void(0);" >计算器</a>
                     <div id="jisuanqi">
-                        <table id="tab1">
-                                <tr class="trone">
-                                    <td colspan="2">
-                                        <input type="text" name="" id="txtnum" value="0">
-                                    </td>
-                                    <td>
-                                        <input type="button" value="清除" onclick="txtnum.value=0;result=0;">
-                                        <input type="button" value="退格" onclick="backspace()">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <table id="tab2">
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="sin" onclick="math('sin')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="cos" onclick="math('cos')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="tan" onclick="math('tan')">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="asin" onclick="math('asin')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="acos" onclick="math('acos')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="atan" onclick="math('atan')">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="PI" onclick="math('PI')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="1/x" onclick="math('1/x')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="exp" onclick="math('exp')">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="lnx" onclick="math('lnx')"> 
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="lgx" onclick="math('lgx')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="n!" onclick="math('n!')">
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table id="tab3">
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="7"
-                                                    onclick="num(7)">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="8" onclick="num(8)">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="9" onclick="num(9)">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="4" onclick="num(4)">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="5" onclick="num(5)">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="6" onclick="num(6)">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="1" onclick="num(1)">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="2" onclick="num(2)">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="3" onclick="num(3)">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="0" onclick="num(0)">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="." onclick="dec()">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="=" onclick="compute('=')">
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table id="tab4">
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="+" onclick="compute('+')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="取整" onclick="compute('i')">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="-" onclick="compute('-')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="取余" onclick="compute('%')">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="*" onclick="compute('*')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="x^y" onclick="compute('x^y')">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="/" onclick="compute('/')">
-                                                </td>
-                                                <td>
-                                                    <input type="button" value="+/-" onclick="zf()">
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                        </table>
+
                     </div>
                 </li>
                 <li class="menu-item">                       
@@ -302,7 +158,6 @@
             </div>
             <div id="focus">
                 <h2 >今日热点</h2>
-                <div class="h2db"></div>
                 <div id="focus-img">
                     <a href="#">
                         <img src="./image/07.jpg" alt=""> 
@@ -322,7 +177,6 @@
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
                 </div>
-                <div class="h2db"></div>
                 <div class="artmain">                  
                     <p>    Step1.直接在你git的命令行窗口输入：<span> remote remove origin</span>.</p>
                     <p>    Step2.把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。</p>                     
@@ -347,7 +201,6 @@
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
                 </div>
-                <div class="h2db"></div>
                 <div class="artmain">
                     <p>
                         葡萄美酒夜光杯，欲饮琵琶马上催。
@@ -361,7 +214,6 @@
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
                 </div>
-                <div class="h2db"></div>
                 <div class="artmain">
                     <p>
                         月落乌啼霜满天，江枫渔火对愁眠。
@@ -375,7 +227,6 @@
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
                 </div>
-                <div class="h2db"></div>
                 <div class="artmain">
                     <p>
                         城阙辅三秦，风烟望五津。
@@ -387,18 +238,25 @@
             </article>
         </div>
         <div id="rside">
-            <div class='musicbox'>
+            <div id='musicbox'>
                 <span></span>
                 <h2 >音乐分享</h2>
-                <div class="h2db"></div>
                 <ul>
                     <li >
-                        <h6>只要平凡-张杰,张碧晨</h6>
-
+                        <h6 id="musictitle"></h6>
                     </li>
-                    <li>
-                        <audio controls="controls">
-                            <source src="http://www.ytmp3.cn/down/49821.mp3">
+                    <li id="musiccover">
+                        <img src="./image/09.jpg" alt="">
+                    </li>
+                    <li id="musiccontrol">
+                        <div>
+                            <span id="musicprevious" class="normal"></span>
+                            <span id="musicnext" class="normal"></span>
+                            <span id="musicplay" class="normal"></span>
+                        </div>
+                    </li>
+                    <li >
+                        <audio>                           
                         </audio>
                     </li>
                 </ul>
@@ -406,7 +264,6 @@
             <div style="clear: both"></div>
             <aside>
                 <h2>热门文章</h2>
-                <div class="h2db"></div>
                 <ul>
                     <li>
                         <a href="#">文章列表</a>
@@ -431,7 +288,6 @@
             </aside>
             <aside>
                 <h2>最新发表</h2>
-                <div class="h2db"></div>
                  <ul>
                     <li>
                         <a href="#">文章列表</a>
@@ -455,7 +311,6 @@
             </aside>
             <aside>
                 <h2>热门视频</h2>
-                <div class="h2db"></div>
                 <ul>
                     <li>
                         <a href="#">如何用Git管理版本</a>

@@ -1,0 +1,146 @@
+<table id="tab1">
+    <tr class="trone">
+        <td colspan="2">
+            <input type="text" name="" id="txtnum" value="0">
+        </td>
+        <td>
+            <input type="button" value="清除" onclick="txtnum.value=0;result=0;">
+            <input type="button" value="退格" onclick="backspace()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table id="tab2">
+                <tr>
+                    <td>
+                        <input type="button" value="sin" onclick="math('sin')">
+                    </td>
+                    <td>
+                        <input type="button" value="cos" onclick="math('cos')">
+                    </td>
+                    <td>
+                        <input type="button" value="tan" onclick="math('tan')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="asin" onclick="math('asin')">
+                    </td>
+                    <td>
+                        <input type="button" value="acos" onclick="math('acos')">
+                    </td>
+                    <td>
+                        <input type="button" value="atan" onclick="math('atan')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="PI" onclick="math('PI')">
+                    </td>
+                    <td>
+                        <input type="button" value="1/x" onclick="math('1/x')">
+                    </td>
+                    <td>
+                        <input type="button" value="exp" onclick="math('exp')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="lnx" onclick="math('lnx')"> 
+                    </td>
+                    <td>
+                        <input type="button" value="lgx" onclick="math('lgx')">
+                    </td>
+                    <td>
+                        <input type="button" value="n!" onclick="math('n!')">
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table id="tab3">
+                <tr>
+                    <td>
+                        <input type="button" value="7"
+                        onclick="num(7)">
+                    </td>
+                    <td>
+                        <input type="button" value="8" onclick="num(8)">
+                    </td>
+                    <td>
+                        <input type="button" value="9" onclick="num(9)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="4" onclick="num(4)">
+                    </td>
+                    <td>
+                        <input type="button" value="5" onclick="num(5)">
+                    </td>
+                    <td>
+                        <input type="button" value="6" onclick="num(6)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="1" onclick="num(1)">
+                    </td>
+                    <td>
+                        <input type="button" value="2" onclick="num(2)">
+                    </td>
+                    <td>
+                        <input type="button" value="3" onclick="num(3)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="0" onclick="num(0)">
+                    </td>
+                    <td>
+                        <input type="button" value="." onclick="dec()">
+                    </td>
+                    <td>
+                        <input type="button" value="=" onclick="compute('=')">
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table id="tab4">
+                <tr>
+                    <td>
+                        <input type="button" value="+" onclick="compute('+')">
+                    </td>
+                    <td>
+                        <input type="button" value="取整" onclick="compute('i')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="-" onclick="compute('-')">
+                    </td>
+                    <td>
+                        <input type="button" value="取余" onclick="compute('%')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="*" onclick="compute('*')">
+                    </td>
+                    <td>
+                        <input type="button" value="x^y" onclick="compute('x^y')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="/" onclick="compute('/')">
+                    </td>
+                    <td>
+                        <input type="button" value="+/-" onclick="zf()">
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

@@ -2,7 +2,6 @@
 <div class="fas fa-address-book signature">
 		2018/8/10 author
 </div>
-<div class="h2db"></div>
 <div class="artmain">
 	<p>这是个实验性的文件,看看异步处理能否把文档加载进来.</p>
 	<p>经测试可用,这下好了啦,以后更新文章就方便太多了.</p>
