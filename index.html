@@ -13,6 +13,7 @@
 <body>
     <div id="top">
         <div id="toptitle">
+            <span id="publicmenu"></span>
             <a href="./index.html">
                 <img src="./image/logonew.png" alt="logo" width="100">
             </a>
@@ -20,7 +21,11 @@
                 <li><a href="#">goodluckwb</a></li>               
             </ul>
             <ul class="toprightul">
-                <li id="stock"></li>
+                <li id="stock">
+                    <ul id="current_price">
+
+                    </ul>
+                </li>
                 <li class="menu-item">
                     <a id="click-jsq" href="javascript:void(0);" >计算器</a>
                     <div id="jisuanqi">
@@ -142,7 +147,7 @@
                             <img src="./image/01.jpg" alt="">
                         </li>
                         <li class="imgzoom">
-                            <img src="./image/02.jpg" alt="">
+                            <img  src="https://c.s-microsoft.com/zh-cn/CMSImages/Surface_Book2_Overview_1_Imageintro_V2.png.jpg?version=f207dd01-2160-1c62-66b4-a240f170f87b" alt="">
                         </li>
                         <li class="imgzoom">
                             <img src="./image/03.jpg" alt="">
@@ -261,7 +266,13 @@
                     </li>
                 </ul>
             </div>
-            <div style="clear: both"></div>
+            <div id="weather">
+                <h2 >天气预报</h2>
+                <select id="select-city"><option>苏州</option><option>商丘</option><option>上海</option></select>
+                <span></span>
+                <ul>
+                </ul>
+            </div>
             <aside>
                 <h2>热门文章</h2>
                 <ul>
