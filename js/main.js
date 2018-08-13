@@ -47,7 +47,7 @@ $(document).ready(function () {
     //自动加载刷新股票
     function refreshPrice() {
         var x = ['1000651', '1000333', '0600690'];
-        var url = 'http://api.money.126.net/data/feed/';
+        var url = 'https://api.money.126.net/data/feed/';
         for (let i = 0; i < x.length; i++) {
             url = url + x[i] + ',';
         }     
@@ -75,16 +75,19 @@ $(document).ready(function () {
     var
         play = $('#musicplay'),
         music = $('audio')[0];
-    pre = $('#musicprevious'),
+        pre = $('#musicprevious'),
         next = $('#musicnext'),
         title = $('#musictitle'),
-        cover = $('#musiccover');
+        cover = $('#musiccover'),
+        wyurl="https://music.163.com/song/media/outer/url?id=";
     var obj = {
         "sites": [
-            { 'title': '只要平凡', 'name': '张杰 张碧晨', 'url': 'http://www.ytmp3.cn/down/49821.mp3' },
-            { 'title': 'I Do', 'name': '911', 'url': 'http://www.ytmp3.cn/down/50636.mp3' },
-            { 'title': '我好像在哪见过你', 'name': '薛之谦', 'url': 'http://www.ytmp3.cn/down/48544.mp3' },
-            { 'title': 'You Say', 'name': 'Lauren Daigle', 'url': 'http://music.163.com/song/media/outer/url?id=575015416.mp3' }
+            { 'title': '只要平凡', 'name': '张杰 张碧晨', 'url': wyurl+'574919767' },
+            { 'title': 'I Do', 'name': '911', 'url': wyurl+'28256115' },
+            { 'title': '我好像在哪见过你', 'name': '薛之谦', 'url': wyurl+'417859631' },
+            { 'title': 'You Say', 'name': 'Lauren Daigle', 'url': wyurl+'575015416' },
+            { 'title': '致青春', 'name': '王菲', 'url': wyurl+'27588992' },
+            { 'title': '半壶纱', 'name': '刘珂矣', 'url': wyurl+'28793140' }
         ]
     }
     var mt = obj.sites[0].title + ' / ' + obj.sites[0].name;
@@ -122,55 +125,83 @@ $(document).ready(function () {
     })
     //设置风格
     //天气预报
-    var
-        url = "http://wthrcdn.etouch.cn/weather_mini",
-        cityid = ['101190401', '101181001', '101020100'];
+    
+    
     $('#select-city').change(function () {
         switch ($(this).val()) {
             case "苏州":
-                citykeyv = "101190401";
+                citykey = "320500";
                 break;
             case "商丘":
-                citykeyv = "101181001";
+                citykey = "411400";
                 break;
             case "上海":
-                citykeyv = "101020100";
+                citykey = "310000";
                 break;
         }
+        tianQi(citykey);
+    })
+    
+    function tianQi(location,type,el){
+        var   url = "https://restapi.amap.com/v3/weather/weatherInfo";
         $.ajax({
             url: url,
-            dataType: 'json',
-            type: 'get',
+            dataType: 'jsonp',
+            type: type,
             data: {
-                citykey: citykeyv
+                key: "dfb9a576fbcb2c9a13a65ab736e47004",
+                city: location,
+                extensions: "all"
             },
+            jsonp:'callback',
             success: function (we) {
-                var todaywe = we.data.forecast[0];
-                var todayda = todaywe.date;
-                var todayrq = todayda.substr(0, 3);
-                var todayxq = todayda.substr(3, 3);
+                var todaywe = we.forecasts[0].casts[0];
                 var date = new Date();
                 var month = date.getMonth() + 1;
+                var todayrq = date.getDate();
+                var todayxq = date.getDay();
                 var lili = $('#weather ul');
-                var fengli1 = todaywe.fengli.substring(9, todaywe.fengli.length - 3);
-                var ganmao = we.data.ganmao;
+                var fengli1 = todaywe.daypower;
                 lili.empty();
-                $("#weather span").css({ "display": 'block', "width": "40%", "float": "right", "color": "#01B1EB", 'text-align': 'right' })
-                    .html(month + '月' + todayrq + " " + todayxq);
-                var first = '今日:' + todaywe.high + " " + todaywe.low
-                    + " " + todaywe.fengxiang + " " + fengli1 + ' ' + todaywe.type + ' ' + ganmao
-                lili.append(first).css({ 'color': '#eb018a', 'font-siz': '16px' });
-                var wei = we.data.forecast;
+                $("#weather i").html(month + '月' + todayrq + " 星期" + todayxq +" "+we.forecasts[0].city);
+                var first = '<li>今日:高' + todaywe.daytemp + "°C 低" + todaywe.nighttemp
+                    + "°C " + todaywe.daywind + "风 " + fengli1 + '级 ' + todaywe.dayweather+'</li>';
+                lili.append(first).css({ 'color': '#eb018a', 'font-size': '14px',"border-bottom":""});
+                var wei = we.forecasts[0].casts;
                 for (let i = 1; i < wei.length; i++) {
-                    var fengli = wei[i].fengli;
-                    var qfl = fengli.substring(9, fengli.length - 3);
-                    var forewe = "<li><span>" + wei[i].date.substr(0, 3) + " </span><span>" + wei[i].high.substr(3, 6) +
-                        "</span><span> " + wei[i].low.substr(3, 6) + "</span><span> " +
-                        wei[i].fengxiang + "</span><span> " + qfl + "</span><span> " + wei[i].type + "</span></li>"
+                    var forewe = "<li><span>" + wei[i].date.substr(6,10) + " </span><span>高" + wei[i].daytemp +
+                        "°C </span><span>低 " + wei[i].nighttemp+ "°C </span><span>" +
+                        wei[i].daywind + "风</span><span>" + wei[i].daypower + "级</span><span> " + wei[i].dayweather + "</span></li>"
                     lili.append(forewe);
                 }
             }
         })
-    })
-    $('#select-city').change();
+    }
+   tianQi('苏州','post','.box1');
+   $("#input-city").change(function(){
+       tianQi($(this).val(),'post','.box1');
+   })
+
+   //publicmenu done.
+   $("#public-menu").click(function(){
+       $("#public-menu-content").slideToggle(500);
+       
+   })
+   $("#public-menu-content").mouseleave(function(){
+        $("#public-menu-content").slideUp(500);
+       
+   })
+   $("#public-menu-content div").click(function(){
+    $("#public-menu-content div ul").slideToggle(500);
+   })
+
+   
+
+
+
+
+
+
+
+
 })

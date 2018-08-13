@@ -11,9 +11,30 @@
 	<script src="./js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
+    <section id="public-menu-content">
+        <div style="background: #ffffff">
+            <p>菜单1</p>
+            <ul>
+                <li>这是内容一部分</li>
+                <li>这是内容一部分</li>
+            </ul>
+        </div>
+        <div style="background: #3944dd">   
+            <p>菜单2</p>
+            <ul >
+                <li>这是另一个部分</li>
+                <li>这是另一个部分</li>
+                <li>这是另一个部分</li>
+            </ul>
+        </div>
+        <p>这可以是一段文字</p>
+        
+        
+        
+    </section>
     <div id="top">
         <div id="toptitle">
-            <span id="publicmenu"></span>
+            <span id="public-menu"></span>
             <a href="./index.html">
                 <img src="./image/logonew.png" alt="logo" width="100">
             </a>
@@ -268,8 +289,15 @@
             </div>
             <div id="weather">
                 <h2 >天气预报</h2>
-                <select id="select-city"><option>苏州</option><option>商丘</option><option>上海</option></select>
-                <span></span>
+                <span id="weather-cityname"></span>
+                <form action="javascript:tianQi();" method="post" target="">
+                    <input id="input-city" type="text" list="allcity" placeholder="请输入城市如:苏州">
+                    <datalist id="allcity">
+                        <option value="苏州"><option value="商丘"><option value="上海">
+                    </datalist>
+                    
+                </form>
+                <i></i>
                 <ul>
                 </ul>
             </div>
@@ -345,6 +373,7 @@
             </aside>
         </div>
     </div>
+    
     <footer>
         <div class="footer_top">
             <h3>
