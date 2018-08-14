@@ -1,9 +1,13 @@
-#This is weibin’s personal homepage.
+This is weibin’s personal homepage.
 ===
 ## Update history
 ---
+### v1.16.3
+>* 增加颜色主题切换.
+>* 搭建主菜单框架.
+>* 搭建底部音乐条框架.
 
-### v.16.2
+### v1.16.2
 > 1. 更改天气源,现在输入城市名可以直接查询.
 > 2. 更改音乐盒源,播放更流畅.
 

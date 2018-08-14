@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
+    <link rel="icon" href="./image/logonew.png" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
@@ -16,7 +17,7 @@
     <div id="top">
         <div id="toptitle">
             <a href="">
-                <img src="./image/logonew.png" alt="logo" width="100">
+                <img src="./image/logonew2.png" alt="logo" width="100">
             </a>
             <ul class="topleftul">
                 <li><a href="#">Goodluckwb</a></li>               
@@ -165,6 +166,30 @@
             </div>
     </footer>
 </body>
-<script src="./js/main.js"></script>
-
+<script src="./js/common.js"></script>
+<script>
+    //图片分页用大图轮播
+    //定义方法函数
+    function imgSwicth() {
+        var d = document.getElementById("bigimg").firstElementChild;
+        var k = 0
+        var imgsrc = new Array();
+        imgsrc[0] = "./image/01.jpg";
+        imgsrc[1] = "./image/02.jpg";
+        imgsrc[2] = "./image/03.jpg";
+        imgsrc[3] = "./image/04.jpg";
+        imgsrc[4] = "./image/05.jpg";
+        setInterval(function () {
+            if (k > imgsrc.length - 1) {
+                k = 0;
+            }
+            for (var i = 0; i < imgsrc.length; i++) {
+                if (i == k) {
+                    d.src = imgsrc[i];
+                }
+            }
+            k++;
+        }, 3000)
+    }
+</script>
 </html>

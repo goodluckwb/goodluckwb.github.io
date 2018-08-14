@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
+    <link rel="icon" href="./image/logonew.png" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
@@ -27,19 +28,27 @@
                 <li>这是另一个部分</li>
             </ul>
         </div>
-        <p>这可以是一段文字</p>
-        
-        
-        
+        <p>这可以是一段文字</p>   
     </section>
     <div id="top">
         <div id="toptitle">
             <span id="public-menu"></span>
             <a href="./index.html">
-                <img src="./image/logonew.png" alt="logo" width="100">
+                <img src="./image/logonew2.png" alt="logo" width="100">
             </a>
             <ul class="topleftul">
-                <li><a href="#">goodluckwb</a></li>               
+                <li><a href="#">goodluckwb</a></li>
+                <li>                   
+                    <select name="changecolor" id="theme">
+                        <option value="喜红">喜红</option>
+                        <option value="深蓝">深蓝</option>
+                        <option value="豆绿">豆绿</option>
+                        <option value="橙色">橙色</option>
+                        <option value="夜色">夜色</option>
+                        <option value="紫色">紫色</option>
+                    </select>
+                </li>
+
             </ul>
             <ul class="toprightul">
                 <li id="stock">
@@ -141,6 +150,14 @@
             </div>
     </nav>
     <div id="main">
+        <section id="silder-music">
+        
+        
+            <div id="silder-music-content"></div>
+        
+            <div id="silder-music-show"></div>
+        
+        </section>
         <div id="lside">
             <div id="lsidetop">
                 <!-- 下面的代码是图片滚动的图标 -->
@@ -393,15 +410,6 @@
     <script src="./js/jisuanqi.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/imgturn.js"></script>
-    <script>
-        //计算器消隐与出现
-        
-        $('#click-jsq').click(function(){
-        $('#jisuanqi').slideToggle(500);
-        })
-        // $('#click-jsq').blur(function(){
-        // $('#jisuanqi').slideUp(500);
-        // })
-    </script>
+    <script src="./js/common.js"></script>
 </body>
 </html>

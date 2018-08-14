@@ -1,35 +1,3 @@
-//返回顶部
-window.onscroll = function () {
-    var totop = document.getElementById("go-to-top");
-    var sc = document.documentElement.scrollTop || document.body.scrollTop;
-    totop.style.display = sc > 100 ? "block" : "none";
-}
-function scrolltop() {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-}
-//图片分页用大图轮播
-//定义方法函数
-function imgSwicth() {
-    var d = document.getElementById("bigimg").firstElementChild;
-    var k = 0
-    var imgsrc = new Array();
-    imgsrc[0] = "./image/01.jpg";
-    imgsrc[1] = "./image/02.jpg";
-    imgsrc[2] = "./image/03.jpg";
-    imgsrc[3] = "./image/04.jpg";
-    imgsrc[4] = "./image/05.jpg";
-    setInterval(function () {
-        if (k > imgsrc.length - 1) {
-            k = 0;
-        }
-        for (var i = 0; i < imgsrc.length; i++) {
-            if (i == k) {
-                d.src = imgsrc[i];
-            }
-        }
-        k++;
-    }, 3000)
-}
 $(document).ready(function () {
     //文章点击按钮展开和收缩功能
     $("article i.fas").click(function () {
@@ -42,8 +10,12 @@ $(document).ready(function () {
             $(this).removeClass('fa-angle-double-down').addClass('fa-angle-double-up');
         }
     });
-    //加载计算器
+    //加载计算器    
     $('#jisuanqi').load("./source/html/jisuanqi.html");
+    //计算器消隐与出现       
+    $('#click-jsq').click(function(){
+        $('#jisuanqi').slideToggle(500);
+    })
     //自动加载刷新股票
     function refreshPrice() {
         var x = ['1000651', '1000333', '0600690'];
@@ -62,7 +34,7 @@ $(document).ready(function () {
             for (let i = 0; i < x.length; i++) {
                 let price = "<li>" + data[x[i]].name + " " + data[x[i]].price + " " + (data[x[i]].percent * 100).toFixed(2) + '%' + data[x[i]].arrow + "</li>"
                 $("#current_price").append(price);
-                $("#current_price li").css({ "display": "inline-block", "margin-right": "5px", "font-weight": "500","font-size": "12px" })
+    
                 $("#current_price li")[i].style.color = data[x[i]].percent < 0 ? "#00FF00" : "#FF0000";
             }
         }).fail((xhr, status) => {
@@ -166,7 +138,7 @@ $(document).ready(function () {
                 $("#weather i").html(month + '月' + todayrq + " 星期" + todayxq +" "+we.forecasts[0].city);
                 var first = '<li>今日:高' + todaywe.daytemp + "°C 低" + todaywe.nighttemp
                     + "°C " + todaywe.daywind + "风 " + fengli1 + '级 ' + todaywe.dayweather+'</li>';
-                lili.append(first).css({ 'color': '#eb018a', 'font-size': '14px',"border-bottom":""});
+                lili.append(first);
                 var wei = we.forecasts[0].casts;
                 for (let i = 1; i < wei.length; i++) {
                     var forewe = "<li><span>" + wei[i].date.substr(6,10) + " </span><span>高" + wei[i].daytemp +
@@ -194,14 +166,10 @@ $(document).ready(function () {
    $("#public-menu-content div").click(function(){
     $("#public-menu-content div ul").slideToggle(500);
    })
-
+   $("#silder-music-show").click(function(){
+       $("#silder-music-content").animate({'width':'toggle'},1000)
+   })
    
-
-
-
-
-
-
-
+   
 
 })

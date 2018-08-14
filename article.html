@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
+    <link rel="icon" href="./image/logonew.png" type="image/x-icon"/>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <script src="./js/jquery-3.3.1.min.js"></script>
+
     <style>
         #wrapper{
             width: 75%;
@@ -22,10 +24,20 @@
     <div id="top">
         <div id="toptitle">
             <a href="">
-                <img src="./image/logonew.png" alt="logo" width="100">
+                <img src="./image/logonew2.png" alt="logo" width="100">
             </a>
             <ul class="topleftul">
-                <li><a href="#">Goodluckwb</a></li>               
+                <li><a href="#">Goodluckwb</a></li> 
+                <li>                   
+                    <select name="changecolor" id="theme">
+                        <option value="喜红">喜红</option>
+                        <option value="深蓝">深蓝</option>
+                        <option value="豆绿">豆绿</option>
+                        <option value="橙色">橙色</option>
+                        <option value="夜色">夜色</option>
+                        <option value="紫色">紫色</option>
+                    </select>
+                </li>              
             </ul>
             <ul class="toprightul">
                 <li class="menu-item">                       
@@ -145,7 +157,7 @@
                         <a href="javascript:">CSS中使用变量</a>
                     </li>
                     <li>
-                        <a href="javascript:">文章列表</a>
+                        <a href="javascript:">图片lazyload的方法</a>
                     </li>
                     <li>
                         <a href="javascript:">文章列表</a>
@@ -172,7 +184,7 @@
                 <div class="footer_line"></div>
             </div>
         </footer>
-        <script src="./js/main.js"></script>
+        <script src="./js/common.js"></script>
         <script>
             var $li=$('#listswitch li');
             var $con=$('article');
@@ -195,7 +207,7 @@
                         $con.load("./source/txt/180811-02.txt");
                     });
                     $li.eq(5).click(function () {
-                        $con.load("./source/txt/.txt");
+                        $con.load("./source/html/lazyload.html");
                     });
                     $li.eq(6).click(function () {
                         $con.load("./source/txt/.txt");
@@ -203,6 +215,8 @@
                     $li.eq(7).click(function () {
                         $con.load("./source/txt/.txt");
                     });
+                                       
+                    
                 });
         </script>
 </body>
