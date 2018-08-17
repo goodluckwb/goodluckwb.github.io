@@ -32,7 +32,7 @@ $(document).ready(function () {
         }).done((data) => {
             $("#current_price").empty();
             for (let i = 0; i < x.length; i++) {
-                let price = "<li>" + data[x[i]].name + " " + data[x[i]].price + " " + (data[x[i]].percent * 100).toFixed(2) + '%' + data[x[i]].arrow + "</li>"
+                let price = "<li><span>"+(i+1)+'</span> ' + data[x[i]].name + " " + data[x[i]].price + " " + (data[x[i]].percent * 100).toFixed(2) + '%' + data[x[i]].arrow + "</li>"
                 $("#current_price").append(price);
     
                 $("#current_price li")[i].style.color = data[x[i]].percent < 0 ? "#00FF00" : "#FF0000";
@@ -59,23 +59,29 @@ $(document).ready(function () {
             { 'title': '我好像在哪见过你', 'name': '薛之谦', 'url': wyurl+'417859631' },
             { 'title': 'You Say', 'name': 'Lauren Daigle', 'url': wyurl+'575015416' },
             { 'title': '致青春', 'name': '王菲', 'url': wyurl+'27588992' },
+            { 'title': 'Rivers of Love', 'name': 'Lisa Ekdahl', 'url': wyurl+'2923752' },
             { 'title': '半壶纱', 'name': '刘珂矣', 'url': wyurl+'28793140' }
         ]
     }
     var mt = obj.sites[0].title + ' / ' + obj.sites[0].name;
     title.text(mt);
-    music.loop = true;
+    // music.loop = true;
     play.click(function () {
         if (!music.paused) {
             music.pause();
+            imagePause();
             play.removeClass('pushdown').addClass('normal');
         } else {
             play.removeClass('normal').addClass('pushdown');
             music.src = obj.sites[0].url;
             music.play();
+            rotate();
+           
+            
         }
     });
     pre.click(function () {
+        imagePause();
         var first = obj.sites[obj.sites.length - 1];
         obj.sites.pop();
         obj.sites.unshift(first);
@@ -83,9 +89,12 @@ $(document).ready(function () {
         mt = obj.sites[0].title + ' / ' + obj.sites[0].name;
         play.removeClass('normal').addClass('pushdown');
         music.play();
+        
         title.text(mt);
+        rotate();
     })
     next.click(function () {
+        imagePause();
         var first = obj.sites[0];
         obj.sites.shift();
         obj.sites.push(first);
@@ -94,7 +103,91 @@ $(document).ready(function () {
         play.removeClass('normal').addClass('pushdown');
         music.play();
         title.text(mt);
+        rotate();
     })
+    //进度条
+    //播放列表
+    var list=$('#bofanglist ul');
+    var len=obj.sites.length;
+    var ss=obj.sites;
+    var timer1;
+    $('#jindutiao span').click(function(){
+        list.empty();
+        for(let i=0;i<len;i++){
+            var li='<li> '+ 0+(i+1) +' '+ss[i].title+" "+ss[i].name+'</li>';
+            list.append(li);
+        }
+        list.slideToggle(500); 
+        //闭包输出点击播放列表的歌曲
+        function sequnce(arrLi){
+            for(var i = 0; i < arrLi.length; i++){
+                (function(j){
+                    arrLi[j].onclick = function(){
+                        
+                       imagePause();
+                        music.src=obj.sites[j].url;
+                        mt = obj.sites[j].title + ' / ' + obj.sites[j].name;
+                        play.removeClass('normal').addClass('pushdown');
+                        music.play();
+                        
+                        title.text(mt);
+                        rotate();
+                      
+                    }	
+                }(i))
+            }
+           
+        }
+        var lii=$('#bofanglist li')
+        sequnce(lii);
+       
+    })
+     //图片旋转，每30毫米旋转5度 和进度条
+     function rotate(){
+        
+        var deg=0;
+        
+        timer1=setInterval(function(){
+            var jdt=$('#jindutiao-current')[0];
+            var jdttxt=$('#jindutiao-current h5')[0];
+            //获取当前歌曲的歌长
+            var lenth=music.duration;
+            cur=music.currentTime;
+            jdt.style.width=""+parseInt(cur*100/lenth)+"%";
+            minute=parseInt(cur/60);
+            second=parseInt(cur%60);
+            if(cur%60<10){
+                jdttxt.innerHTML=""+minute+":0"+second+"";
+            }else{
+                jdttxt.innerHTML=""+minute+":"+second+"";
+            }           
+            
+                      
+            cover[0].style.transform="rotate("+deg+"deg)";
+            deg+=1;
+            if(deg>360){
+                deg=0;
+            }
+        },30);
+      
+    }
+    //图片暂停旋转
+    function imagePause(){
+        clearInterval(timer1);
+       
+    }
+    
+    // function jindutiao(){
+    //     var jdt=$('#jindutiao-current')[0];
+    //     //获取当前歌曲的歌长
+    //     var lenth=music.duration;
+    //     timer1=setInterval(function(){
+    //         cur=music.currentTime;//获取当前的播放时间
+    //         jdt.style.width=""+parseFloat(cur/lenth)*300+"px";
+    //     },50)
+    // }
+    //顺序播放
+    music.addEventListener("ended",imagePause(),true);
     //设置风格
     //天气预报
     
@@ -135,7 +228,7 @@ $(document).ready(function () {
                 var lili = $('#weather ul');
                 var fengli1 = todaywe.daypower;
                 lili.empty();
-                $("#weather i").html(month + '月' + todayrq + " 星期" + todayxq +" "+we.forecasts[0].city);
+                $("#weather h4").html(' '+month + '月' + todayrq + " 星期" + todayxq +" "+we.forecasts[0].city);
                 var first = '<li>今日:高' + todaywe.daytemp + "°C 低" + todaywe.nighttemp
                     + "°C " + todaywe.daywind + "风 " + fengli1 + '级 ' + todaywe.dayweather+'</li>';
                 lili.append(first);
@@ -154,22 +247,6 @@ $(document).ready(function () {
        tianQi($(this).val(),'post','.box1');
    })
 
-   //publicmenu done.
-   $("#public-menu").click(function(){
-       $("#public-menu-content").slideToggle(500);
-       
-   })
-   $("#public-menu-content").mouseleave(function(){
-        $("#public-menu-content").slideUp(500);
-       
-   })
-   $("#public-menu-content div").click(function(){
-    $("#public-menu-content div ul").slideToggle(500);
-   })
-   $("#silder-music-show").click(function(){
-       $("#silder-music-content").animate({'width':'toggle'},1000)
-   })
-   
-   
+  
 
 })

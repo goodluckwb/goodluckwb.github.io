@@ -46,18 +46,16 @@
                         <option value="橙色">橙色</option>
                         <option value="夜色">夜色</option>
                         <option value="紫色">紫色</option>
+                        <option value="随机">随机</option>
+
                     </select>
                 </li>
 
             </ul>
             <ul class="toprightul">
-                <li id="stock">
-                    <ul id="current_price">
-
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <a id="click-jsq" href="javascript:void(0);" >计算器</a>
+               
+                <li class="menu-item fas fa-calculator">
+                    <a id="click-jsq"   href="javascript:void(0);">计算器</a>
                     <div id="jisuanqi">
 
                     </div>
@@ -113,33 +111,27 @@
     </div>
     <header>
         <h1>心随你的步调</h1>
-        <h4><i>一个平凡人的自语</i></h4>
+        <h3><i>一个平凡人的自语</i></h3>
     </header>
     <nav>
         <ul>
             <li>
-                <span class="fas fa-home home"></span>
-                <a href="./index.html">首页</a>
+                <a href="./index.html" class="fas fa-home"> 首页</a>
             </li>
             <li>
-                <a href="./article.html">文章</a>
-                <span class="fas fa-angle-down home"></span>
+                <a href="./article.html" class="fas fa-newspaper"> 文章</a>
             </li>
             <li>
-                <a href="./video.html">视频</a>
-                <span class="fas fa-angle-down home"></span>
+                <a href="./video.html" class="fas fa-video"> 视频</a>
             </li>
             <li>
-                <a href="./image.html">图像</a>
-                <span class="fas fa-angle-down home"></span>
+                <a href="./image.html" class="fas fa-image"> 图像</a>
             </li>
             <li>
-                <a href="./video-live.html">电视</a>
-                <span class="fas fa-angle-down home"></span>
+                <a href="./video-live.html" class="fas fa-tv"> 电视</a>
             </li>
             <li>
-                <a href="./timeline.html">时间线</a>
-                <span class="fas fa-angle-down home"></span>
+                <a href="./timeline.html" class="fas fa-clock"> 时间线</a>
             </li>
         </ul>         
             <div id="search">
@@ -200,13 +192,15 @@
                 </div>            
             </div>
             <div id="focus">
-                <h2 >今日热点</h2>
+                <div class="title-div">
+                    <h2 class="fas fa-hand-point-right"> 今日热点</h2>
+                </div>
                 <div id="focus-img">
                     <a href="#">
                         <img src="./image/07.jpg" alt=""> 
                     </a>
                 </div>                
-                <h3>诺基亚X6国际版即将登陆海外市场</h3>
+                <h3 class="fas fa-award"> 诺基亚X6国际版即将登陆海外市场</h3>
                 <p id="focus-content">
                     诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
                     诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
@@ -215,31 +209,32 @@
             </div>
             
             <article>
-                <h2> 第一次Git错误的解决方法</h2>
+                <h3 class="fas fa-book-reader"> 第一次Git错误的解决方法</h3>
                 <i class="fas fa-angle-double-up"></i>
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
                 </div>
-                <div class="artmain">                  
-                    <p>    Step1.直接在你git的命令行窗口输入：<span> remote remove origin</span>.</p>
-                    <p>    Step2.把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。</p>                     
-                    <p>    Step3.重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。
-                            这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格，
-                            会得到Bad escape character ‘ygen’.的错误。 </p>                       
-                    <p>    Step4.删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。    
-                            输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件，
-                            然后全部复制粘贴到key即可.</p>
-                    <p>    测试<span>ssh -T git@github.com</span>。</p>
-                    <p>    Step5.<span>echo "new Test" >> README.md</span></p>
-                    <p>    <span>git init</span></p>
-                    <p>    <span>git add README.md</span></p>
-                    <p>    <span>git commit -m "first commit"</span></p>
-                    <p>    <span>git remote add origin 你的ssh地址</span></p>
-                    <p>    <span>git push -u origin master</span></p>
+                <div class="artmain">
+                    <blockquote >
+                        <ol >
+                        <li>直接在你git的命令行窗口输入：<span> remote remove origin</span>.</li>
+                        <li>把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。</li>
+                        <li>重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。 这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格， 会得到Bad escape
+                            character ‘ygen’.的错误。</li> 
+                        <li> 删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件， 然后全部复制粘贴到key即可.测试
+                            <span>ssh -T git@github.com</span>。</li>
+                        <li><span>echo "new Test" >> README.md</span>
+                            <span>git init</span>
+                            <span>git add README.md</span>
+                            <span>git commit -m "first commit"</span>
+                            <span>git remote add origin 你的ssh地址</span>
+                            <span>git push -u origin master</span></li>
+                        </ol>
+                    </blockquote>
                 </div>
             </article>
             <article>
-                <h2>凉州词</h2>
+                <h3 class="fas fa-book-reader"> 凉州词</h3>
                 <i class="fas fa-angle-double-up"></i>
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
@@ -252,7 +247,7 @@
                 </div>
             </article>
             <article>
-                <h2>枫桥夜泊</h2>
+                <h3 class="fas fa-book-reader"> 枫桥夜泊</h3>
                 <i class="fas fa-angle-double-up"></i>
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
@@ -265,7 +260,7 @@
                 </div>
             </article>
             <article>
-                <h2>送杜少府之任蜀州</h2>
+                <h3 class="fas fa-book-reader"> 送杜少府之任蜀州</h3>
                 <i class="fas fa-angle-double-up"></i>
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
@@ -282,11 +277,13 @@
         </div>
         <div id="rside">
             <div id='musicbox'>
-                <span></span>
-                <h2 >音乐分享</h2>
+                <div class="title-div">
+                    <span></span>
+                    <h2 class="fas fa-headphones"> 音乐分享</h2>
+                </div>
                 <ul>
                     <li >
-                        <h6 id="musictitle"></h6>
+                        <h4 id="musictitle"></h4>
                     </li>
                     <li id="musiccover">
                         <img src="./image/09.jpg" alt="">
@@ -298,28 +295,56 @@
                             <span id="musicplay" class="normal"></span>
                         </div>
                     </li>
+                    
+                    <li id="jindutiao">
+                        <span id="jindutiao-current">
+                            <h5 style="float:right;color: white"></h5>
+                        </span>
+                        <span class="fas fa-list tubiao"></span>
+                    </li>
                     <li >
                         <audio>                           
                         </audio>
                     </li>
+                    <li id="bofanglist">
+                        <ul id="bofanglistul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div id="weather">
-                <h2 >天气预报</h2>
-                <span id="weather-cityname"></span>
-                <form action="javascript:tianQi();" method="post" target="">
-                    <input id="input-city" type="text" list="allcity" placeholder="请输入城市如:苏州">
-                    <datalist id="allcity">
-                        <option value="苏州"><option value="商丘"><option value="上海">
-                    </datalist>
-                    
-                </form>
-                <i></i>
+                <div class="title-div">
+                    <h2 Class="fas fa-sun"> 天气预报</h2>
+                    <form action="javascript:;" method="post" target="">
+                        <input id="input-city" type="text" list="allcity" placeholder="请输入城市如:苏州">
+                        <datalist id="allcity">
+                            <option value="苏州"><option value="商丘"><option value="上海">
+                        </datalist>
+                        
+                    </form>
+                </div>
+                <h4></h4>
                 <ul>
                 </ul>
             </div>
+            <div id="stock">
+                <div class="title-div">
+                    <h2 Class="fas fa-chart-line"> 股票概览</h2>
+                </div>
+                <ul id="current_price">
+
+                </ul>
+                
+            </div>
             <aside>
-                <h2>热门文章</h2>
+                <div class="title-div">
+                    <h2 class="fas fa-book-open"> 热门文章</h2>
+                </div>
                 <ul>
                     <li>
                         <a href="#">文章列表</a>
@@ -343,7 +368,9 @@
                 </ul>
             </aside>
             <aside>
-                <h2>最新发表</h2>
+                <div class="title-div">
+                    <h2 class="fas fa-pen-nib"> 最新发表</h2>
+                </div>
                  <ul>
                     <li>
                         <a href="#">文章列表</a>
@@ -366,7 +393,9 @@
                 </ul>
             </aside>
             <aside>
-                <h2>热门视频</h2>
+                <div class="title-div">
+                    <h2 class="fas fa-video"> 热门视频</h2>
+                </div>
                 <ul>
                     <li>
                         <a href="#">如何用Git管理版本</a>

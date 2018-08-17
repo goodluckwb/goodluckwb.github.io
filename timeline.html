@@ -47,6 +47,8 @@
             position: relative;
             /* overflow: hidden; */
             /* border: 1px solid red; */
+       
+            /* box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637); */
         }
 
         .timeline-content::after {
@@ -143,6 +145,8 @@
             color: aliceblue;
             margin-top: 20px;
             box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637);
+            border: none;
+           
         }
 
         #wrapper div:nth-child(2n) h3 {
@@ -166,6 +170,7 @@
             border-top: 10px solid #8c51c7;
             letter-spacing: 1px;
             box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637);
+            z-index: -1;
         }
 
         #wrapper div:nth-child(2n) p {
@@ -223,14 +228,45 @@
 </head>
 
 <body>
+    <section id="public-menu-content">
+            <div style="background: #ffffff">
+                <p>菜单1</p>
+                <ul>
+                    <li>这是内容一部分</li>
+                    <li>这是内容一部分</li>
+                </ul>
+            </div>
+            <div style="background: #3944dd">   
+                <p>菜单2</p>
+                <ul >
+                    <li>这是另一个部分</li>
+                    <li>这是另一个部分</li>
+                    <li>这是另一个部分</li>
+                </ul>
+            </div>
+            <p>这可以是一段文字</p>   
+        </section>
     <div id="top">
         <div id="toptitle">
-            <a href="">
+            <span id="public-menu"></span>
+            <a href="./index.html">
                 <img src="./image/logonew2.png" alt="logo" width="100">
             </a>
             <ul class="topleftul">
                 <li>
                     <a href="#">Goodluckwb</a>
+                </li>
+                <li>
+                    <select name="changecolor" id="theme">
+                        <option value="喜红">喜红</option>
+                        <option value="深蓝">深蓝</option>
+                        <option value="豆绿">豆绿</option>
+                        <option value="橙色">橙色</option>
+                        <option value="夜色">夜色</option>
+                        <option value="紫色">紫色</option>
+                        <option value="随机">随机</option>
+                
+                    </select>
                 </li>
             </ul>
             <ul class="toprightul">
@@ -284,37 +320,29 @@
     </div>
     <header>
         <h1>心随你的步调</h1>
-        <h4>
-            <i>一个平凡人的自语</i>
-        </h4>
+        <h3><i>一个平凡人的自语</i></h3>
     </header>
     <nav>
         <ul>
-            <li>
-                <span class="fas fa-home home"></span>
-                <a href="./index.html">首页</a>
-            </li>
-            <li>
-                <a href="./article.html">文章</a>
-                <span class="fas fa-angle-down home"></span>
-            </li>
-            <li>
-                <a href="./video.html">视频</a>
-                <span class="fas fa-angle-down home"></span>
-            </li>
-            <li>
-                <a href="./image.html">图像</a>
-                <span class="fas fa-angle-down home"></span>
-            </li>
-            <li>
-                <a href="./video-live.html">电视</a>
-                <span class="fas fa-angle-down home"></span>
-            </li>
-            <li>
-                <a href="./timeline.html">时间线</a>
-                <span class="fas fa-angle-down home"></span>
-            </li>
-        </ul>
+                <li>
+                    <a href="./index.html" class="fas fa-home"> 首页</a>
+                </li>
+                <li>
+                    <a href="./article.html" class="fas fa-newspaper"> 文章</a>
+                </li>
+                <li>
+                    <a href="./video.html" class="fas fa-video"> 视频</a>
+                </li>
+                <li>
+                    <a href="./image.html" class="fas fa-image"> 图像</a>
+                </li>
+                <li>
+                    <a href="./video-live.html" class="fas fa-tv"> 电视</a>
+                </li>
+                <li>
+                    <a href="./timeline.html" class="fas fa-clock"> 时间线</a>
+                </li>
+            </ul>   
         <div id="search">
             <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
                 <input class="search-input" type="text" name="word" placeholder="请输入关键字">
@@ -325,6 +353,14 @@
     <div id="main">
         <div id="wrapper">
 
+            <div class='timeline-content'>
+                <span class="year">2018</span>
+                <h3>开发历程
+                    <i>8月17日</i>
+                </h3>
+                <p> 增加音乐盒进度条,播放列表和封面旋转.增加各种小图标.调整各主题颜色搭配.
+                </p>
+            </div>
             <div class='timeline-content'>
                 <span class="year">2018</span>
                 <h3>开发历程

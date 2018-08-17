@@ -13,17 +13,40 @@
     <script src="./js/jquery-3.3.1.min.js"></script>
 
     <style>
-        #wrapper{
-            width: 75%;
-            float: left;
+       
+        .float {
+        position:fixed;
+        top:0px;
+        }
+        #listswitch{
+            width: 250px;
         }
     </style>
 </head>
 
 <body>
+    <section id="public-menu-content">
+        <div style="background: #ffffff">
+            <p>菜单1</p>
+            <ul>
+                <li>这是内容一部分</li>
+                <li>这是内容一部分</li>
+            </ul>
+        </div>
+        <div style="background: #3944dd">
+            <p>菜单2</p>
+            <ul>
+                <li>这是另一个部分</li>
+                <li>这是另一个部分</li>
+                <li>这是另一个部分</li>
+            </ul>
+        </div>
+        <p>这可以是一段文字</p>
+    </section>
     <div id="top">
         <div id="toptitle">
-            <a href="">
+            <span id="public-menu"></span>
+            <a href="./index.html">
                 <img src="./image/logonew2.png" alt="logo" width="100">
             </a>
             <ul class="topleftul">
@@ -92,35 +115,29 @@
     </div>
     <header>
         <h1>心随你的步调</h1>
-        <h4><i>一个平凡人的自语</i></h4>
+        <h3><i>一个平凡人的自语</i></h3>
     </header>
     <nav>
         <ul>
-            <li>
-                <span class="fas fa-home home"></span>
-                <a href="./index.html">首页</a>
-            </li>
-            <li>
-                <a href="./article.html">文章</a>
-                <span class="fas fa-angle-down home"></span>
-            </li>
-            <li>
-                <a href="./video.html">视频</a>
-                <span class="fas fa-angle-down home"></span>
-            </li>
-            <li>
-                <a href="./image.html">图像</a>
-                <span class="fas fa-angle-down home"></span>
-            </li>
-            <li>
-                <a href="./video-live.html">电视</a>
-                <span class="fas fa-angle-down home"></span>
-            </li>
-            <li>
-                <a href="./timeline.html">时间线</a>
-                <span class="fas fa-angle-down home"></span>
-            </li>
-        </ul>         
+                <li>
+                    <a href="./index.html" class="fas fa-home"> 首页</a>
+                </li>
+                <li>
+                    <a href="./article.html" class="fas fa-newspaper"> 文章</a>
+                </li>
+                <li>
+                    <a href="./video.html" class="fas fa-video"> 视频</a>
+                </li>
+                <li>
+                    <a href="./image.html" class="fas fa-image"> 图像</a>
+                </li>
+                <li>
+                    <a href="./video-live.html" class="fas fa-tv"> 电视</a>
+                </li>
+                <li>
+                    <a href="./timeline.html" class="fas fa-clock"> 时间线</a>
+                </li>
+            </ul>         
             <div id="search">
                 <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
                     <input class="search-input" type="text" name="word" placeholder="请输入关键字">
@@ -130,42 +147,45 @@
     </nav>
     <div id="main">
        <div id="lside"> 
-            <div style="height: 40px;"></div>          
+                
             <article>
                 
             </article>                
        </div>
        <div id=rside >
-            <div style="height: 50px;"></div>
-            <aside>
-                <h2>文章列表</h2>
-                <ul id="listswitch">
-                    <li>
-                        <a href="javascript:">9种JS原生动画效果</a>
-                        <span class="littleicon">新</span>
-                    </li>
-                    <li>
-                        <a href="javascript:">AJAX文档加载处理</a>
-                    </li>
-                    <li>
-                        <a href="javascript:">Markdown语法手册</a>
-                    </li>
-                    <li>
-                        <a href="javascript:">JQuery方法手册</a>
-                    </li>
-                    <li>
-                        <a href="javascript:">CSS中使用变量</a>
-                    </li>
-                    <li>
-                        <a href="javascript:">图片lazyload的方法</a>
-                    </li>
-                    <li>
-                        <a href="javascript:">文章列表</a>
-                    </li>
-                    <li>
-                        <a href="javascript:">文章列表</a>
-                    </li>
-                </ul>
+            
+            <aside id="asidefixed">
+                    <div class="title-div">
+                        <h2 class="fas fa-book-open"> 文章列表</h2>
+                    </div>
+                    <ul id="listswitch">
+                        <li>
+                            <a href="#">9种JS原生动画效果</a>
+                            <span class="littleicon">新</span>
+                        </li>
+                        <li>
+                            <a href="#">AJAX文档加载处理</a>
+                        </li>
+                        <li>
+                            <a href="#">Markdown语法手册</a>
+                        </li>
+                        <li>
+                            <a href="#">JQuery方法手册</a>
+                        </li>
+                        <li>
+                            <a href="#">CSS中使用变量</a>
+                        </li>
+                        <li>
+                            <a href="#">图片lazyload的方法</a>
+                        </li>
+                        <li>
+                            <a href="#">文章列表</a>
+                        </li>
+                        <li>
+                            <a href="#">文章列表</a>
+                        </li>
+                    </ul>
+                    
             </aside>
        </div>
     </div>
@@ -187,10 +207,14 @@
         <script src="./js/common.js"></script>
         <script>
             var $li=$('#listswitch li');
+            
             var $con=$('article');
             //设置默认加载的文件
             $con.load("./source/txt/180810-01.txt");
+           
+              
             $(document).ready(function () {
+                
                     $li.eq(0).click(function () {
                         $con.load("./source/txt/180808-01.txt");
                     });
@@ -205,6 +229,7 @@
                     });
                     $li.eq(4).click(function () {
                         $con.load("./source/txt/180811-02.txt");
+                                        
                     });
                     $li.eq(5).click(function () {
                         $con.load("./source/html/lazyload.html");
@@ -215,9 +240,21 @@
                     $li.eq(7).click(function () {
                         $con.load("./source/txt/.txt");
                     });
-                                       
                     
-                });
+            });
+            document.addEventListener('scroll', function (event) { 
+                var scrollDistance = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                var aa=document.getElementsByTagName('aside')[0];
+                if (scrollDistance >= 245) {    // 触发的位置
+                   aa.style.position='fixed';
+                   aa.style.top='14px';
+                //    aa.style.right='0';
+
+                } else {
+                    aa.style.position='relative';
+                    aa.style.top='0px';
+                }
+            });
         </script>
 </body>
 </html>
