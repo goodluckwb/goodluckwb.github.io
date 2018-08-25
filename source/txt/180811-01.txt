@@ -1,6 +1,8 @@
-<h3 class="fas fa-book-reader"> JQuery方法手册</h3>
-<div class="fas fa-address-book signature">
-		2018/8/11 author
+<div id='article-title'>
+	<h3 class="fas fa-book-reader"> JQuery方法手册</h3>
+	<div class="fas fa-address-book signature">
+			2018/8/11 author
+	</div>
 </div>
 <div class="artmain">
 <pre>

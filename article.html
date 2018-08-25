@@ -6,97 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
-    <link rel="icon" href="./image/logonew.png" type="image/x-icon"/>
+    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <script src="./js/jquery-3.3.1.min.js"></script>
 
     <style>
-       
         .float {
-        position:fixed;
-        top:0px;
+            position: fixed;
+            top: 0px;
         }
-        #listswitch{
+
+        #listswitch {
             width: 250px;
+        }
+
+        #article-title {
+            position: relative;
+            top: 0px;
+            height: 50px;
+            background: var(--backcolor);
+            border-bottom: 1px solid var(--titlecolor);
         }
     </style>
 </head>
 
 <body>
     <section id="public-menu-content">
-        <div style="background: #ffffff">
-            <p>菜单1</p>
+        <div style="background: #ffffff" id="public-menu-content-div1">
+            <p>菜单</p>
             <ul>
                 <li>这是内容一部分</li>
                 <li>这是内容一部分</li>
             </ul>
         </div>
-        <div style="background: #3944dd">
-            <p>菜单2</p>
+        <div style="background: #ffffff" id="public-menu-content-div2">
+            <p>菜单</p>
             <ul>
-                <li>这是另一个部分</li>
-                <li>这是另一个部分</li>
-                <li>这是另一个部分</li>
+                <li> <a href="./index.html" class=""> 首页</a> </li>
+                <li><a href="./article.html"> 文章</a></li>
+                <li><a href="./video.html"> 视频</a></li>
+                <li><a href="./image.html"> 图像</a></li>
+                <li><a href="./video-live.html"> 电视</a></li>
+                <li><a href="./timeline.html"> 时间线</a></li>
             </ul>
         </div>
-        <p>这可以是一段文字</p>
+        <p>点击菜单外区域将关闭</p>
     </section>
-    <div id="top">
-        <div id="toptitle">
+    <div id="coolsites-list">
+
+    </div>
+    <nav>
+        <div id="logo">
             <span id="public-menu"></span>
-            <a href="./index.html">
-                <img src="./image/logonew2.png" alt="logo" width="100">
-            </a>
-            <ul class="topleftul">
-                <li><a href="#">Goodluckwb</a></li> 
-                <li>                   
-                    <select name="changecolor" id="theme">
-                        <option value="喜红">喜红</option>
-                        <option value="深蓝">深蓝</option>
-                        <option value="豆绿">豆绿</option>
-                        <option value="橙色">橙色</option>
-                        <option value="夜色">夜色</option>
-                        <option value="紫色">紫色</option>
-                    </select>
-                </li>              
-            </ul>
-            <ul class="toprightul">
-                <li class="menu-item">                       
-                    <span class="fas fa-angle-down others"></span>
-                    <a href="#">所有分类</a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#">原创文章</a>
-                        </li>
-                        <li>
-                            <a href="#">精品转载</a>
-                        </li>
-                        <li>
-                            <a href="#">平面设计</a>
-                        </li>
-                        <li>
-                            <a href="#">游戏相关</a>
-                        </li>
-                        <li>
-                            <a href="#">办公相关</a>
-                        </li>
-                        <li>
-                            <a href="#">视频特效</a>
-                        </li>
-                        <li>
-                            <a href="#">三维建模</a>
-                        </li>
-                        <li>
-                            <a href="#">音乐分享</a>
-                        </li>
-                    </ul>                           
+            <a href="./index.html"> <img src="./image/wblogo2.svg" alt="logo" width="100"></a>
+            <a href="#">goodluckwb</a>
+        </div>
+
+        <ul id="mainmenu">
+            <li> <a href="./index.html">首页</a> <span class=''></span><i></i></li>
+            <li><a href="./article.html"> 文章</a><span class=''></span><i></i></li>
+            <li><a href="./video.html"> 视频</a><span class=''></span><i></i></li>
+            <li><a href="./image.html"> 图像</a><span class=''></span><i></i></li>
+            <li><a href="./video-live.html"> 电视</a><span class=''></span><i></i></li>
+            <li><a href="./timeline.html"> 时间线</a><span class=''></span></li>
+        </ul>
+
+
+        <div id="smallpart">
+
+            <div id="search">
+                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
+                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="百度">
+                </form>
+            </div>
+            <div id="jisuanqi">
+            </div>
+            <ul>
+                <li id="coolsites">酷站</li>
+                <li id="click-jsq">计算器</li>
+
+                <li id="theme">
+                    <p id="theme-select" value="">主题</p>
+                    <span class="fas fa-angle-down"></span>
+                    <ol>
+                        <li>喜红</li>
+                        <li>深蓝</li>
+                        <li>豆绿</li>
+                        <li>橙色</li>
+                        <li>夜色</li>
+                        <li>紫色</li>
+                        <li>随机</li>
+                    </ol>
                 </li>
             </ul>
 
         </div>
-    </div>
+
+
+    </nav>
     <div id="go-to-top" style="display: none;">
         <div class="gototop">
             <i class=""></i>
@@ -110,151 +120,141 @@
         <div class="gototop">
             <i id="gototop-up" onmousedown="scrolltop();"></i>
             <span class='totoptip'>返回顶部</span>
-        </div>
 
+        </div>
     </div>
     <header>
+        <img src="./image/headerl.png" alt="">
         <h1>心随你的步调</h1>
         <h3><i>一个平凡人的自语</i></h3>
+
     </header>
-    <nav>
-        <ul>
-                <li>
-                    <a href="./index.html" class="fas fa-home"> 首页</a>
-                </li>
-                <li>
-                    <a href="./article.html" class="fas fa-newspaper"> 文章</a>
-                </li>
-                <li>
-                    <a href="./video.html" class="fas fa-video"> 视频</a>
-                </li>
-                <li>
-                    <a href="./image.html" class="fas fa-image"> 图像</a>
-                </li>
-                <li>
-                    <a href="./video-live.html" class="fas fa-tv"> 电视</a>
-                </li>
-                <li>
-                    <a href="./timeline.html" class="fas fa-clock"> 时间线</a>
-                </li>
-            </ul>         
-            <div id="search">
-                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
-                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="百度">
-                </form>
-            </div>
-    </nav>
     <div id="main">
-       <div id="lside"> 
-                
+        <div id="lside">
+
             <article>
-                
-            </article>                
-       </div>
-       <div id=rside >
-            
+
+            </article>
+        </div>
+        <div id=rside>
+
             <aside id="asidefixed">
-                    <div class="title-div">
-                        <h2 class="fas fa-book-open"> 文章列表</h2>
-                    </div>
-                    <ul id="listswitch">
-                        <li>
-                            <a href="#">9种JS原生动画效果</a>
-                            <span class="littleicon">新</span>
-                        </li>
-                        <li>
-                            <a href="#">AJAX文档加载处理</a>
-                        </li>
-                        <li>
-                            <a href="#">Markdown语法手册</a>
-                        </li>
-                        <li>
-                            <a href="#">JQuery方法手册</a>
-                        </li>
-                        <li>
-                            <a href="#">CSS中使用变量</a>
-                        </li>
-                        <li>
-                            <a href="#">图片lazyload的方法</a>
-                        </li>
-                        <li>
-                            <a href="#">文章列表</a>
-                        </li>
-                        <li>
-                            <a href="#">文章列表</a>
-                        </li>
-                    </ul>
-                    
+                <div class="title-div">
+                    <h2 class="fas fa-book-open"> 文章列表</h2>
+                </div>
+                <ul id="listswitch">
+                    <li>
+                        <a href="#">9种JS原生动画效果</a>
+                        <span class="littleicon">新</span>
+                    </li>
+                    <li>
+                        <a href="#">AJAX文档加载处理</a>
+                    </li>
+                    <li>
+                        <a href="#">Markdown语法手册</a>
+                    </li>
+                    <li>
+                        <a href="#">JQuery方法手册</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS中使用变量</a>
+                    </li>
+                    <li>
+                        <a href="#">图片lazyload的方法</a>
+                    </li>
+                    <li>
+                        <a href="#">Canvas的基本用法</a>
+                    </li>
+                    <li>
+                        <a href="#">JS中的监听事件</a>
+                    </li>
+                    <li>
+                        <a href="#">JS对象封装的方法</a>
+                    </li>
+                </ul>
+
             </aside>
-       </div>
+        </div>
     </div>
     <footer>
-            <div class="footer_top">
-                <h3>
-                    <span>WeiBin</span> 
-                </h3>    
-            </div>
-            <div class="footer_bottom">
-                <span>
-                版权所有,
-                2018-2020
-                All Rights Reserved.
-                </span>
-                <div class="footer_line"></div>
-            </div>
-        </footer>
-        <script src="./js/common.js"></script>
-        <script>
-            var $li=$('#listswitch li');
-            
-            var $con=$('article');
-            //设置默认加载的文件
-            $con.load("./source/txt/180810-01.txt");
-           
-              
-            $(document).ready(function () {
-                
-                    $li.eq(0).click(function () {
-                        $con.load("./source/txt/180808-01.txt");
-                    });
-                    $li.eq(1).click(function () {
-                        $con.load("./source/txt/180810-01.txt");
-                    });
-                    $li.eq(2).click(function () {
-                        $con.load("./source/txt/180810-02.txt");
-                    });
-                    $li.eq(3).click(function () {
-                        $con.load("./source/txt/180811-01.txt");
-                    });
-                    $li.eq(4).click(function () {
-                        $con.load("./source/txt/180811-02.txt");
-                                        
-                    });
-                    $li.eq(5).click(function () {
-                        $con.load("./source/html/lazyload.html");
-                    });
-                    $li.eq(6).click(function () {
-                        $con.load("./source/txt/.txt");
-                    });
-                    $li.eq(7).click(function () {
-                        $con.load("./source/txt/.txt");
-                    });
-                    
-            });
-            document.addEventListener('scroll', function (event) { 
-                var scrollDistance = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-                var aa=document.getElementsByTagName('aside')[0];
-                if (scrollDistance >= 245) {    // 触发的位置
-                   aa.style.position='fixed';
-                   aa.style.top='14px';
-                //    aa.style.right='0';
+        <div class="footer_top">
+            <h4>
+                <span>WeiBin</span>
+            </h4>
+        </div>
+        <div class="footer_bottom">
+            <span>
+                &copy;版权所有, 2018-2020 All Rights Reserved.
+            </span>
+            <div class="footer_line"></div>
+        </div>
+    </footer>
+    <script src="./js/common.js"></script>
+    <script>
+        var $li = $('#listswitch li');
 
-                } else {
-                    aa.style.position='relative';
-                    aa.style.top='0px';
-                }
+        var $con = $('article');
+        //设置默认加载的文件
+        $con.load("./source/txt/180810-01.txt");
+
+
+        $(document).ready(function () {
+
+            $li.eq(0).click(function () {
+                $con.load("./source/txt/180808-01.txt");
             });
-        </script>
+            $li.eq(1).click(function () {
+                $con.load("./source/txt/180810-01.txt");
+            });
+            $li.eq(2).click(function () {
+                $con.load("./source/txt/180810-02.txt");
+            });
+            $li.eq(3).click(function () {
+                $con.load("./source/txt/180811-01.txt");
+            });
+            $li.eq(4).click(function () {
+                $con.load("./source/txt/180811-02.txt");
+
+            });
+            $li.eq(5).click(function () {
+                $con.load("./source/html/lazyload.html");
+            });
+            $li.eq(6).click(function () {
+                $con.load("./source/html/canvas.html");
+            });
+            $li.eq(7).click(function () {
+                $con.load("./source/txt/180821-01.txt");
+            });
+            $li.eq(8).click(function () {
+                $con.load("./source/html/fengzhuang.html");
+            });
+            $li.eq(9).click(function () {
+                $con.load("./source/txt/");
+            });
+            $li.eq(10).click(function () {
+                $con.load("./source/txt/");
+            });
+
+        });
+        document.addEventListener('scroll', function (event) {
+            var scrollDistance = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+            var aa = document.getElementsByTagName('aside')[0];
+            var titlediv = document.getElementById('article-title');
+            if (scrollDistance >= 150) {    // 触发的位置
+                aa.style.position = 'fixed';
+                aa.style.top = '50px';
+
+                titlediv.style.position = 'fixed';
+                titlediv.style.top = '46px';
+                titlediv.style.width = '800px';
+            } else {
+                aa.style.position = 'relative';
+                aa.style.top = '0px';
+                titlediv.style.position = 'relative';
+                titlediv.style.top = '0px';
+            }
+        });
+    </script>
 </body>
+
 </html>

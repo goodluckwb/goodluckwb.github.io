@@ -6,88 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
-    <link rel="icon" href="./image/logonew.png" type="image/x-icon"/>
+    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <style>
+        #video-div{
+            width: 960px;
+            height:540px;
+            display: block;
+            float: right;
+            margin: 0px auto;
+        }
+        #video-div embed{
+            width: 100%;
+            height:100%;
+            
+        }
+        #channel{
+            width: 120px;
+            float: left;
+            position: relative;
+        }
+        .channeltab{
+            cursor: pointer;
+            display: block;
+            float: left;
+            width: 100%;
+            font: 16px/22px 'Microsoft Yahei';
+            margin-bottom: 5px;
+        }
+        .channeltab:hover{
+            color: var(--titlecolor);
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
 
 <body>
     <section id="public-menu-content">
-            <div style="background: #ffffff">
-                <p>菜单1</p>
-                <ul>
-                    <li>这是内容一部分</li>
-                    <li>这是内容一部分</li>
-                </ul>
-            </div>
-            <div style="background: #3944dd">   
-                <p>菜单2</p>
-                <ul >
-                    <li>这是另一个部分</li>
-                    <li>这是另一个部分</li>
-                    <li>这是另一个部分</li>
-                </ul>
-            </div>
-            <p>这可以是一段文字</p>   
-        </section>
-    <div id="top">
-        <div id="toptitle">
-            <span id="public-menu"></span>
-            <a href="./index.html">
-                <img src="./image/logonew2.png" alt="logo" width="100">
-            </a>
-            <ul class="topleftul">
-                <li><a href="#">Goodluckwb</a></li> 
-                <li>
-                    <select name="changecolor" id="theme">
-                        <option value="喜红">喜红</option>
-                        <option value="深蓝">深蓝</option>
-                        <option value="豆绿">豆绿</option>
-                        <option value="橙色">橙色</option>
-                        <option value="夜色">夜色</option>
-                        <option value="紫色">紫色</option>
-                        <option value="随机">随机</option>
-                
-                    </select>
-                </li>
+        <div style="background: #ffffff" id="public-menu-content-div1">
+            <p>菜单</p>
+            <ul>
+                <li>这是内容一部分</li>
+                <li>这是内容一部分</li>
             </ul>
-            <ul class="toprightul">
-                <li class="menu-item">                       
-                    <span class="fas fa-angle-down others"></span>
-                    <a href="#">所有分类</a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#">原创文章</a>
-                        </li>
-                        <li>
-                            <a href="#">精品转载</a>
-                        </li>
-                        <li>
-                            <a href="#">平面设计</a>
-                        </li>
-                        <li>
-                            <a href="#">游戏相关</a>
-                        </li>
-                        <li>
-                            <a href="#">办公相关</a>
-                        </li>
-                        <li>
-                            <a href="#">视频特效</a>
-                        </li>
-                        <li>
-                            <a href="#">三维建模</a>
-                        </li>
-                        <li>
-                            <a href="#">音乐分享</a>
-                        </li>
-                    </ul>                           
+        </div>
+        <div style="background: #ffffff" id="public-menu-content-div2">
+            <p>菜单</p>
+            <ul>
+                <li> <a href="./index.html" class=""> 首页</a> </li>
+                <li><a href="./article.html"> 文章</a></li>
+                <li><a href="./video.html"> 视频</a></li>
+                <li><a href="./image.html"> 图像</a></li>
+                <li><a href="./video-live.html"> 电视</a></li>
+                <li><a href="./timeline.html"> 时间线</a></li>
+            </ul>
+        </div>
+        <p>点击菜单外区域将关闭</p>
+    </section>
+    <div id="coolsites-list">
+
+    </div>
+    <nav>
+        <div id="logo">
+            <span id="public-menu"></span>
+            <a href="./index.html"> <img src="./image/wblogo2.svg" alt="logo" width="100"></a>
+            <a href="#">goodluckwb</a>
+        </div>
+
+        <ul id="mainmenu">
+            <li> <a href="./index.html">首页</a> <span class=''></span><i></i></li>
+            <li><a href="./article.html"> 文章</a><span class=''></span><i></i></li>
+            <li><a href="./video.html"> 视频</a><span class=''></span><i></i></li>
+            <li><a href="./image.html"> 图像</a><span class=''></span><i></i></li>
+            <li><a href="./video-live.html"> 电视</a><span class=''></span><i></i></li>
+            <li><a href="./timeline.html"> 时间线</a><span class=''></span></li>
+        </ul>
+
+
+        <div id="smallpart">
+
+            <div id="search">
+                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
+                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="百度">
+                </form>
+            </div>
+            <div id="jisuanqi">
+            </div>
+            <ul>
+                <li id="coolsites">酷站</li>
+                <li id="click-jsq">计算器</li>
+
+                <li id="theme">
+                    <p id="theme-select" value="">主题</p>
+                    <span class="fas fa-angle-down"></span>
+                    <ol>
+                        <li>喜红</li>
+                        <li>深蓝</li>
+                        <li>豆绿</li>
+                        <li>橙色</li>
+                        <li>夜色</li>
+                        <li>紫色</li>
+                        <li>随机</li>
+                    </ol>
                 </li>
             </ul>
 
         </div>
-    </div>
+
+    </nav>
     <div id="go-to-top" style="display: none;">
         <div class="gototop">
             <i class=""></i>
@@ -101,103 +132,97 @@
         <div class="gototop">
             <i id="gototop-up" onmousedown="scrolltop();"></i>
             <span class='totoptip'>返回顶部</span>
-        </div>
 
+        </div>
     </div>
     <header>
+        <img src="./image/headerl.png" alt="">
         <h1>心随你的步调</h1>
         <h3><i>一个平凡人的自语</i></h3>
+
     </header>
-    <nav>
-        <ul>
-                <li>
-                    <a href="./index.html" class="fas fa-home"> 首页</a>
-                </li>
-                <li>
-                    <a href="./article.html" class="fas fa-newspaper"> 文章</a>
-                </li>
-                <li>
-                    <a href="./video.html" class="fas fa-video"> 视频</a>
-                </li>
-                <li>
-                    <a href="./image.html" class="fas fa-image"> 图像</a>
-                </li>
-                <li>
-                    <a href="./video-live.html" class="fas fa-tv"> 电视</a>
-                </li>
-                <li>
-                    <a href="./timeline.html" class="fas fa-clock"> 时间线</a>
-                </li>
-            </ul>    
-            <div id="search">
-                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
-                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="百度">
-                </form>
-            </div>
-    </nav>
     <div id="main">
-       <div id="wrapper">           
+        <div id="wrapper">
             <div class="current_nav">
                 <a href="./index.html">首页</a>
                 <span class="sub">></span>
                 <a href="#">视频</a>
                 <span class="sub">></span>
                 <a href="#">电视直播</a>
-               
+
             </div>
             <div id="channel">
                 <ul>
-                    <li class="channeltab" onmousedown="changechannel('channel[0]');">
-                        <h3 class="fas fa-link"> CCTV5体育</h3>
+                    <li class="channeltab"> + 三国
                     </li>
-                    <li class="channeltab" onmousedown="changechannel('channel[1]');">
-                        <h3 class="fas fa-link"> 虎牙三国</h3>
+                    <li class="channeltab"> + 水浒
                     </li>
-                    <li class="channeltab" onmousedown="changechannel('channel[2]');"> 
-                        <h3 class="fas fa-link"> 虎牙水浒</h3>
+                    <li class="channeltab"> + 亮剑
                     </li>
-                    
+                    <li class="channeltab"> + 科幻
+                    </li>
+                    <li class="channeltab"> + 电影
+                    </li>
+
                 </ul>
 
             </div>
-           <div class="videoiframe">
-              <iframe name="play" width="100%" height="100%" id="player" controls="controls"
-              src="https://player.cntv.cn/standard/live_HLSDRM20180618.swf?ChannelID=cctv5&amp;videoTVChannel=cctv5&amp;P2PChannelID=pd://cctv_p2p_hdcctv5&amp;VideoName=cctv5&amp;channelID=cctv5&amp;BannerWidth=600&amp;BannerInterval=20&amp;playBackType=common&amp;ruleVisible=true&amp;languageXml=&amp;configURL=https://player.cntv.cn/flashplayer/config/WebHDSPlayerConfig.xml&amp;referrer=&amp;fingerprint=Fingerprint&amp;wmode=opaque&amp;quality=high" border="0" frameborder="0" scrolling="auto" allowtransparency="true">
-              </iframe> 
-           </div>
-       </div>
+            <div id="video-div">
+                <embed name="play" id="player" controls="controls" src="https://liveshare.huya.com/11352944/huyacoop.swf">
+
+            </div>
+        </div>
     </div>
     <footer>
-            <div class="footer_top">
-                <h3>
-                    <span>WeiBin</span> 
-                </h3>    
-            </div>
-            <div class="footer_bottom">
-                <span>
-                版权所有,
-                2018-2020
-                All Rights Reserved.
-                </span>
-                <div class="footer_line"></div>
-            </div>
-        </footer>
-        <script>
-            // 直播切换频道
-            function changechannel(test){   
-                var channel=document.getElementsByClassName("channeltab");
-                var iframe=document.getElementById("player");
-                    if (test=="channel[0]"){
-                        iframe.src="https://player.cntv.cn/standard/live_HLSDRM20180618.swf?ChannelID=cctv5&amp;videoTVChannel=cctv5&amp;P2PChannelID=pd://cctv_p2p_hdcctv5&amp;VideoName=cctv5&amp;channelID=cctv5&amp;BannerWidth=600&amp;BannerInterval=20&amp;playBackType=common&amp;ruleVisible=true&amp;languageXml=&amp;configURL=https://player.cntv.cn/flashplayer/config/WebHDSPlayerConfig.xml&amp;referrer=&amp;fingerprint=Fingerprint&amp;wmode=opaque&amp;quality=high";            
-                    }else if (test=="channel[1]"){
-                        iframe.src="https://liveshare.huya.com/11352944/huyacoop.swf";
-                    }else if (test=="channel[2]"){
-                        iframe.src="https://liveshare.huya.com/11342384/huyacoop.swf";
+        <div class="footer_top">
+            <h4>
+                <span>WeiBin</span>
+            </h4>
+        </div>
+        <div class="footer_bottom">
+            <span>
+                &copy;版权所有, 2018-2020 All Rights Reserved.
+            </span>
+            <div class="footer_line"></div>
+        </div>
+    </footer>
+    <script>
+        // 直播切换频道
+        var channel = $(".channeltab");
+        var player = $("#video-div");
+        var tv = {
+            'sites': [
+                { 'titel': '三国', 'src': 'https://liveshare.huya.com/11352944/huyacoop.swf' },
+                { 'titel': '水浒', 'src': 'https://liveshare.huya.com/11342384/huyacoop.swf' },
+                { 'titel': '亮剑', 'src': 'https://liveshare.huya.com/11342434/huyacoop.swf' },
+                { 'titel': '科幻', 'src': 'https://liveshare.huya.com/11352964/huyacoop.swf' },
+                { 'titel': '电影', 'src': 'http://liveshare.huya.com/11342386/huyacoop.swf' }
+            ]
+        }
+
+        function changeTv(channel) {
+            for (let i = 0; i < channel.length; i++) {
+                (function (j) {
+                    channel[j].onclick = function () {
+                        player.empty();
+                        var embed = '';
+                        embed += '<embed src=' + tv.sites[j].src + '>';
+                        player.append(embed);
                     }
+                })(i);
+
             }
 
-        </script>
-        <script src="./js/common.js"></script>
+        }
+        changeTv(channel);
+
+
+
+
+
+
+    </script>
+    <script src="./js/common.js"></script>
 </body>
+
 </html>

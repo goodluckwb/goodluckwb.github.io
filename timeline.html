@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
-    <link rel="icon" href="./image/logonew.png" type="image/x-icon"/>
+    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
@@ -47,8 +47,13 @@
             position: relative;
             /* overflow: hidden; */
             /* border: 1px solid red; */
-       
+
             /* box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637); */
+        }
+
+        .timeline-content img {
+            position: relative;
+            width: 100%;
         }
 
         .timeline-content::after {
@@ -139,14 +144,14 @@
         #wrapper h3 {
             display: block;
             font: 22px/30px "微软雅黑";
-            font-weight: 800;
+            /* font-weight: 800; */
             background: #8c51c7;
-            padding: 10px 20px 0;
+            padding: 5px 20px 0;
             color: aliceblue;
-            margin-top: 20px;
-            box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637);
+            margin: 20px 0 0 0;
+            /* box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637); */
             border: none;
-           
+            
         }
 
         #wrapper div:nth-child(2n) h3 {
@@ -166,10 +171,10 @@
             font: 16px/25px "微软雅黑";
             padding: 10px 20px 40px;
             border: 4px solid #8c51c7;
-            border-radius: 0 0 50px 50px;
-            border-top: 10px solid #8c51c7;
+            border-radius: 0 0 30px 30px;
+            
             letter-spacing: 1px;
-            box-shadow: 5px 2px 5px rgba(51, 51, 51, 0.637);
+            box-shadow: 5px 5px 5px rgba(51, 51, 51, 0.637);
             z-index: -1;
         }
 
@@ -195,7 +200,13 @@
             float: left;
         }
 
+        .hidden {
+            display: none;
+        }
 
+        .show {
+            display: block;
+        }
 
         @media only screen and (max-width: 767px) {
             #wrapper div {
@@ -229,80 +240,79 @@
 
 <body>
     <section id="public-menu-content">
-            <div style="background: #ffffff">
-                <p>菜单1</p>
-                <ul>
-                    <li>这是内容一部分</li>
-                    <li>这是内容一部分</li>
-                </ul>
-            </div>
-            <div style="background: #3944dd">   
-                <p>菜单2</p>
-                <ul >
-                    <li>这是另一个部分</li>
-                    <li>这是另一个部分</li>
-                    <li>这是另一个部分</li>
-                </ul>
-            </div>
-            <p>这可以是一段文字</p>   
-        </section>
-    <div id="top">
-        <div id="toptitle">
-            <span id="public-menu"></span>
-            <a href="./index.html">
-                <img src="./image/logonew2.png" alt="logo" width="100">
-            </a>
-            <ul class="topleftul">
-                <li>
-                    <a href="#">Goodluckwb</a>
-                </li>
-                <li>
-                    <select name="changecolor" id="theme">
-                        <option value="喜红">喜红</option>
-                        <option value="深蓝">深蓝</option>
-                        <option value="豆绿">豆绿</option>
-                        <option value="橙色">橙色</option>
-                        <option value="夜色">夜色</option>
-                        <option value="紫色">紫色</option>
-                        <option value="随机">随机</option>
-                
-                    </select>
-                </li>
-            </ul>
-            <ul class="toprightul">
-                <li class="menu-item">
-                    <span class="fas fa-angle-down others"></span>
-                    <a href="#">所有分类</a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#">原创文章</a>
-                        </li>
-                        <li>
-                            <a href="#">精品转载</a>
-                        </li>
-                        <li>
-                            <a href="#">平面设计</a>
-                        </li>
-                        <li>
-                            <a href="#">游戏相关</a>
-                        </li>
-                        <li>
-                            <a href="#">办公相关</a>
-                        </li>
-                        <li>
-                            <a href="#">视频特效</a>
-                        </li>
-                        <li>
-                            <a href="#">三维建模</a>
-                        </li>
-                        <li>
-                            <a href="#">音乐分享</a>
-                        </li>
-                    </ul>
-                </li>
+        <div style="background: #ffffff" id="public-menu-content-div1">
+            <p>菜单</p>
+            <ul>
+                <li>这是内容一部分</li>
+                <li>这是内容一部分</li>
             </ul>
         </div>
+        <div style="background: #ffffff" id="public-menu-content-div2">
+            <p>菜单</p>
+            <ul>
+                <li> <a href="./index.html" class=""> 首页</a> </li>
+                <li><a href="./article.html"> 文章</a></li>
+                <li><a href="./video.html"> 视频</a></li>
+                <li><a href="./image.html"> 图像</a></li>
+                <li><a href="./video-live.html"> 电视</a></li>
+                <li><a href="./timeline.html"> 时间线</a></li>
+            </ul>
+        </div>
+        <p>点击菜单外区域将关闭</p>
+    </section>
+    <div id="coolsites-list">
+
     </div>
+    <nav>
+        <div id="logo">
+            <span id="public-menu"></span>
+            <a href="./index.html"> <img src="./image/wblogo2.svg" alt="logo" width="100"></a>
+            <a href="#">goodluckwb</a>
+        </div>
+
+        <ul id="mainmenu">
+            <li> <a href="./index.html">首页</a> <span class=''></span><i></i></li>
+            <li><a href="./article.html"> 文章</a><span class=''></span><i></i></li>
+            <li><a href="./video.html"> 视频</a><span class=''></span><i></i></li>
+            <li><a href="./image.html"> 图像</a><span class=''></span><i></i></li>
+            <li><a href="./video-live.html"> 电视</a><span class=''></span><i></i></li>
+            <li><a href="./timeline.html"> 时间线</a><span class=''></span></li>
+        </ul>
+
+
+        <div id="smallpart">
+
+            <div id="search">
+                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
+                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="百度">
+                </form>
+            </div>
+            <div id="jisuanqi">
+            </div>
+            <ul>
+                <li id="coolsites">酷站</li>
+                <li id="click-jsq">计算器</li>
+
+                <li id="theme">
+                    <p id="theme-select" value="">主题</p>
+                    <span class="fas fa-angle-down"></span>
+                    <ol>
+                        <li>喜红</li>
+                        <li>深蓝</li>
+                        <li>豆绿</li>
+                        <li>橙色</li>
+                        <li>夜色</li>
+                        <li>紫色</li>
+                        <li>随机</li>
+                    </ol>
+                </li>
+            </ul>
+
+        </div>
+
+
+    </nav>
     <div id="go-to-top" style="display: none;">
         <div class="gototop">
             <i class=""></i>
@@ -316,49 +326,61 @@
         <div class="gototop">
             <i id="gototop-up" onmousedown="scrolltop();"></i>
             <span class='totoptip'>返回顶部</span>
+
         </div>
     </div>
     <header>
+        <img src="./image/headerl.png" alt="">
         <h1>心随你的步调</h1>
         <h3><i>一个平凡人的自语</i></h3>
+
     </header>
-    <nav>
-        <ul>
-                <li>
-                    <a href="./index.html" class="fas fa-home"> 首页</a>
-                </li>
-                <li>
-                    <a href="./article.html" class="fas fa-newspaper"> 文章</a>
-                </li>
-                <li>
-                    <a href="./video.html" class="fas fa-video"> 视频</a>
-                </li>
-                <li>
-                    <a href="./image.html" class="fas fa-image"> 图像</a>
-                </li>
-                <li>
-                    <a href="./video-live.html" class="fas fa-tv"> 电视</a>
-                </li>
-                <li>
-                    <a href="./timeline.html" class="fas fa-clock"> 时间线</a>
-                </li>
-            </ul>   
-        <div id="search">
-            <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
-                <input class="search-input" type="text" name="word" placeholder="请输入关键字">
-                <input class="search-submit" type="submit" value="百度">
-            </form>
-        </div>
-    </nav>
     <div id="main">
         <div id="wrapper">
+            <h3 style="text-align:center;margin-bottom:20px;">项目设计&开发大事件</h3>
+            <div class='timeline-content'>
+                <span class="year">2018</span>
+                <h3>开发历程
+                    <i>8月25日</i>
+                </h3>
+                <p> 细节调整,重构图片页面为瀑布流.
+                    <img src="./image/2018-08-23_194707.jpg">
+                </p>
+            </div>
+            <div class='timeline-content'>
+                <span class="year">2018</span>
+                <h3>开发历程
+                    <i>8月23日</i>
+                </h3>
+                <p> 继续调整版面协调性,增加热点切换.
+                    <img src="./image/2018-08-23_194707.jpg">
+                </p>
+            </div>
+            <div class='timeline-content'>
+                <span class="year">2018</span>
+                <h3>开发历程
+                    <i>8月22日</i>
+                </h3>
+                <p> 增加酷站弹出式导航.更换logo.
 
+                </p>
+            </div>
+            <div class='timeline-content'>
+                <span class="year">2018</span>
+                <h3>开发历程
+                    <i>8月20日</i>
+                </h3>
+                <p> 音乐盒循环播放与封面切换,再次大幅调整版面结构.双导航条合并为一个顶部导航.
+                    <img src="./image/2018-08-20_211147.jpg">
+                </p>
+            </div>
             <div class='timeline-content'>
                 <span class="year">2018</span>
                 <h3>开发历程
                     <i>8月17日</i>
                 </h3>
                 <p> 增加音乐盒进度条,播放列表和封面旋转.增加各种小图标.调整各主题颜色搭配.
+                    <img src='./image/2018-08-20_210225.jpg'>
                 </p>
             </div>
             <div class='timeline-content'>
@@ -458,10 +480,10 @@
                 <h3>开发历程
                     <i>7月22日</i>
                 </h3>
-                <p> 这是我的第一个网页开发,希望以后继续保持,开发更多更好的作品. 我的作品地址:</br>
+                <p> 这是我的第一个网页开发,希望以后继续保持,开发更多更好的作品. 我的作品地址:<br/>
                     <a href="https://goodluckwb.github.io" target="_blank">goodluckwb.github.io</a>
                     <a href="https://goodluckwb.gitee.io" target="_blank">goodluckwb.gitee.io</a>
-                    </br>这2个地方更新.
+                    <br/>这2个地方更新.
                 </p>
             </div>
 
@@ -469,20 +491,21 @@
     </div>
     <footer>
         <div class="footer_top">
-            <h3>
+            <h4>
                 <span>WeiBin</span>
-            </h3>
+            </h4>
         </div>
         <div class="footer_bottom">
             <span>
-                版权所有, 2018-2020 All Rights Reserved.
+                &copy;版权所有, 2018-2020 All Rights Reserved.
             </span>
             <div class="footer_line"></div>
         </div>
     </footer>
     <script>
-        var w = document.getElementById('wrapper');
-        console.log(w.children)
+
+
+
     </script>
     <script src="./js/common.js"></script>
 </body>

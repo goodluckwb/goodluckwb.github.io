@@ -6,88 +6,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
-    <link rel="icon" href="./image/logonew.png" type="image/x-icon"/>
+    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <style>
+        #bigimg{
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        #bigimg img{
+            position: relative;
+            width: 110%;
+            top: -50%;
+            left: -10%;
+        }
+
+        .imglist{
+            box-sizing: border-box;
+            margin: 20px auto;
+            width: 32%;
+            float: left;   
+            /* background: linear-gradient( rgba(255,255,255,0.5) ,rgba(167, 236, 245, 0.719)); */
+        }
+
+        .imglist::after{
+            content: "";
+            height: 20px;
+            display:block;
+            clear:both;
+        }
+        .imglist li{
+            position: relative;
+            margin-top: 15px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.28);
+            /* height: 350px; */
+        }
+        .imglist li:hover{
+            box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.58);
+            transition: all 0.3s;
+        }
+        .imglist img{
+            position: relative;
+            display: inline-block;
+            width: 110%;
+        }
+        figure:nth-child(2),figure:nth-child(3){
+            margin-right:2%;
+        }
+        #wrapper{
+            position: relative;
+            top: -100px;
+            width: 90%;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+        #wrapper::after{
+            content: "";
+            display:block;
+            clear:both;
+        }
+        #wrapper h2{
+           
+            letter-spacing: .1em;
+            margin: 15px calc(50% - 64px);
+            border: none;
+            font-size: 18px;
+        }
+    </style>
 </head>
 
-<body onload='imgSwicth()'>
+<body >
     <section id="public-menu-content">
-            <div style="background: #ffffff">
-                <p>菜单1</p>
-                <ul>
-                    <li>这是内容一部分</li>
-                    <li>这是内容一部分</li>
-                </ul>
-            </div>
-            <div style="background: #3944dd">   
-                <p>菜单2</p>
-                <ul >
-                    <li>这是另一个部分</li>
-                    <li>这是另一个部分</li>
-                    <li>这是另一个部分</li>
-                </ul>
-            </div>
-            <p>这可以是一段文字</p>   
-        </section>
-    <div id="top">
-        <div id="toptitle">
-            <span id="public-menu"></span>
-            <a href="./index.html">
-                <img src="./image/logonew2.png" alt="logo" width="100">
-            </a>
-            <ul class="topleftul">
-                <li><a href="#">Goodluckwb</a></li>
-                <li>
-                    <select name="changecolor" id="theme">
-                        <option value="喜红">喜红</option>
-                        <option value="深蓝">深蓝</option>
-                        <option value="豆绿">豆绿</option>
-                        <option value="橙色">橙色</option>
-                        <option value="夜色">夜色</option>
-                        <option value="紫色">紫色</option>
-                        <option value="随机">随机</option>
-                
-                    </select>
-                </li>
+        <div style="background: #ffffff" id="public-menu-content-div1">
+            <p>菜单</p>
+            <ul>
+                <li>这是内容一部分</li>
+                <li>这是内容一部分</li>
             </ul>
-            <ul class="toprightul">
-                <li class="menu-item">                       
-                    <span class="fas fa-angle-down others"></span>
-                    <a href="#">所有分类</a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#">原创文章</a>
-                        </li>
-                        <li>
-                            <a href="#">精品转载</a>
-                        </li>
-                        <li>
-                            <a href="#">平面设计</a>
-                        </li>
-                        <li>
-                            <a href="#">游戏相关</a>
-                        </li>
-                        <li>
-                            <a href="#">办公相关</a>
-                        </li>
-                        <li>
-                            <a href="#">视频特效</a>
-                        </li>
-                        <li>
-                            <a href="#">三维建模</a>
-                        </li>
-                        <li>
-                            <a href="#">音乐分享</a>
-                        </li>
-                    </ul>                           
+        </div>
+        <div style="background: #ffffff" id="public-menu-content-div2">
+            <p>菜单</p>
+            <ul>
+                <li> <a href="./index.html" class=""> 首页</a> </li>
+                <li><a href="./article.html"> 文章</a></li>
+                <li><a href="./video.html"> 视频</a></li>
+                <li><a href="./image.html"> 图像</a></li>
+                <li><a href="./video-live.html"> 电视</a></li>
+                <li><a href="./timeline.html"> 时间线</a></li>
+            </ul>
+        </div>
+        <p>点击菜单外区域将关闭</p>
+    </section>
+    <div id="coolsites-list">
+
+    </div>
+    <nav>
+        <div id="logo">
+            <span id="public-menu"></span>
+            <a href="./index.html"> <img src="./image/wblogo2.svg" alt="logo" width="100"></a>
+            <a href="#">goodluckwb</a>
+        </div>
+
+        <ul id="mainmenu">
+            <li> <a href="./index.html">首页</a> <span class=''></span><i></i></li>
+            <li><a href="./article.html"> 文章</a><span class=''></span><i></i></li>
+            <li><a href="./video.html"> 视频</a><span class=''></span><i></i></li>
+            <li><a href="./image.html"> 图像</a><span class=''></span><i></i></li>
+            <li><a href="./video-live.html"> 电视</a><span class=''></span><i></i></li>
+            <li><a href="./timeline.html"> 时间线</a><span class=''></span></li>
+        </ul>
+
+
+        <div id="smallpart">
+
+            <div id="search">
+                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
+                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="百度">
+                </form>
+            </div>
+            <div id="jisuanqi">
+            </div>
+            <ul>
+                <li id="coolsites">酷站</li>
+                <li id="click-jsq">计算器</li>
+
+                <li id="theme">
+                    <p id="theme-select" value="">主题</p>
+                    <span class="fas fa-angle-down"></span>
+                    <ol>
+                        <li>喜红</li>
+                        <li>深蓝</li>
+                        <li>豆绿</li>
+                        <li>橙色</li>
+                        <li>夜色</li>
+                        <li>紫色</li>
+                        <li>随机</li>
+                    </ol>
                 </li>
             </ul>
 
         </div>
-    </div>
+
+
+    </nav>
     <div id="go-to-top" style="display: none;">
         <div class="gototop">
             <i class=""></i>
@@ -101,101 +168,142 @@
         <div class="gototop">
             <i id="gototop-up" onmousedown="scrolltop();"></i>
             <span class='totoptip'>返回顶部</span>
-        </div>
 
+        </div>
     </div>
     <header>
+        <img src="./image/headerl.png" alt="">
         <h1>心随你的步调</h1>
         <h3><i>一个平凡人的自语</i></h3>
+
     </header>
-    <nav>
-        <ul>
-                <li>
-                    <a href="./index.html" class="fas fa-home"> 首页</a>
-                </li>
-                <li>
-                    <a href="./article.html" class="fas fa-newspaper"> 文章</a>
-                </li>
-                <li>
-                    <a href="./video.html" class="fas fa-video"> 视频</a>
-                </li>
-                <li>
-                    <a href="./image.html" class="fas fa-image"> 图像</a>
-                </li>
-                <li>
-                    <a href="./video-live.html" class="fas fa-tv"> 电视</a>
-                </li>
-                <li>
-                    <a href="./timeline.html" class="fas fa-clock"> 时间线</a>
-                </li>
-            </ul>   
-            <div id="search">
-                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
-                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="百度">
-                </form>
-            </div>
-    </nav>
-    
+
     <div id="bigimg">
         <img src="./image/07.jpg" alt="" width="100%">
     </div>
-    <div id="wrapper">           
-        <div id="imgtitle">
-            <h2 onclick="">精美图片</h2>
+    <div id="wrapper">
+        <div class="title-div">
+            <h2 onclick="" class="far fa-image"> 精美图片</h2>
         </div>
-        <figure id="imglist">
-            <ul >
-                <li class="imgl2r"><img src="./image/08.jpg" alt="">
+        <figure class="imglist">
+            <ul>
+                <li class="imgl2r"><img src="" data-echo="./image/08.jpg" alt="">
                     <p>扬帆,出征</p>
                 </li>
-                <li class="imgl2r"><img src="./image/01.jpg" alt="">
-                    <p>夏日,吃瓜就是爱啊</p>
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/525081b2953b78919cb450c9419461e35bcfc5431d0f5a-UWok0D_fw658" alt="">
+                    <p>美女</p>
                 </li>
-                <li class="imgl2r"><img src="./image/02.jpg" alt="">
-                    <p>舒服的思念</p>
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/a4d63dc50abb07377aee13b540bf95a0f1badb6630aa0-L3W94R_fw658" alt="">
+                    <p>美女</p>
                 </li>
-                <li class="imgl2r"><img src="./image/03.jpg" alt="">
-                    <p>赤热,并没有</p>
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/cb84512eec8b08abcab31b1cdde156083ec255e68720c0-KBaT2k_fw658" alt="">
+                    <p>美女</p>
                 </li>
-                <li class="imgl2r"><img src="./image/04.jpg" alt="">
-                    <p>蓝天,白云</p>
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/7b9ae154b447cfc19c95628d9367138e60e238016508e6-z15wjF_fw658" alt="">
+                    <p>李知恩</p>
                 </li>
-                <li class="imgl2r"><img src="./image/05.jpg" alt="">
+                <li class="imgl2r"><img src="" data-echo="./image/05.jpg" alt="">
                     <p>希望,也许</p>
                 </li>
-                <li class="imgl2r"><img src="./image/06.jpg" alt="">
-                    <p>听说你很倔</p>
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/b44b578829ce796feeb423fe323d2fda52b696adaa33b-DVSPrN_fw658" alt="">
+                    <p>美女</p>
                 </li>
-                <li class="imgl2r"><img src="./image/07.jpg" alt="">
-                    <p>看到就渴了</p>
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/7a67a015a7d671efa8c1efbe6458403d9a27b30c260e6-FqOs9q_fw658" alt="">
+                    <p>嘴巴嘟嘟</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://img5.duitang.com/uploads/item/201410/24/20141024181713_AkG4W.thumb.700_0.jpeg" alt="">
+                    <p>美女</p>
                 </li>
                 
-            </ul>   
+                
+
+            </ul>
+        </figure>
+        <figure class="imglist">
+            <ul>
+                
+                <li class="imgl2r"><img src="" data-echo="http://b.zol-img.com.cn/desk/bizhi/image/5/960x600/1404457972673.jpg" alt="">
+                    <p>美女</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://img.7xz.com/img/picimg/201609/20160907105336_593369dbbe9e2cc6534.jpg" alt="">
+                    <p>美女</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="https://b-ssl.duitang.com/uploads/item/201504/22/20150422H1756_sNuWa.thumb.1300_0.jpeg" alt="">
+                    <p>美女</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://photo.tuchong.com/4063120/f/561840542.jpg" alt="">
+                    <p>美女</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://i7.hexunimg.cn/2014-12-08/171203249.jpg" alt="">
+                    <p>南笙</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://img4.imgtn.bdimg.com/it/u=3573290569,4019870750&fm=214&gp=0.jpg" alt="">
+                    <p>美女</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://pic.eastlady.cn/uploads/tp/201704/9999/e510110cb0.jpg" alt="">
+                    <p>美女</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://img.zcool.cn/community/0100f75746957432f875a42990d658.jpg@1280w_1l_2o_100sh.jpg" alt="">
+                    <p>美女</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://img4.duitang.com/uploads/item/201307/22/20130722113608_R2fhH.thumb.700_0.jpeg" alt="">
+                    <p>美女</p>
+                </li>
+            </ul>
+        </figure>
+        <figure class="imglist">
+            <ul>
+                <li class="imgl2r"><img src="" data-echo="http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/03/92/5d4e34041bb061665b5247707e4ebfae.jpg" alt="">
+                    <p>水母</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://www.deskier.com/uploads/allimg/160913/1-160913155448.jpg" alt="">
+                    <p>萌狗</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://attachments.gfan.com/forum/attachments2/201410/31/000919r8u9o9b5pt1iz5rj.jpg" alt="">
+                    <p>小兔子</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://cdn.duitang.com/uploads/item/201512/18/20151218132032_SfZve.jpeg" alt="">
+                    <p>猫咪</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://img5q.duitang.com/uploads/item/201404/18/20140418223400_UhPn5.thumb.700_0.jpeg" alt="">
+                    <p>鲸鱼</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://pic.ffpic.com/files/2015/0425/0423xrqlbbsjbz7.jpg" alt="">
+                    <p>想吃</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://4493bz.1985t.com/uploads/allimg/160401/3-160401151503.jpg" alt="">
+                    <p>美女</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="https://tse1.mm.bing.net/th?id=OIP.9P0Bfi50boVtjT-4qnWWxAHaEK&pid=Api" alt="">
+                    <p>美景</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http://img5.duitang.com/uploads/item/201508/13/20150813095944_cReEd.thumb.700_0.jpeg" alt="">
+                    <p>美女</p>
+                </li>
+            </ul>
         </figure>
     </div>
-    
+
     <footer>
-            <div class="footer_top">
-                <h3>
-                    <span>WeiBin</span> 
-                </h3>    
-            </div>
-            <div class="footer_bottom">
-                <span>
-                版权所有,
-                2018-2020
-                All Rights Reserved.
-                </span>
-                <div class="footer_line"></div>
-            </div>
+        <div class="footer_top">
+            <h4>
+                <span>WeiBin</span>
+            </h4>
+        </div>
+        <div class="footer_bottom">
+            <span>
+                &copy;版权所有, 2018-2020 All Rights Reserved.
+            </span>
+            <div class="footer_line"></div>
+        </div>
     </footer>
 </body>
 <script src="./js/common.js"></script>
 <script>
     //图片分页用大图轮播
     //定义方法函数
-    function imgSwicth() {
+   
+    !function imgSwicth() {
         var d = document.getElementById("bigimg").firstElementChild;
         var k = 0
         var imgsrc = new Array();
@@ -215,6 +323,67 @@
             }
             k++;
         }, 3000)
-    }
+    }();
+    //图片lazyload
+    //https://github.com/helijun/documents/blob/master/plugin/echo/js/echo.js
+    window.Echo = (function(window, document, undefined) {
+
+        'use strict';
+
+        var store = [],
+        offset,
+        throttle,
+        poll;
+
+        var _inView = function(el) {
+            var coords = el.getBoundingClientRect();
+            return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + parseInt(offset));
+        };
+
+        var _pollImages = function() {
+            for (var i = store.length; i--;) {
+                var self = store[i];
+                if (_inView(self)) {
+                    self.src = self.getAttribute('data-echo');
+                    store.splice(i, 1);
+                }
+            }
+        };
+
+        var _throttle = function() {
+            clearTimeout(poll);
+            poll = setTimeout(_pollImages, throttle);
+        };
+
+        var init = function(obj) {
+            var nodes = document.querySelectorAll('[data-echo]');
+            var opts = obj || {};
+            offset = opts.offset || 0;
+            throttle = opts.throttle || 250;
+
+            for (var i = 0; i < nodes.length; i++) {
+                store.push(nodes[i]);
+            }
+
+            _throttle();
+
+            if (document.addEventListener) {
+                window.addEventListener('scroll', _throttle, false);
+            } else {
+                window.attachEvent('onscroll', _throttle);
+            }
+        };
+
+        return {
+            init: init,
+            render: _throttle
+        };
+
+        })(window, document);
+    Echo.init({
+        offset: 0,//离可视区域多少像素的图片可以被加载
+    　　throttle: 0 //图片延时多少毫秒加载
+    });
 </script>
+
 </html>

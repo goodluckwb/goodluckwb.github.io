@@ -1,9 +1,26 @@
-<h3 class="fas fa-book-reader"> AJAX异步处理网页文档</h3>
-<div class="fas fa-address-book signature">
-		2018/8/10 author
+<div id='article-title'>
+	<h3 class="fas fa-book-reader"> 第一次Git错误的解决方法</h3>
+	<div class="fas fa-address-book signature">
+			2018/8/10 author
+	</div>
 </div>
 <div class="artmain">
-	<p>这是个实验性的文件,看看异步处理能否把文档加载进来.</p>
-	<p>经测试可用,这下好了啦,以后更新文章就方便太多了.</p>
-	<p>亲们可以直接点击右边的文章列表进行文章切换.</p>
+	<blockquote>
+		<ol>
+			<li>直接在你git的命令行窗口输入：<span> remote remove origin</span>.</li>
+			<li>把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。</li>
+			<li>重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。 这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格，
+				会得到Bad escape character ‘ygen’.的错误。</li>
+			<li> 删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件，
+				然后全部复制粘贴到key即可.测试
+				<span>ssh -T git@github.com</span>。</li>
+			<li><span>echo "new Test" >> README.md</span>
+				<span>git init</span>
+				<span>git add README.md</span>
+				<span>git commit -m "first commit"</span>
+				<span>git remote add origin 你的ssh地址</span>
+				<span>git push -u origin master</span></li>
+		</ol>
+	</blockquote>
+
 </div>

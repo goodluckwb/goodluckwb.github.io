@@ -6,88 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
-    <link rel="icon" href="./image/logonew.png" type="image/x-icon"/>
+    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <style>
+        #topvideo{
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        #topvideo video{
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <section id="public-menu-content">
-            <div style="background: #ffffff">
-                <p>菜单1</p>
-                <ul>
-                    <li>这是内容一部分</li>
-                    <li>这是内容一部分</li>
-                </ul>
-            </div>
-            <div style="background: #3944dd">   
-                <p>菜单2</p>
-                <ul >
-                    <li>这是另一个部分</li>
-                    <li>这是另一个部分</li>
-                    <li>这是另一个部分</li>
-                </ul>
-            </div>
-            <p>这可以是一段文字</p>   
-        </section>
-    <div id="top">
-        <div id="toptitle">
-            <span id="public-menu"></span>
-            <a href="./index.html">
-                <img src="./image/logonew2.png" alt="logo" width="100">
-            </a>
-            <ul class="topleftul">
-                <li><a href="#">Goodluckwb</a></li> 
-                <li>
-                    <select name="changecolor" id="theme">
-                        <option value="喜红">喜红</option>
-                        <option value="深蓝">深蓝</option>
-                        <option value="豆绿">豆绿</option>
-                        <option value="橙色">橙色</option>
-                        <option value="夜色">夜色</option>
-                        <option value="紫色">紫色</option>
-                        <option value="随机">随机</option>
-                
-                    </select>
-                </li>
+        <div style="background: #ffffff" id="public-menu-content-div1">
+            <p>菜单</p>
+            <ul>
+                <li>这是内容一部分</li>
+                <li>这是内容一部分</li>
             </ul>
-            <ul class="toprightul">
-                <li class="menu-item">                       
-                    <span class="fas fa-angle-down others"></span>
-                    <a href="#">所有分类</a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#">原创文章</a>
-                        </li>
-                        <li>
-                            <a href="#">精品转载</a>
-                        </li>
-                        <li>
-                            <a href="#">平面设计</a>
-                        </li>
-                        <li>
-                            <a href="#">游戏相关</a>
-                        </li>
-                        <li>
-                            <a href="#">办公相关</a>
-                        </li>
-                        <li>
-                            <a href="#">视频特效</a>
-                        </li>
-                        <li>
-                            <a href="#">三维建模</a>
-                        </li>
-                        <li>
-                            <a href="#">音乐分享</a>
-                        </li>
-                    </ul>                           
+        </div>
+        <div style="background: #ffffff" id="public-menu-content-div2">
+            <p>菜单</p>
+            <ul>
+                <li> <a href="./index.html" class=""> 首页</a> </li>
+                <li><a href="./article.html"> 文章</a></li>
+                <li><a href="./video.html"> 视频</a></li>
+                <li><a href="./image.html"> 图像</a></li>
+                <li><a href="./video-live.html"> 电视</a></li>
+                <li><a href="./timeline.html"> 时间线</a></li>
+            </ul>
+        </div>
+        <p>点击菜单外区域将关闭</p>
+    </section>
+    <div id="coolsites-list">
+
+    </div>
+    <nav>
+        <div id="logo">
+            <span id="public-menu"></span>
+            <a href="./index.html"> <img src="./image/wblogo2.svg" alt="logo" width="100"></a>
+            <a href="#">goodluckwb</a>
+        </div>
+
+        <ul id="mainmenu">
+            <li> <a href="./index.html">首页</a> <span class=''></span><i></i></li>
+            <li><a href="./article.html"> 文章</a><span class=''></span><i></i></li>
+            <li><a href="./video.html"> 视频</a><span class=''></span><i></i></li>
+            <li><a href="./image.html"> 图像</a><span class=''></span><i></i></li>
+            <li><a href="./video-live.html"> 电视</a><span class=''></span><i></i></li>
+            <li><a href="./timeline.html"> 时间线</a><span class=''></span></li>
+        </ul>
+
+
+        <div id="smallpart">
+
+            <div id="search">
+                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
+                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="百度">
+                </form>
+            </div>
+            <div id="jisuanqi">
+            </div>
+            <ul>
+                <li id="coolsites">酷站</li>
+                <li id="click-jsq">计算器</li>
+
+                <li id="theme">
+                    <p id="theme-select" value="">主题</p>
+                    <span class="fas fa-angle-down"></span>
+                    <ol>
+                        <li>喜红</li>
+                        <li>深蓝</li>
+                        <li>豆绿</li>
+                        <li>橙色</li>
+                        <li>夜色</li>
+                        <li>紫色</li>
+                        <li>随机</li>
+                    </ol>
                 </li>
             </ul>
 
         </div>
-    </div>
+
+    </nav>
     <div id="go-to-top" style="display: none;">
         <div class="gototop">
             <i class=""></i>
@@ -101,76 +110,49 @@
         <div class="gototop">
             <i id="gototop-up" onmousedown="scrolltop();"></i>
             <span class='totoptip'>返回顶部</span>
-        </div>
 
+        </div>
     </div>
     <header>
+        <img src="./image/headerl.png" alt="">
         <h1>心随你的步调</h1>
         <h3><i>一个平凡人的自语</i></h3>
+
     </header>
-    <nav>
-        <ul>
-                <li>
-                    <a href="./index.html" class="fas fa-home"> 首页</a>
-                </li>
-                <li>
-                    <a href="./article.html" class="fas fa-newspaper"> 文章</a>
-                </li>
-                <li>
-                    <a href="./video.html" class="fas fa-video"> 视频</a>
-                </li>
-                <li>
-                    <a href="./image.html" class="fas fa-image"> 图像</a>
-                </li>
-                <li>
-                    <a href="./video-live.html" class="fas fa-tv"> 电视</a>
-                </li>
-                <li>
-                    <a href="./timeline.html" class="fas fa-clock"> 时间线</a>
-                </li>
-            </ul>           
-            <div id="search">
-                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
-                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="百度">
-                </form>
-            </div>
-    </nav>
+    <div id="topvideo">
+        <video id="video" src="http://www.quanjing.com/image/2018image/homepage/fun.mp4?v=7" loop="loop" autoplay="autoplay" type="video/mp4" muted="" __idm_id__="983011329"></video>
+    </div>
     <div id="main">
-       <div id="wrapper">           
-        <table>
-            <tbody>
-                <tr>
-                    <th>项目</th>
-                    <th>内容具体描述</th>
-                </tr>
-                <tr>
-                    <td>个人爱好</td>
-                    <td> 学习代码编程,平面设计,创建3D模型,视频与特效编辑.</td>
-                </tr>
-                <tr>
-                    <td>热门游戏</td>
-                    <td>王者荣耀,绝地求生,英雄联盟</td>
-                </tr>
-            </tbody>
-        </table>
-       </div>
+        
+        <div id="wrapper">
+
+            <div id="video-content">
+                <p>《守望先锋》D.Va动画短片</p>
+                <iframe src="https://player.youku.com/embed/XMzc5Mjk5MDE0MA====" width="960" height="540" frameborder="0"></iframe>
+                <p>张艺谋《影》</p>
+                <video controls="controls" width="960px" height="540px" src="http://vfx.mtime.cn/Video/2018/08/24/mp4/180824104230502641.mp4"></video>
+                <p>见证第一只狗的诞生</p>
+                <video controls="controls" width="960" height="540" src="http://vfx.mtime.cn/Video/2018/08/24/mp4/180824111351828997.mp4" ></video>
+                <p>《战地5》RTX效果视频演示
+                <iframe src="https://player.youku.com/embed/XMzc5NTk0MjgyNA====" width="960" height="540" frameborder="0" autoplay='false'></iframe>
+                </p>
+            </div>
+        </div>
     </div>
     <footer>
-            <div class="footer_top">
-                <h3>
-                    <span>WeiBin</span> 
-                </h3>    
-            </div>
-            <div class="footer_bottom">
-                <span>
-                版权所有,
-                2018-2020
-                All Rights Reserved.
-                </span>
-                <div class="footer_line"></div>
-            </div>
-        </footer>
-        <script src="./js/common.js"></script>
+        <div class="footer_top">
+            <h4>
+                <span>WeiBin</span>
+            </h4>
+        </div>
+        <div class="footer_bottom">
+            <span>
+                &copy;版权所有, 2018-2020 All Rights Reserved.
+            </span>
+            <div class="footer_line"></div>
+        </div>
+    </footer>
+    <script src="./js/common.js"></script>
 </body>
+
 </html>

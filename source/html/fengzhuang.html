@@ -1,0 +1,67 @@
+<div id='article-title'>
+	<h3 class="fas fa-book-reader"> JS对象封装的常用方式</h3>
+	<div class="fas fa-address-book signature">
+			2018/8/21 author
+	</div>
+</div>
+<div class="artmain">
+    <pre><p>常规封装
+	function Person (name,age,sex){
+		this.name = name;
+		this.age = age;
+		this.sex = sex;
+	}
+	Person.prototype = {
+		constructor:Person,
+		sayHello:function(){
+			console.log('hello');
+		}
+	}
+	var p=new Person('xiaom',23,'man');
+	p.sayHello();
+	这种方式是比较常见的方式,比较直观,但是Person() 的职责是构造对象,如果把初始化的事情也放在里面完成,代码就会显得繁琐,如果放在一个方法里初始化会不会好点呢?</p><p>升级版 (常见)
+	function Person (info){
+		this._init(info);
+	}
+	Pserson.prototype = {
+		constructor : Person,
+		_init : function(info) {
+			this.name = info.name;
+			this.age = info.age;
+			this.sex = info.sex;
+		}
+		sayHello:function(){
+			console.log('hello');
+		}
+	}</p><p>闭包
+	var Person = (function(window) {
+	var Person = function(name) {
+		return new Person.fn.init(name);
+	}
+	Person.fn = Person.prototype = {
+		constructor: Person,
+		init: function(name) {
+			this.name = name;
+			this.sayHello = function() {
+				this.makeArray();
+			}
+		},
+		makeArray: function() {
+			console.log(this.name);
+		}
+	}
+	Person.fn.init.prototype = Person.fn;
+	return Person;
+	})();
+	
+	(function () {
+		function a()
+		{
+			alert('i am a');
+		}
+		outFunc = function () {
+			a();
+		}
+	})();
+	闭包的好处是,这里不论写多少个function,a b c d ...外面都调用不到，包括这里面var定义的变量也都调用不到，那么你在里面尽情的写，就不用担心这些函数名变量名跟外界冲突；
+只需要暴露一个outFunc这个函数供外界调用。这个函数呢没有用var定义，就变成一个全局变量，外界就可以调用的到，利用这一点，让这个函数变成匿名函数和外界沟通的桥梁。

@@ -1,98 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WeiBin的个人主页</title>
-    <link rel="icon" href="./image/logonew.png" type="image/x-icon"/>
+    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-	<script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
+
 <body>
     <section id="public-menu-content">
-        <div style="background: #ffffff">
-            <p>菜单1</p>
+        <div style="background: #ffffff" id="public-menu-content-div1">
+            <p>菜单</p>
             <ul>
                 <li>这是内容一部分</li>
                 <li>这是内容一部分</li>
             </ul>
         </div>
-        <div style="background: #3944dd">   
-            <p>菜单2</p>
-            <ul >
-                <li>这是另一个部分</li>
-                <li>这是另一个部分</li>
-                <li>这是另一个部分</li>
+        <div style="background: #ffffff" id="public-menu-content-div2">
+            <p>菜单</p>
+            <ul>
+                <li> <a href="./index.html" class=""> 首页</a> </li>
+                <li><a href="./article.html"> 文章</a></li>
+                <li><a href="./video.html"> 视频</a></li>
+                <li><a href="./image.html"> 图像</a></li>
+                <li><a href="./video-live.html"> 电视</a></li>
+                <li><a href="./timeline.html"> 时间线</a></li>
             </ul>
         </div>
-        <p>这可以是一段文字</p>   
+        <p>点击菜单外区域将关闭</p>
     </section>
-    <div id="top">
-        <div id="toptitle">
-            <span id="public-menu"></span>
-            <a href="./index.html">
-                <img src="./image/logonew2.png" alt="logo" width="100">
-            </a>
-            <ul class="topleftul">
-                <li><a href="#">goodluckwb</a></li>
-                <li>                   
-                    <select name="changecolor" id="theme">
-                        <option value="喜红">喜红</option>
-                        <option value="深蓝">深蓝</option>
-                        <option value="豆绿">豆绿</option>
-                        <option value="橙色">橙色</option>
-                        <option value="夜色">夜色</option>
-                        <option value="紫色">紫色</option>
-                        <option value="随机">随机</option>
+    <div id="coolsites-list">
 
-                    </select>
-                </li>
-
-            </ul>
-            <ul class="toprightul">
-               
-                <li class="menu-item fas fa-calculator">
-                    <a id="click-jsq"   href="javascript:void(0);">计算器</a>
-                    <div id="jisuanqi">
-
-                    </div>
-                </li>
-                <li class="menu-item">                       
-                    <span class="fas fa-angle-down others"></span>
-                    <a href="javascript:void(0);">所有分类</a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#">原创文章</a>
-                        </li>
-                        <li>
-                            <a href="#">精品转载</a>
-                        </li>
-                        <li>
-                            <a href="#">平面设计</a>
-                        </li>
-                        <li>
-                            <a href="#">游戏相关</a>
-                        </li>
-                        <li>
-                            <a href="#">办公相关</a>
-                        </li>
-                        <li>
-                            <a href="#">视频特效</a>
-                        </li>
-                        <li>
-                            <a href="#">三维建模</a>
-                        </li>
-                        <li>
-                            <a href="#">音乐分享</a>
-                        </li>
-                    </ul>                           
-                </li>
-            </ul>
-        </div>
     </div>
+    <nav>
+        <div id="logo">
+            <span id="public-menu"></span>
+            <a href="./index.html"> <img src="./image/wblogo2.svg" alt="logo" width="100"></a>
+            <a href="#">goodluckwb</a>
+        </div>
+
+        <ul id="mainmenu">
+            <li> <a href="./index.html">首页</a> <span class=''></span><i></i></li>
+            <li><a href="./article.html"> 文章</a><span class=''></span><i></i></li>
+            <li><a href="./video.html"> 视频</a><span class=''></span><i></i></li>
+            <li><a href="./image.html"> 图像</a><span class=''></span><i></i></li>
+            <li><a href="./video-live.html"> 电视</a><span class=''></span><i></i></li>
+            <li><a href="./timeline.html"> 时间线</a><span class=''></span></li>
+        </ul>
+
+        <div id="smallpart">
+
+            <div id="search">
+                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
+                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
+                    <input class="search-submit" type="submit" value="百度">
+                </form>
+            </div>
+            <div id="jisuanqi">
+            </div>
+            <ul>
+                <li id="coolsites">酷站</li>
+                <li id="click-jsq">计算器</li>
+
+                <li id="theme">
+                    <p id="theme-select" value="">主题</p>
+                    <span class="fas fa-angle-down"></span>
+                    <ol>
+                        <li>喜红</li>
+                        <li>深蓝</li>
+                        <li>豆绿</li>
+                        <li>橙色</li>
+                        <li>夜色</li>
+                        <li>紫色</li>
+                        <li>随机</li>
+                    </ol>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
     <div id="go-to-top" style="display: none;">
         <div class="gototop">
             <i class=""></i>
@@ -106,49 +100,24 @@
         <div class="gototop">
             <i id="gototop-up" onmousedown="scrolltop();"></i>
             <span class='totoptip'>返回顶部</span>
-            
+
         </div>
     </div>
     <header>
+        <img src="./image/headerl.png" alt="">
         <h1>心随你的步调</h1>
         <h3><i>一个平凡人的自语</i></h3>
+
     </header>
-    <nav>
-        <ul>
-            <li>
-                <a href="./index.html" class="fas fa-home"> 首页</a>
-            </li>
-            <li>
-                <a href="./article.html" class="fas fa-newspaper"> 文章</a>
-            </li>
-            <li>
-                <a href="./video.html" class="fas fa-video"> 视频</a>
-            </li>
-            <li>
-                <a href="./image.html" class="fas fa-image"> 图像</a>
-            </li>
-            <li>
-                <a href="./video-live.html" class="fas fa-tv"> 电视</a>
-            </li>
-            <li>
-                <a href="./timeline.html" class="fas fa-clock"> 时间线</a>
-            </li>
-        </ul>         
-            <div id="search">
-                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
-                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="百度">
-                </form>
-            </div>
-    </nav>
+
     <div id="main">
-        <section id="silder-music">
-        
-        
-            <div id="silder-music-content"></div>
-        
-            <div id="silder-music-show"></div>
-        
+        <section id="side-music">
+
+
+            <div id="side-music-content"></div>
+
+            <div id="side-music-show"></div>
+
         </section>
         <div id="lside">
             <div id="lsidetop">
@@ -172,12 +141,12 @@
                 <!-- 一下为图片内容部分 -->
                 <div id="imgbox">
                     <ul id="imgturn">
-                    
                         <li class="imgzoom">
-                            <img src="./image/01.jpg" alt="">
+                            <img src="https://img.zcool.cn/community/0102b4578059b40000018c1bf9d922.jpg@1280w_1l_2o_100sh.jpg" alt="">
                         </li>
                         <li class="imgzoom">
-                            <img  src="https://c.s-microsoft.com/zh-cn/CMSImages/Surface_Book2_Overview_1_Imageintro_V2.png.jpg?version=f207dd01-2160-1c62-66b4-a240f170f87b" alt="">
+                            <img src="https://c.s-microsoft.com/zh-cn/CMSImages/Surface_Book2_Overview_1_Imageintro_V2.png.jpg?version=f207dd01-2160-1c62-66b4-a240f170f87b"
+                                alt="">
                         </li>
                         <li class="imgzoom">
                             <img src="./image/03.jpg" alt="">
@@ -186,56 +155,47 @@
                             <img src="./image/04.jpg" alt="">
                         </li>
                         <li class="imgzoom">
-                            <img src="./image/01.jpg" alt="">
+                            <img src="https://img.zcool.cn/community/0102b4578059b40000018c1bf9d922.jpg@1280w_1l_2o_100sh.jpg" alt="">
                         </li>
                     </ul>
-                </div>            
+                </div>
             </div>
             <div id="focus">
                 <div class="title-div">
                     <h2 class="fas fa-hand-point-right"> 今日热点</h2>
+                    <ul id="focus-list">
+                        <li>IT界 /</li>
+                        <li class="active">科学 /</li>
+                        <li>硬件 /</li>
+                        <li>软件 /</li>
+                        <li>游戏 /</li>
+                        <li>智能</li>
+                    </ul>
                 </div>
-                <div id="focus-img">
-                    <a href="#">
-                        <img src="./image/07.jpg" alt=""> 
-                    </a>
-                </div>                
-                <h3 class="fas fa-award"> 诺基亚X6国际版即将登陆海外市场</h3>
-                <p id="focus-content">
-                    诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
-                    诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
-                    诺基亚X6（诺基亚6.1 Plus）采用双面玻璃机身设计，搭载骁龙636处理器，5.8英寸19:9全面屏， 后置1600万像素+500万像素镜头，前置1600万像素镜头，预装安卓8.1系统。内置3060mAh容量电池， 支持QC3.0的18W快速充电，只需要30分钟即可完成充电50%。
-                </p>               
+                <div id="focus-content">
+
+                </div>
+
+            </div>
+            <div class="title-div">
+                <h2 class="fas fa-paper-plane"> 精选内容</h2>
+            </div>
+            <div id="jingxuan">
+                <ul>
+                    <li class="box-reflect"><img src="./image/01.jpg" alt=""></li>
+                    <li><img src="./image/02.jpg" alt=""></li>
+                    <li><img src="./image/03.jpg" alt=""></li>
+                    <li><img src="./image/04.jpg" alt=""></li>
+                    <li><img src="./image/05.jpg" alt=""></li>
+                    <li><img src="./image/06.jpg" alt=""></li>
+                
+                   
+                </ul>
             </div>
             
             <article>
-                <h3 class="fas fa-book-reader"> 第一次Git错误的解决方法</h3>
-                <i class="fas fa-angle-double-up"></i>
-                <div class="fas fa-address-book signature">
-                    2018/7/22 author
-                </div>
-                <div class="artmain">
-                    <blockquote >
-                        <ol >
-                        <li>直接在你git的命令行窗口输入：<span> remote remove origin</span>.</li>
-                        <li>把.ssh文件删掉，就是命令行<span>ssh-add -D</span>然后继续<span>rm -r ~/.ssh</span>就OK了。</li>
-                        <li>重建ssh，直接输入命令<span>ssh-keygen -t rsa -C “邮箱”</span>,一路回车。 这里注意ssh-keygen命令中间没有空格，如果在ssh后面加上空格， 会得到Bad escape
-                            character ‘ygen’.的错误。</li> 
-                        <li> 删除github网页里的ssh，在setting下的SSH and GPG keys下删除ssh。输入新的ssh，新建一个key值，标题随意，key就是打开那个id_rsa.pub文件， 然后全部复制粘贴到key即可.测试
-                            <span>ssh -T git@github.com</span>。</li>
-                        <li><span>echo "new Test" >> README.md</span>
-                            <span>git init</span>
-                            <span>git add README.md</span>
-                            <span>git commit -m "first commit"</span>
-                            <span>git remote add origin 你的ssh地址</span>
-                            <span>git push -u origin master</span></li>
-                        </ol>
-                    </blockquote>
-                </div>
-            </article>
-            <article>
-                <h3 class="fas fa-book-reader"> 凉州词</h3>
-                <i class="fas fa-angle-double-up"></i>
+                <h3 > 凉州词</h3>
+                <i class="fas fa-angle-up"></i>
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
                 </div>
@@ -247,8 +207,8 @@
                 </div>
             </article>
             <article>
-                <h3 class="fas fa-book-reader"> 枫桥夜泊</h3>
-                <i class="fas fa-angle-double-up"></i>
+                <h3 > 枫桥夜泊</h3>
+                <i class="fas fa-angle-up"></i>
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
                 </div>
@@ -260,8 +220,8 @@
                 </div>
             </article>
             <article>
-                <h3 class="fas fa-book-reader"> 送杜少府之任蜀州</h3>
-                <i class="fas fa-angle-double-up"></i>
+                <h3 > 送杜少府之任蜀州</h3>
+                <i class="fas fa-angle-up"></i>
                 <div class="fas fa-address-book signature">
                     2018/7/22 author
                 </div>
@@ -282,28 +242,30 @@
                     <h2 class="fas fa-headphones"> 音乐分享</h2>
                 </div>
                 <ul>
-                    <li >
+                    <li>
                         <h4 id="musictitle"></h4>
                     </li>
                     <li id="musiccover">
-                        <img src="./image/09.jpg" alt="">
+                        <img src="https://p1.music.126.net/CjGoliP3xOB0gcCUaeTTBg==/109951163375727336.jpg?param=300x300" alt="">
                     </li>
                     <li id="musiccontrol">
                         <div>
                             <span id="musicprevious" class="normal"></span>
                             <span id="musicnext" class="normal"></span>
-                            <span id="musicplay" class="normal"></span>
+                            <span id="musicplay" class="normal">
+                                <!-- <canvas width=50 height=50 id="myCanvas" style="z-index:1000"></canvas> -->
+                            </span>
                         </div>
                     </li>
-                    
+
                     <li id="jindutiao">
                         <span id="jindutiao-current">
                             <h5 style="float:right;color: white"></h5>
                         </span>
                         <span class="fas fa-list tubiao"></span>
                     </li>
-                    <li >
-                        <audio>                           
+                    <li>
+                        <audio>
                         </audio>
                     </li>
                     <li id="bofanglist">
@@ -323,9 +285,11 @@
                     <form action="javascript:;" method="post" target="">
                         <input id="input-city" type="text" list="allcity" placeholder="请输入城市如:苏州">
                         <datalist id="allcity">
-                            <option value="苏州"><option value="商丘"><option value="上海">
+                            <option value="苏州">
+                                <option value="商丘">
+                                    <option value="上海">
                         </datalist>
-                        
+
                     </form>
                 </div>
                 <h4></h4>
@@ -339,7 +303,7 @@
                 <ul id="current_price">
 
                 </ul>
-                
+
             </div>
             <aside>
                 <div class="title-div">
@@ -371,7 +335,7 @@
                 <div class="title-div">
                     <h2 class="fas fa-pen-nib"> 最新发表</h2>
                 </div>
-                 <ul>
+                <ul>
                     <li>
                         <a href="#">文章列表</a>
                     </li>
@@ -417,28 +381,28 @@
                     </li>
                 </ul>
             </aside>
+
         </div>
     </div>
-    
+
     <footer>
         <div class="footer_top">
-            <h3>
-                <span>WeiBin</span> 
-            </h3>    
+            <h4>
+                <span>WeiBin</span>
+            </h4>
         </div>
         <div class="footer_bottom">
             <span>
-            版权所有,
-            2018-2020
-            All Rights Reserved.
+                &copy;版权所有, 2018-2020 All Rights Reserved.
             </span>
             <div class="footer_line"></div>
         </div>
     </footer>
-    
+
     <script src="./js/jisuanqi.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/imgturn.js"></script>
     <script src="./js/common.js"></script>
 </body>
+
 </html>
