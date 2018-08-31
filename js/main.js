@@ -44,7 +44,7 @@ $(document).ready(function () {
         });     
     };
     refreshPrice();
-    setInterval(refreshPrice, 1000*60*3);
+    setInterval(refreshPrice, 1000*60*1);
     //音乐盒
     var
         play = $('#musicplay'),

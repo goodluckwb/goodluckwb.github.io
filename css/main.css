@@ -12,6 +12,7 @@ sup{vertical-align:text-top}sub{vertical-align:text-bottom}
 fieldset,img{border:0}
 table{border-collapse:collapse;border-spacing:0}
 pre{white-space: pre-wrap;}
+embed,video,iframe{width: 100%;height: 100%;border: none;}
 @font-face{ 
     font-family:"FontAwesome"; 
     src:url('../source/fontawesome/webfonts/fa-regular-400.eot'); 
@@ -23,6 +24,24 @@ pre{white-space: pre-wrap;}
     font-weight:normal; 
     font-style:normal; 
 }
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width:10px;
+    }
+   
+    ::-webkit-scrollbar-track {
+    /* -webkit-box-shadow:inset006pxrgba(0,0,0,0.3); */
+    border-radius:10px;
+    }
+    /* 滚动条滑块 */
+    ::-webkit-scrollbar-thumb {
+    border-radius:10px;
+    background:rgba(255, 125, 125, 0.5);
+    /* -webkit-box-shadow:inset006pxrgba(0,0,0,0.5); */
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+    background:rgba(255,0,0,0.6);
+    }
 :root{
     --titlecolor:#CC0706;
     --leftbordercolor:#99cc33;
@@ -52,7 +71,6 @@ h2{
     border-right: 1px solid var(--titlecolor);
     border-left: 1px solid var(--titlecolor);
     border-bottom: none;
-    display: inline-block;
     font: 16px/16px "微软雅黑",'黑体',sans-serif;
     /* box-sizing: border-box; */
     z-index: 100;
@@ -102,6 +120,8 @@ h2{
     overflow: visiable;
     height:34px;
     /* margin-bottom: 10px;  */
+    /* background: rgba(255,255,255,0.3); */
+   
 }
 h3 {
 	position:relative;
@@ -286,7 +306,7 @@ header{
         color: var(--anniucolor);
         font-size:50px;
         line-height: 50px;
-        text-shadow: 5px 5px 20px rgb(50, 50, 50);
+        text-shadow: 5px 5px 10px rgba(50, 50, 50,.8);
     }
     header h3{
         position: absolute;
@@ -295,7 +315,7 @@ header{
         color: var(--fontcolor);
         font-size:25px;
         line-height: 25px;
-        text-shadow: 5px 5px 20px rgb(50, 50, 50);
+        text-shadow: 5px 5px 10px rgba(50, 50, 50,.8);
         border: none;
     }
 strong{
@@ -311,6 +331,8 @@ nav{
     padding: 0 5%;
     width: 100%;
     z-index: 1000;
+    /* border-bottom: 1px solid #e2e2e2; */
+    box-shadow: 0 0 10px rgba(0,0,0,.6);
 }
     #logo{
         float: left;
@@ -442,7 +464,7 @@ nav{
     margin-bottom: 15px;
     background: #f9f9f9;
     padding: 15px 15px;
-    box-shadow: 0px 0px 10px #3f3f3f;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
 }
     #main::after{
         content: "";
@@ -486,7 +508,7 @@ nav{
     }
     #imgbox ul li{
         float: left;
-        width: 800px;
+        width: 805px;
     }
     #imgturn{
         position: relative;

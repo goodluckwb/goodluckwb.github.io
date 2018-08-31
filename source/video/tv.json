@@ -1,0 +1,58 @@
+[
+   
+    {
+        "topMenu":"虎牙直播",
+        "subMenu":[
+            {"title":"新三国","imgurl":"","type":"embed","url":"https://liveshare.huya.com/11352944/huyacoop.swf"},
+            {"title":"新水浒","imgurl":"","type":"embed","url":"https://liveshare.huya.com/11342384/huyacoop.swf"},
+            {"title":"亮剑","imgurl":"","type":"embed","url":"https://liveshare.huya.com/11342434/huyacoop.swf"},
+            {"title":"科幻","imgurl":"","type":"embed","url":"https://liveshare.huya.com/11352964/huyacoop.swf"},
+            {"title":"成龙","imgurl":"","type":"embed","url":"http://liveshare.huya.com/11342386/huyacoop.swf"},
+            {"title":"漫威","imgurl":"","type":"embed","url":"http://liveshare.huya.com/11602075/huyacoop.swf"},
+            {"title":"舌尖地球","imgurl":"","type":"embed","url":"http://liveshare.huya.com/11352955/huyacoop.swf"}
+            
+        ]
+    },
+    {
+        "topMenu":"电视频道",  
+        "subMenu":[
+            {"title":"CCTV-5","type":"iframe","imgsrc":"http://p1.img.cctvpic.com/photoAlbum/templet/special/PAGETEIZZ4GiRbyPpk11xQdL160414/ELMTWHMxJ0d8XhldQZEClglQ160414_1460625135.png","url":"http://player.cntv.cn/standard/live_HLSDRM20180618.swf?ChannelID=cctv5&amp;videoTVChannel=cctv5&amp;P2PChannelID=pd://cctv_p2p_hdcctv5&amp;VideoName=cctv5&amp;channelID=cctv5&amp;BannerWidth=600&amp;BannerInterval=20&amp;playBackType=common&amp;ruleVisible=true&amp;languageXml=&amp;configURL=http://player.cntv.cn/flashplayer/config/WebHDSPlayerConfig.xml&amp;referrer=&amp;fingerprint=Fingerprint&amp;wmode=opaque&amp;quality=high"},
+            {"title":"快乐垂钓","type":"iframe","imgsrc":"","url":"http://vip.cietv.com/cmp/url.html?%C3%A2%B9%FB%D6%B1%B2%A5"},
+            {"title":"湖南卫视","imgurl":"","type":"ckplayer","url": "http://117.169.120.210:8080/live/hunanstv/.m3u8" },
+            {"title":"东方卫视","imgurl":"","type":"ckplayer","url": "http://hls.cntv.myqcloud.com/live/5213_dongfang.m3u8" },
+            {"title":"CCTV-5","imgurl":"","type":"embed","url": "http://g.alicdn.com/de/prismplayer-flash/1.2.16/PrismPlayer.swf?vurl=http://117.169.120.210:8080/live/cctv-5/.m3u8" },
+            {"title":"CCTV-9","imgurl":"","type":"ckplayer","url": "http://202.107.188.149:5002/cctv9_hdcq.m3u8?token=guoziyun" },
+            {"title":"CCTV-10","imgurl":"","type":"embed","url": "http://g.alicdn.com/de/prismplayer-flash/1.2.16/PrismPlayer.swf?vurl=http://223.110.243.150/PLTV/2/224/3221226013/index.m3u8" },
+            {"title":"CCTV-13","imgurl":"","type":"ckplayer","url": "http://117.169.120.210:8080/live/cctv-13/.m3u8" },
+            {"title":"江苏卫视","imgurl":"","type":"embed","url": "http://player.pplive.cn/live/2.12.29/player4live2.swf?rcc=0&pid=493601&pl=pptv://0a2fmaaWpqOSy7OVltmpmueX2NqXrN==" },
+            {"title":"凤凰资讯","imgurl":"","type":"ckplayer","url": "http://live.fengshows.com/live/PIN_500k/index.m3u8" },
+            {"title":"完美游戏","imgurl":"","type":"embed","url": "http://g.alicdn.com/de/prismplayer-flash/1.2.16/PrismPlayer.swf?vurl=http://183.207.249.16/PLTV/3/224/3221225539/index.m3u8" },
+            {"title":"动画王国","imgurl":"","type":"embed","url": "http://g.alicdn.com/de/prismplayer-flash/1.2.16/PrismPlayer.swf?vurl=http://223.110.243.150/PLTV/3/224/3221225555/index.m3u8" },
+            {"title":"爱情喜剧","imgurl":"","type":"ckplayer","url": "http://183.207.249.12/PLTV/3/224/3221225525/index.m3u8" },
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url": "https://flv.quanmin.tv/live/1597963106.flv" }
+        ]
+    },
+    {
+        "topMenu":"BiliBili",
+        "subMenu":[
+            {"title":"直播频道1","imgurl":"","type":"embed","url":"http://s1.hdslb.com/bfs/static/blive/live-assets/player/flash/pageplayer-latest.swf?room_id=3568283&cid=3568283&state=LIVE"},
+            {"title":"直播频道2","imgurl":"","type":"embed","url":"http://s1.hdslb.com/bfs/static/blive/live-assets/player/flash/pageplayer-latest.swf?room_id=1913690&cid=1913690&state=LIVE"},
+            {"title":"直播频道3","imgurl":"","type":"embed","url":"http://s1.hdslb.com/bfs/static/blive/live-assets/player/flash/pageplayer-latest.swf?room_id=1929865&cid=1929865&state=LIVE"},
+            {"title":"直播频道4","imgurl":"","type":"embed","url":"http://s1.hdslb.com/bfs/static/blive/live-assets/player/flash/pageplayer-latest.swf?room_id=27190&cid=27190&state=LIVE"},
+            {"title":"郭德刚相声","imgurl":"","type":"embed","url":"http://s1.hdslb.com/bfs/static/blive/live-assets/player/flash/pageplayer-latest.swf?room_id=4183597&cid=4183597&state=LIVE"}
+        ]
+    },
+    {
+        "topMenu":"游戏直播",
+        "subMenu":[
+            {"title":"绝地求生","imgurl":"","type":"embed","url":"https://liveshare.huya.com/14674490/huyacoop.swf"},
+            {"title":"绝地求生","imgurl":"","type":"embed","url":"https://liveshare.huya.com/daiwei/huyacoop.swf"},
+            {"title":"使命召唤","imgurl":"","type":"embed","url":"https://liveshare.huya.com/saoshu/huyacoop.swf"},
+            {"title":"王者荣耀","imgurl":"","type":"embed","url":"https://liveshare.huya.com/10140788/huyacoop.swf"},
+            {"title":"跑跑卡丁车","imgurl":"","type":"embed","url":"https://liveshare.huya.com/yhcoffee/huyacoop.swf"},
+            {"title":"炉石传说","imgurl":"","type":"embed","url":"https://liveshare.huya.com/13059171/huyacoop.swf"}
+        
+        ]
+    }
+    
+]

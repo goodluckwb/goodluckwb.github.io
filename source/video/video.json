@@ -1,0 +1,56 @@
+[
+    {
+        "topMenu":"精品视频",
+        "subMenu":[
+            {"type":"ckplayer","title":"《名侦探柯南》","class":"『动漫』","imgsrc":"http://www.chinanews.com/cr/2015/0109/1661910731.jpg","url":"http://hdl1901.plures.net/onlive/508ddc63dcaf4d3b9f5c8b7ff77f2b9d_550.flv?yfSecret=3786f9290588729ddc78184752427267&yfTime=5b471d45"},
+            {"type":"ckplayer","title":"CCTV-9","class":"『电视』","imgsrc":"./image/video-03.jpg","url":"http://202.107.188.149:5002/cctv9_hdcq.m3u8?token=guoziyun"},
+            {"type":"ckplayer","title":"全民直播","class":"『电影』","imgsrc":"./image/video-02.jpg","url":"https://flv.quanmin.tv/live/2046540092.flv"},
+            {"type":"ckplayer","title":"蔡徐坤《Pull Up》","class":"『MV』","imgsrc":"http://img1.c.yinyuetai.com/video/mv/180802/0/-M-0027c85e0bbc17ad7f82e716de6b478d_240x135.jpg","url":"http://hc.yinyuetai.com/uploads/videos/common/DDF20164F9DE80A0F99EEB14FC34DDD6.mp4"},
+            {"type":"ckplayer","title":"王嘉尔《Dawn of us》","class":"『MV』","imgsrc":"http://img2.c.yinyuetai.com/video/mv/180419/0/-M-4d9191b47bdeb37fc1f7e092a35a865b_240x135.jpg","url":"http://hc.yinyuetai.com/uploads/videos/common/32690162DDE3F051E6C65A78D40EC0BE.mp4"},
+            {"type":"ckplayer","title":"[韩]防弹少年团《IDOL》","class":"『MV』","imgsrc":"http://img2.c.yinyuetai.com/video/mv/180824/0/-M-2f1d0dcc320c8c0efd9e29247f85f6aa_240x135.jpg","url":"http://he.yinyuetai.com/uploads/videos/common/293B01656B35B06932A6E06500EE56DA.mp4"},
+            {"type":"ckplayer","title":"[日]早安少女组《YEAH YEAH YEAH》","class":"『MV』","imgsrc":"http://img1.c.yinyuetai.com/video/mv/180821/0/-M-06ed2bf8a652ca8185ae64122a0460de_240x135.jpg","url":"http://hc.yinyuetai.com/uploads/videos/common/5742016557038DC7A58EDD42F74DC65B.mp4"},
+            {"type":"h5video","title":"邓紫棋《倒数》","class":"『MV』","imgsrc":"http://img2.c.yinyuetai.com/video/mv/180829/0/-M-b5afad06a48cfca36b508aacb3a11302_240x135.jpg","url":"http://hc.yinyuetai.com/uploads/videos/common/7363016584F5AA7E2C25A21951442614.mp4"}
+        ]
+    },
+    {
+        "topMenu":"电影",
+        "subMenu":[
+            {"type":"iframe","title":"《狄仁杰之四大天王》","class":"『电影』","imgsrc":"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2526405034.jpg","url":"https://sohu.com-v-sohu.com/share/747e32ab0fea7fbd2ad9ec03daa3f840"},
+            {"type":"embed","title":"科幻系列","class":"『电影』","imgsrc":"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=2087380019,2761131100&fm=85&s=7615308C405305FD6796728B0300C09F","url":"https://liveshare.huya.com/11352964/huyacoop.swf"},
+            {"type":"embed","title":"成龙系列","class":"『电影』","imgsrc":"https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=3347193079,2510516286&fm=85&s=AF448B43C753307E4ACC9D09030070C2","url":"http://liveshare.huya.com/11342386/huyacoop.swf"},
+            {"type":"iframe","title":"《豆福传》","class":"『动画』","imgsrc":"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=3377097530,3490895609&fm=85&s=90311698475067CE1236B8D7030050B8","url":"http://player.youku.com/embed/XMzEzNTkxNTY2NA=="},
+            {"type":"embed","title":"《国宝会说话》之人头壶","class":"『记录』","imgsrc":"https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=84b72eccb5096b63851959523c318733/30adcbef76094b36225ef20ea8cc7cd98c109d01.jpg","url":"https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=r0025s53tfl&auto=0"},
+            {"type":"iframe","title":"《碟中谍6》预告片","class":"『电影』","imgsrc":"https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2529365085.jpg","url":"http://www.yugaopian.cn/embed/152161"},
+            {"type":"embed","title":"五分钟看《月球》","class":"『电影』","imgsrc":"http://s6.sinaimg.cn/mw690/5ec48e94tx6CXxDis2a76&690","url":"http://player.youku.com/player.php/sid/XMzgwMTAwMzc4MA==/v.swf"},
+            {"type":"embed","title":"《悲伤逆流成河》预告片","class":"『电影』","imgsrc":"https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2529701498.jpg","url":"http://static1.mtime.cn/20180730161010/flash/newvideoplayer.swf?vid=71712&mid=250539"},
+            {"type":"h5video","title":"《登月第一人》预告片","class":"『电影』","imgsrc":"https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2526982113.jpg","url":"http://vfx.mtime.cn/Video/2018/08/30/mp4/180830090622017985.mp4"},
+            {"type":"h5video","title":"《雪之华》预告片","class":"『电影』","imgsrc":"http://img5.mtime.cn/mg/2018/08/30/105427.26046519.jpg","url":"http://vfx.mtime.cn/Video/2018/08/30/mp4/180830105110939469.mp4"},
+            {"type":"h5video","title":"《大轰炸》预告片","class":"『电影』","imgsrc":"http://img5.mtime.cn/mg/2018/08/30/170746.65360408.jpg","url":"http://vfx.mtime.cn/Video/2018/08/30/mp4/180830170816298720.mp4"},
+            {"type":"h5video","title":"《狼伴归途》预告片","class":"『电影』","imgsrc":"https://img1.doubanio.com/view/movie_poster_cover/lpst/public/p2530871439.jpg","url":"http://vfx.mtime.cn/Video/2018/08/29/mp4/180829102400514590.mp4"},
+            {"type":"h5video","title":"张艺谋《影》预告片","class":"『电影』","imgsrc":"https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2530513100.jpg","url":"http://vfx.mtime.cn/Video/2018/08/24/mp4/180824104230502641.mp4"}
+
+        ]
+    },
+    {
+        "topMenu":"MV",
+        "subMenu":[
+            {"type":"h5video","title":"邓紫棋《倒数》","class":"『MV』","imgsrc":"http://img2.c.yinyuetai.com/video/mv/180829/0/-M-b5afad06a48cfca36b508aacb3a11302_240x135.jpg","url":"http://hc.yinyuetai.com/uploads/videos/common/7363016584F5AA7E2C25A21951442614.mp4"},
+            {"type":"h5video","title":"Zedd《Beautiful now》","class":"『MV』","imgsrc":"http://img2.c.yinyuetai.com/video/mv/150613/2307995/-M-e9a07e92fbc8f6c7dffbc8814257948d_240x135.jpg","url":"http://hc.yinyuetai.com/uploads/videos/common/26E40156079190972EBF2341ACCAB8A5.flv?sc=1d212a0649e78bda&br=784&vid=2307995&aid=25764&area=US&vst=0"},
+            {"type":"ckplayer","title":"蔡徐坤《Pull Up》","class":"『MV』","imgsrc":"http://img1.c.yinyuetai.com/video/mv/180802/0/-M-0027c85e0bbc17ad7f82e716de6b478d_240x135.jpg","url":"http://hc.yinyuetai.com/uploads/videos/common/DDF20164F9DE80A0F99EEB14FC34DDD6.mp4"},
+            {"type":"ckplayer","title":"王嘉尔《Dawn of us》","class":"『MV』","imgsrc":"http://img2.c.yinyuetai.com/video/mv/180419/0/-M-4d9191b47bdeb37fc1f7e092a35a865b_240x135.jpg","url":"http://hc.yinyuetai.com/uploads/videos/common/32690162DDE3F051E6C65A78D40EC0BE.mp4"},
+            {"type":"ckplayer","title":"[韩]防弹少年团《IDOL》","class":"『MV』","imgsrc":"http://img2.c.yinyuetai.com/video/mv/180824/0/-M-2f1d0dcc320c8c0efd9e29247f85f6aa_240x135.jpg","url":"http://he.yinyuetai.com/uploads/videos/common/293B01656B35B06932A6E06500EE56DA.mp4"},
+            {"type":"ckplayer","title":"[日]早安少女组《YEAH YEAH YEAH》","class":"『MV』","imgsrc":"http://img1.c.yinyuetai.com/video/mv/180821/0/-M-06ed2bf8a652ca8185ae64122a0460de_240x135.jpg","url":"http://hc.yinyuetai.com/uploads/videos/common/5742016557038DC7A58EDD42F74DC65B.mp4"},
+            {"type":"ckplayer","title":"《我的梦》","class":"『MV』","imgsrc":"./image/video-01.jpg","url":"http://img.ksbbs.com/asset/Mon_1703/d30e02a5626c066.mp4"}
+        ]
+    },
+    {
+        "topMenu":"游戏",
+        "subMenu":[
+            {"type":"iframe","title":"《赛博朋克2077》游戏演示","class":"『游戏』","imgsrc":"https://vthumb.ykimg.com/054101015B843B628B3C46A367A3855E","url":"https://player.youku.com/embed/XMzgwMDQ4OTY3Ng=="},
+            {"type":"iframe","title":"守望先锋人气女生D.Va短片","class":"『游戏』","imgsrc":"http://img3.dwstatic.com/vhuyatv/1706/362764089954/1498816985442.jpg","url":"http://player.youku.com/embed/XMzc5Mjk3NTQyOA=="},
+            {"type":"iframe","title":"战地5演示","class":"『游戏』","imgsrc":"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1706078330,3680306569&fm=85&s=E107D2141A74548AD82C63D5030070AA","url":"https://player.youku.com/embed/XMzgwMzM4NTY2NA=="},
+            {"type":"embed","title":"火炬之光:前线演示","class":"『游戏』","imgsrc":"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=584219292,699866455&fm=173&app=25&f=JPEG?w=640&h=360&s=D97131C4D0499157D04C4C930300808B","url":"http://player.youku.com/player.php/sid/XMzgwMDIzMTU1Ng==/v.swf"}
+        ]
+    }
+    
+]

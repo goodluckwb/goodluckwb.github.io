@@ -28,7 +28,7 @@
             box-sizing: border-box;
             margin: 20px auto;
             width: 32%;
-            float: left;   
+            float: left;
             /* background: linear-gradient( rgba(255,255,255,0.5) ,rgba(167, 236, 245, 0.719)); */
         }
 
@@ -60,10 +60,11 @@
         }
         #wrapper{
             position: relative;
-            top: -100px;
+            top: -70px;
             width: 90%;
             margin: 0 auto;
-            background: #ffffff;
+
+            background: #ffffff9c;
         }
         #wrapper::after{
             content: "";
@@ -71,11 +72,33 @@
             clear:both;
         }
         #wrapper h2{
-           
+            position: relative;
+            left:calc(50% - 54px);
+            top:18px;
+            padding: 5px;
             letter-spacing: .1em;
-            margin: 15px calc(50% - 64px);
-            border: none;
+            /* margin: 15px calc(50% - 64px); */
+            border: 1px solid var(--titlecolor);
             font-size: 18px;
+            background:#ffffff;
+            border-radius: 15px;
+
+
+        }
+        .blur{
+            -webkit-filter: blur(5px);
+            -moz-filter: blur(5px);
+            -ms-filter: blur(5px);
+            filter: blur(15px);
+        }
+        #blur{
+            width: 100%;
+            height: 70px;
+            float: left;
+            background: #ffffffc4;
+        }
+        #wrapper .title-div{
+            margin: 0 20%;
         }
     </style>
 </head>
@@ -182,8 +205,9 @@
         <img src="./image/07.jpg" alt="" width="100%">
     </div>
     <div id="wrapper">
+        <!-- <div class="blur" id="blur"></div> -->
         <div class="title-div">
-            <h2 onclick="" class="far fa-image"> 精美图片</h2>
+            <h2 class="far fa-image"> 精美图片</h2>
         </div>
         <figure class="imglist">
             <ul>
@@ -211,24 +235,19 @@
                 <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/7a67a015a7d671efa8c1efbe6458403d9a27b30c260e6-FqOs9q_fw658" alt="">
                     <p>嘴巴嘟嘟</p>
                 </li>
-                <li class="imgl2r"><img src="" data-echo="http://img5.duitang.com/uploads/item/201410/24/20141024181713_AkG4W.thumb.700_0.jpeg" alt="">
-                    <p>美女</p>
-                </li>
-                
-                
 
             </ul>
         </figure>
         <figure class="imglist">
             <ul>
-                
+
                 <li class="imgl2r"><img src="" data-echo="http://b.zol-img.com.cn/desk/bizhi/image/5/960x600/1404457972673.jpg" alt="">
                     <p>美女</p>
                 </li>
                 <li class="imgl2r"><img src="" data-echo="http://img.7xz.com/img/picimg/201609/20160907105336_593369dbbe9e2cc6534.jpg" alt="">
                     <p>美女</p>
                 </li>
-                <li class="imgl2r"><img src="" data-echo="https://b-ssl.duitang.com/uploads/item/201504/22/20150422H1756_sNuWa.thumb.1300_0.jpeg" alt="">
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/50cc04a79af2e6469ec87f104e6e7352b7a45eb133111-45B3Ww_fw658" alt="">
                     <p>美女</p>
                 </li>
                 <li class="imgl2r"><img src="" data-echo="http://photo.tuchong.com/4063120/f/561840542.jpg" alt="">
@@ -237,7 +256,7 @@
                 <li class="imgl2r"><img src="" data-echo="http://i7.hexunimg.cn/2014-12-08/171203249.jpg" alt="">
                     <p>南笙</p>
                 </li>
-                <li class="imgl2r"><img src="" data-echo="http://img4.imgtn.bdimg.com/it/u=3573290569,4019870750&fm=214&gp=0.jpg" alt="">
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/9aa96cf1c380e437e79321a6a501e87f517f95a9e61e-WuHSav_fw658" alt="">
                     <p>美女</p>
                 </li>
                 <li class="imgl2r"><img src="" data-echo="http://pic.eastlady.cn/uploads/tp/201704/9999/e510110cb0.jpg" alt="">
@@ -246,13 +265,19 @@
                 <li class="imgl2r"><img src="" data-echo="http://img.zcool.cn/community/0100f75746957432f875a42990d658.jpg@1280w_1l_2o_100sh.jpg" alt="">
                     <p>美女</p>
                 </li>
-                <li class="imgl2r"><img src="" data-echo="http://img4.duitang.com/uploads/item/201307/22/20130722113608_R2fhH.thumb.700_0.jpeg" alt="">
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/d543081bb95733d9456cf3865d77c85bae64dd5c9f721-5RzJRr_fw658" alt="">
+                    <p>美女</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="//img.hb.aicdn.com/ab1864f458669fe970bdbd673304b8136450f31018db0b-JynWTu_fw658" alt="">
                     <p>美女</p>
                 </li>
             </ul>
         </figure>
         <figure class="imglist">
             <ul>
+                <li class="imgl2r"><img src="" data-echo="http://i1.umei.cc/uploads/tu/201805/9999/7113d068d2.jpg" alt="">
+                    <p>美女</p>
+                </li>
                 <li class="imgl2r"><img src="" data-echo="http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/03/92/5d4e34041bb061665b5247707e4ebfae.jpg" alt="">
                     <p>水母</p>
                 </li>
@@ -262,14 +287,11 @@
                 <li class="imgl2r"><img src="" data-echo="http://attachments.gfan.com/forum/attachments2/201410/31/000919r8u9o9b5pt1iz5rj.jpg" alt="">
                     <p>小兔子</p>
                 </li>
-                <li class="imgl2r"><img src="" data-echo="http://cdn.duitang.com/uploads/item/201512/18/20151218132032_SfZve.jpeg" alt="">
-                    <p>猫咪</p>
-                </li>
-                <li class="imgl2r"><img src="" data-echo="http://img5q.duitang.com/uploads/item/201404/18/20140418223400_UhPn5.thumb.700_0.jpeg" alt="">
-                    <p>鲸鱼</p>
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/5218f21c8e33bcaabfaba2224a6839431ab3d75924c240-XgfKYB_fw658" alt="">
+                    <p>美女</p>
                 </li>
                 <li class="imgl2r"><img src="" data-echo="http://pic.ffpic.com/files/2015/0425/0423xrqlbbsjbz7.jpg" alt="">
-                    <p>想吃</p>
+                    <p>雪糕</p>
                 </li>
                 <li class="imgl2r"><img src="" data-echo="http://4493bz.1985t.com/uploads/allimg/160401/3-160401151503.jpg" alt="">
                     <p>美女</p>
@@ -277,7 +299,10 @@
                 <li class="imgl2r"><img src="" data-echo="https://tse1.mm.bing.net/th?id=OIP.9P0Bfi50boVtjT-4qnWWxAHaEK&pid=Api" alt="">
                     <p>美景</p>
                 </li>
-                <li class="imgl2r"><img src="" data-echo="http://img5.duitang.com/uploads/item/201508/13/20150813095944_cReEd.thumb.700_0.jpeg" alt="">
+                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/6c7873d84ee9e42ec4ed2a12871a4a016f311a3239f88-O29LPg_fw658" alt="">
+                    <p>美女</p>
+                </li>
+                <li class="imgl2r"><img src="" data-echo="http:////img.hb.aicdn.com/08ced054fbf9e124415c49c5313377d49cd9c48131de7-aXpVkL_fw658" alt="">
                     <p>美女</p>
                 </li>
             </ul>
@@ -302,7 +327,7 @@
 <script>
     //图片分页用大图轮播
     //定义方法函数
-   
+
     !function imgSwicth() {
         var d = document.getElementById("bigimg").firstElementChild;
         var k = 0

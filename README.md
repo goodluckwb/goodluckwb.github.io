@@ -2,6 +2,10 @@ This is weibin’s personal homepage.
 ===
 ## Update history
 ---
+### v1.18(8/31)
+>* 完善视频和电视两大板块,以及html5和flash播放器的调用逻辑.
+>* 其他细节调整.
+
 ### v1.17.2(8/25)
 >* 重构图像页为瀑布流.
 
