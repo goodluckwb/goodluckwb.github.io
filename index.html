@@ -2,114 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WeiBin的个人主页</title>
-    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./js/head.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <section id="public-menu-content">
-        <div style="background: #ffffff" id="public-menu-content-div1">
-            <p>菜单</p>
-            <ul>
-                <li>这是内容一部分</li>
-                <li>这是内容一部分</li>
-            </ul>
-        </div>
-        <div style="background: #ffffff" id="public-menu-content-div2">
-            <p>菜单</p>
-            <ul>
-                <li> <a href="./index.html" class=""> 首页</a> </li>
-                <li><a href="./article.html"> 文章</a></li>
-                <li><a href="./video.html"> 视频</a></li>
-                <li><a href="./image.html"> 图像</a></li>
-                <li><a href="./video-live.html"> 电视</a></li>
-                <li><a href="./timeline.html"> 时间线</a></li>
-            </ul>
-        </div>
-        <p>点击菜单外区域将关闭</p>
-    </section>
-    <div id="coolsites-list">
+    <div id="nav">
 
     </div>
-    <nav>
-        <div id="logo">
-            <span id="public-menu"></span>
-            <a href="./index.html"> <img src="./image/wblogo2.svg" alt="logo" width="100"></a>
-            <a href="#">goodluckwb</a>
-        </div>
-
-        <ul id="mainmenu">
-            <li> <a href="./index.html">首页</a> <span class=''></span><i></i></li>
-            <li><a href="./article.html"> 文章</a><span class=''></span><i></i></li>
-            <li><a href="./video.html"> 视频</a><span class=''></span><i></i></li>
-            <li><a href="./image.html"> 图像</a><span class=''></span><i></i></li>
-            <li><a href="./video-live.html"> 电视</a><span class=''></span><i></i></li>
-            <li><a href="./timeline.html"> 时间线</a><span class=''></span></li>
-        </ul>
-
-        <div id="smallpart">
-
-            <div id="search">
-                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
-                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="百度">
-                </form>
-            </div>
-            <div id="jisuanqi">
-            </div>
-            <ul>
-                <li id="coolsites">酷站</li>
-                <li id="click-jsq">计算器</li>
-
-                <li id="theme">
-                    <p id="theme-select" value="">主题</p>
-                    <span class="fas fa-angle-down"></span>
-                    <ol>
-                        <li>喜红</li>
-                        <li>深蓝</li>
-                        <li>豆绿</li>
-                        <li>橙色</li>
-                        <li>夜色</li>
-                        <li>紫色</li>
-                        <li>随机</li>
-                    </ol>
-                </li>
-            </ul>
-
-        </div>
-
-    </nav>
-    <div id="go-to-top" style="display: none;">
-        <div class="gototop">
-            <i class=""></i>
-        </div>
-        <div class="gototop">
-            <i class=""></i>
-        </div>
-        <div class="gototop">
-            <i class=""></i>
-        </div>
-        <div class="gototop">
-            <i id="gototop-up" onmousedown="scrolltop();"></i>
-            <span class='totoptip'>返回顶部</span>
-
-        </div>
-    </div>
-    <header>
-        <img src="./image/headerl.png" alt="">
-        <h1>心随你的步调</h1>
-        <h3><i>一个平凡人的自语</i></h3>
-
-    </header>
-
     <div id="main">
         <section id="side-music">
 
@@ -164,11 +63,11 @@
                 <div class="title-div">
                     <h2 class="fas fa-hand-point-right"> 今日热点</h2>
                     <ul id="focus-list">
-                        <li>IT界 /</li>
-                        <li class="active">科学 /</li>
-                        <li>硬件 /</li>
-                        <li>软件 /</li>
-                        <li>游戏 /</li>
+                        <li>IT界</li>
+                        <li class="active">科学</li>
+                        <li>硬件</li>
+                        <li>软件</li>
+                        <li>游戏</li>
                         <li>智能</li>
                     </ul>
                 </div>
@@ -182,14 +81,12 @@
             </div>
             <div id="jingxuan">
                 <ul>
-                    <li class="box-reflect"><img src="./image/01.jpg" alt=""></li>
-                    <li><img src="./image/02.jpg" alt=""></li>
-                    <li><img src="./image/03.jpg" alt=""></li>
-                    <li><img src="./image/04.jpg" alt=""></li>
-                    <li><img src="./image/05.jpg" alt=""></li>
-                    <li><img src="./image/06.jpg" alt=""></li>
-                
-                   
+                    <li><img src="./image/01.jpg" alt=""><span class="label label-right">图片</span></li>
+                    <li><img src="./image/02.jpg" alt=""><span class="label label-right">图片</span></li>
+                    <li><img src="./image/03.jpg" alt=""><span class="label label-right">图片</span></li>
+                    <li><img src="./image/04.jpg" alt=""><span class="label label-right">图片</span></li>
+                    <li><img src="./image/05.jpg" alt=""><span class="label label-right">图片</span></li>
+                    <li><img src="./image/06.jpg" alt=""><span class="label label-right">图片</span></li>
                 </ul>
             </div>
             
@@ -201,6 +98,7 @@
                 </div>
                 <div class="artmain">
                     <p>
+                        <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
                         葡萄美酒夜光杯，欲饮琵琶马上催。
                         <br> 醉卧沙场君莫笑，古来征战几人回？
                     </p>
@@ -214,6 +112,7 @@
                 </div>
                 <div class="artmain">
                     <p>
+                        <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
                         月落乌啼霜满天，江枫渔火对愁眠。
                         <br> 姑苏城外寒山寺，夜半钟声到客船。
                     </p>
@@ -227,6 +126,7 @@
                 </div>
                 <div class="artmain">
                     <p>
+                        <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
                         城阙辅三秦，风烟望五津。
                         <br> 与君离别意，同是宦游人。
                         <br> 海内存知己，天涯若比邻。
@@ -250,16 +150,17 @@
                     </li>
                     <li id="musiccontrol">
                         <div>
-                            <span id="musicprevious" class="normal"></span>
-                            <span id="musicnext" class="normal"></span>
+                            <span id="musicprevious"></span>
+                            <span id="musicnext" ></span>
                             <span id="musicplay" class="normal">
                                 <!-- <canvas width=50 height=50 id="myCanvas" style="z-index:1000"></canvas> -->
                             </span>
+
                         </div>
                     </li>
 
-                    <li id="jindutiao">
-                        <span id="jindutiao-current">
+                    <li id="jindutiao" >
+                        <span id="jindutiao-current" >
                             <h5 style="float:right;color: white"></h5>
                         </span>
                         <span class="fas fa-list tubiao"></span>
@@ -286,8 +187,8 @@
                         <input id="input-city" type="text" list="allcity" placeholder="请输入城市如:苏州">
                         <datalist id="allcity">
                             <option value="苏州">
-                                <option value="商丘">
-                                    <option value="上海">
+                            <option value="商丘">
+                            <option value="上海">
                         </datalist>
 
                     </form>
@@ -312,7 +213,7 @@
                 <ul>
                     <li>
                         <a href="#">文章列表</a>
-                        <span class="littleicon">新</span>
+                        <span class="badge badge-primary">新</span>
                     </li>
                     <li>
                         <a href="#">文章列表</a>
@@ -385,24 +286,11 @@
         </div>
     </div>
 
-    <footer>
-        <div class="footer_top">
-            <h4>
-                <span>WeiBin</span>
-            </h4>
-        </div>
-        <div class="footer_bottom">
-            <span>
-                &copy;版权所有, 2018-2020 All Rights Reserved.
-            </span>
-            <div class="footer_line"></div>
-        </div>
+    <footer id="footer">
+        
     </footer>
-
-    <script src="./js/jisuanqi.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/imgturn.js"></script>
-    <script src="./js/common.js"></script>
 </body>
 
 </html>

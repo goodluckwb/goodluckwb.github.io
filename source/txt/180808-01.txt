@@ -6,8 +6,6 @@
 </div>
 <div class="artmain">
 <pre>
-	    已经不知是哪位大神写的啦,向大神致敬,转在此处学习!
-		
 		1，匀速动画效果
 		window.onload = function(){
 		 var odiv = document.getElementById('odiv');

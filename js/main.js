@@ -34,7 +34,7 @@ $(document).ready(function () {
         }).done((data) => {
             $("#current_price").empty();
             for (let i = 0; i < x.length; i++) {
-                let price = "<li><span>"+(i+1)+'</span> ' + data[x[i]].name + " " + data[x[i]].price + " " + (data[x[i]].percent * 100).toFixed(2) + '%' + data[x[i]].arrow + "</li>"
+                let price = '<li><span class="badge badge-index">'+(i+1)+'</span> ' + data[x[i]].name + " " + data[x[i]].price + " " + (data[x[i]].percent * 100).toFixed(2) + '%' + data[x[i]].arrow + "</li>"
                 $("#current_price").append(price);
     
                 $("#current_price li")[i].style.color = data[x[i]].percent < 0 ? "#99cc33" : "#CC0706";
@@ -79,11 +79,9 @@ $(document).ready(function () {
         } else {
             play.removeClass('normal').addClass('pushdown');
             music.src = obj.sites[0].url;
-          
             changeCover(0);
             music.play();
             rotate();
-            
         }
     });
     pre.click(function () {
@@ -95,7 +93,6 @@ $(document).ready(function () {
         mt = obj.sites[0].title + ' / ' + obj.sites[0].name;
         play.removeClass('normal').addClass('pushdown');
         music.play();
-       
         changeCover(0);
         title.text(mt);
         rotate();
@@ -121,7 +118,6 @@ $(document).ready(function () {
     var ss=obj.sites;
     var timer1;
     $('#jindutiao span').click(function(){
-
     refreshplaylist();
     list.slideToggle(500); 
         //闭包输出点击播放列表的歌曲

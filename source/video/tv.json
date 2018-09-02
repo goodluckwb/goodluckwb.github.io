@@ -45,6 +45,26 @@
             {"title":"炉石传说","imgurl":"","type":"embed","url":"https://liveshare.huya.com/13059171/huyacoop.swf"}
         
         ]
+    },
+    {
+        "topMenu":"全民直播",
+        "subMenu":[
+            {"title":"名探柯南","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1505295658.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1595928432.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/2334870.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1927084902.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1579085168.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1916656238.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1889046142.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1088223842.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1715204896.flv"},
+            {"title":"新三国","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/75315.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1971252834.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/2094567208.flv"},
+            {"title":"点歌直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1914366834.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/2130375482.flv"},
+            {"title":"全民直播","imgurl":"","type":"ckplayer","url":"https://flv.quanmin.tv/live/1106899064.flv"}
+        
+        ]
     }
-    
 ]

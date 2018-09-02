@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after{margin:0;padding:0;box-sizing: border-box;}
+ol,ul{list-style:none}
+body,button,input,select,textarea,ul,span{font:14px/18px "Microsoft Yahei",'微软雅黑','宋体',tahoma,arial,"Hiragino Sans GB"}
+code,article,pre,aside,section,footer,header,nav,table,p{font:16px/25px 'Microsoft Yahei','微软雅黑','宋体',courier new,courier,monospace}
+table{border-collapse:collapse;border-spacing:0}
+pre{white-space:pre-wrap;}
+embed,video,iframe{width:100%;height:100%;border:none;}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+@font-face{ 
+    font-family:"FontAwesome"; 
+    src:url('../source/webfonts/fontawesome/fa-regular-400.eot'); 
+    src:url("../source/webfonts/fontawesome/fa-regular-400.eot") format("embedded-opentype"), 
+    url("../source/webfonts/fontawesome/fa-brands-400.woff2") format("woff2"), 
+    url("../source/webfonts/fontawesome/fa-regular-400.woff ") format("woff"), 
+    url("../source/webfonts/fontawesome/fa-regular-400.ttf") format("truetype"), 
+    url("../source/webfonts/fontawesome/fa-regular-400.svg") format("svg"); 
+    font-weight:normal; 
+    font-style:normal; 
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0rem;
+  }
+  
+p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  color:var(--titlecolor);
+  /* text-decoration: underline; */
+}
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+    width:10px;
+    }
+   
+    ::-webkit-scrollbar-track {
+    /* -webkit-box-shadow:inset006pxrgba(0,0,0,0.3); */
+    border-radius:10px;
+    }
+    /* 滚动条滑块 */
+    ::-webkit-scrollbar-thumb {
+    border-radius:10px;
+    background:rgba(255, 125, 125, 0.5);
+    /* -webkit-box-shadow:inset006pxrgba(0,0,0,0.5); */
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+    background:rgba(255,0,0,0.6);
+    }
+:root{
+    --titlecolor:#CC0706;
+    --leftbordercolor:#99cc33;
+    --partcolor:#01B1EB;
+    --anniucolor:#EB018a;
+    --fontcolor:#ffc033;
+    --blinecolor:#dadadc;
+    --hovercolor:#2b333b;
+    --backcolor:#EEF0F4;
+    --codebgcolor: #F4DFDF;
+    --huise:#777777;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.active{
+    color: white !important;
+    background: var(--hovercolor) !important;
+}
+.current{
+    background: var(--titlecolor) !important;
+}
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.clear:after{
+    display: block;
+    content: ' ';
+    clear: both;
+}
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    position: absolute;
+  }
+    .badge-primary {
+        top: 0.7em;
+        right: 2em;
+        color: #fff;
+        background-color: var(--fontcolor);
+    }
+    .badge-primary[href]:hover, .badge-primary[href]:focus {
+        color:#fff;
+        text-decoration: none;
+        background-color: #0062cc;
+    }
+    .badge-index{
+        top: 0.25em;
+        left: 0px;
+        color: #fff;
+        background-color: var(--anniucolor);
+    }
+    .index-0{
+        background: #FF0066;
+    }
+    .index-1{
+        background: #FF1F85;
+    }
+    .index-2{
+        background: #FF3DA3;
+    }
+.label{
+    display: inline-block;
+    position: absolute;
+    line-height: 2em;
+    background: var(--leftbordercolor);
+    color:#fff;
+}
+    .label-left{
+        top: 0em;
+        left: 0em;
+        border-bottom-right-radius: 1em;
+        padding:0 5px 0 0px;
+    }
+    .label-right{
+        top: 0em;
+        right: 0em;
+        border-bottom-left-radius: 1em;
+        padding:0 2px 0 5px;
+    }
+.progress {
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: 0.75rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    }
+    
+    .progress-bar {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--success);
+    transition: width 0.6s ease;
+    }

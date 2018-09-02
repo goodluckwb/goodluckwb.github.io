@@ -2,15 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WeiBin的个人主页</title>
-    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
-    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/head.js" type="text/javascript"></script>
     <style>
         #bigimg{
             width: 100%;
@@ -102,104 +94,11 @@
         }
     </style>
 </head>
-
-<body >
-    <section id="public-menu-content">
-        <div style="background: #ffffff" id="public-menu-content-div1">
-            <p>菜单</p>
-            <ul>
-                <li>这是内容一部分</li>
-                <li>这是内容一部分</li>
-            </ul>
+    
+    <body>
+        <div id="nav">
+    
         </div>
-        <div style="background: #ffffff" id="public-menu-content-div2">
-            <p>菜单</p>
-            <ul>
-                <li> <a href="./index.html" class=""> 首页</a> </li>
-                <li><a href="./article.html"> 文章</a></li>
-                <li><a href="./video.html"> 视频</a></li>
-                <li><a href="./image.html"> 图像</a></li>
-                <li><a href="./video-live.html"> 电视</a></li>
-                <li><a href="./timeline.html"> 时间线</a></li>
-            </ul>
-        </div>
-        <p>点击菜单外区域将关闭</p>
-    </section>
-    <div id="coolsites-list">
-
-    </div>
-    <nav>
-        <div id="logo">
-            <span id="public-menu"></span>
-            <a href="./index.html"> <img src="./image/wblogo2.svg" alt="logo" width="100"></a>
-            <a href="#">goodluckwb</a>
-        </div>
-
-        <ul id="mainmenu">
-            <li> <a href="./index.html">首页</a> <span class=''></span><i></i></li>
-            <li><a href="./article.html"> 文章</a><span class=''></span><i></i></li>
-            <li><a href="./video.html"> 视频</a><span class=''></span><i></i></li>
-            <li><a href="./image.html"> 图像</a><span class=''></span><i></i></li>
-            <li><a href="./video-live.html"> 电视</a><span class=''></span><i></i></li>
-            <li><a href="./timeline.html"> 时间线</a><span class=''></span></li>
-        </ul>
-
-
-        <div id="smallpart">
-
-            <div id="search">
-                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
-                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="百度">
-                </form>
-            </div>
-            <div id="jisuanqi">
-            </div>
-            <ul>
-                <li id="coolsites">酷站</li>
-                <li id="click-jsq">计算器</li>
-
-                <li id="theme">
-                    <p id="theme-select" value="">主题</p>
-                    <span class="fas fa-angle-down"></span>
-                    <ol>
-                        <li>喜红</li>
-                        <li>深蓝</li>
-                        <li>豆绿</li>
-                        <li>橙色</li>
-                        <li>夜色</li>
-                        <li>紫色</li>
-                        <li>随机</li>
-                    </ol>
-                </li>
-            </ul>
-
-        </div>
-
-
-    </nav>
-    <div id="go-to-top" style="display: none;">
-        <div class="gototop">
-            <i class=""></i>
-        </div>
-        <div class="gototop">
-            <i class=""></i>
-        </div>
-        <div class="gototop">
-            <i class=""></i>
-        </div>
-        <div class="gototop">
-            <i id="gototop-up" onmousedown="scrolltop();"></i>
-            <span class='totoptip'>返回顶部</span>
-
-        </div>
-    </div>
-    <header>
-        <img src="./image/headerl.png" alt="">
-        <h1>心随你的步调</h1>
-        <h3><i>一个平凡人的自语</i></h3>
-
-    </header>
 
     <div id="bigimg">
         <img src="./image/07.jpg" alt="" width="100%">
@@ -305,110 +204,102 @@
                 <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/08ced054fbf9e124415c49c5313377d49cd9c48131de7-aXpVkL_fw658" alt="">
                     <p>美女</p>
                 </li>
+                <li class="imgl2r"><img src="" data-echo="http://img1.gamersky.com/image2018/09/20180901_ddw_459_10/gamersky_02small_04_2018911620FEB.jpg" alt="">
+                    <p>风景</p>
+                </li>
             </ul>
         </figure>
     </div>
 
-    <footer>
-        <div class="footer_top">
-            <h4>
-                <span>WeiBin</span>
-            </h4>
-        </div>
-        <div class="footer_bottom">
-            <span>
-                &copy;版权所有, 2018-2020 All Rights Reserved.
-            </span>
-            <div class="footer_line"></div>
-        </div>
+    <footer id="footer">
+       
     </footer>
+
+	<script>
+		//图片分页用大图轮播
+		//定义方法函数
+
+		!function imgSwicth() {
+			var d = document.getElementById("bigimg").firstElementChild;
+			var k = 0
+			var imgsrc = new Array();
+			imgsrc[0] = "./image/01.jpg";
+			imgsrc[1] = "./image/02.jpg";
+			imgsrc[2] = "./image/03.jpg";
+			imgsrc[3] = "./image/04.jpg";
+			imgsrc[4] = "./image/05.jpg";
+			setInterval(function () {
+				if (k > imgsrc.length - 1) {
+					k = 0;
+				}
+				for (var i = 0; i < imgsrc.length; i++) {
+					if (i == k) {
+						d.src = imgsrc[i];
+					}
+				}
+				k++;
+			}, 3000)
+		}();
+		//图片lazyload
+		//https://github.com/helijun/documents/blob/master/plugin/echo/js/echo.js
+		window.Echo = (function(window, document, undefined) {
+
+			'use strict';
+
+			var store = [],
+			offset,
+			throttle,
+			poll;
+
+			var _inView = function(el) {
+				var coords = el.getBoundingClientRect();
+				return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + parseInt(offset));
+			};
+
+			var _pollImages = function() {
+				for (var i = store.length; i--;) {
+					var self = store[i];
+					if (_inView(self)) {
+						self.src = self.getAttribute('data-echo');
+						store.splice(i, 1);
+					}
+				}
+			};
+
+			var _throttle = function() {
+				clearTimeout(poll);
+				poll = setTimeout(_pollImages, throttle);
+			};
+
+			var init = function(obj) {
+				var nodes = document.querySelectorAll('[data-echo]');
+				var opts = obj || {};
+				offset = opts.offset || 0;
+				throttle = opts.throttle || 250;
+
+				for (var i = 0; i < nodes.length; i++) {
+					store.push(nodes[i]);
+				}
+
+				_throttle();
+
+				if (document.addEventListener) {
+					window.addEventListener('scroll', _throttle, false);
+				} else {
+					window.attachEvent('onscroll', _throttle);
+				}
+			};
+
+			return {
+				init: init,
+				render: _throttle
+			};
+
+			})(window, document);
+		Echo.init({
+			offset: 0,//离可视区域多少像素的图片可以被加载
+		　　throttle: 0 //图片延时多少毫秒加载
+		});
+	</script>
 </body>
-<script src="./js/common.js"></script>
-<script>
-    //图片分页用大图轮播
-    //定义方法函数
-
-    !function imgSwicth() {
-        var d = document.getElementById("bigimg").firstElementChild;
-        var k = 0
-        var imgsrc = new Array();
-        imgsrc[0] = "./image/01.jpg";
-        imgsrc[1] = "./image/02.jpg";
-        imgsrc[2] = "./image/03.jpg";
-        imgsrc[3] = "./image/04.jpg";
-        imgsrc[4] = "./image/05.jpg";
-        setInterval(function () {
-            if (k > imgsrc.length - 1) {
-                k = 0;
-            }
-            for (var i = 0; i < imgsrc.length; i++) {
-                if (i == k) {
-                    d.src = imgsrc[i];
-                }
-            }
-            k++;
-        }, 3000)
-    }();
-    //图片lazyload
-    //https://github.com/helijun/documents/blob/master/plugin/echo/js/echo.js
-    window.Echo = (function(window, document, undefined) {
-
-        'use strict';
-
-        var store = [],
-        offset,
-        throttle,
-        poll;
-
-        var _inView = function(el) {
-            var coords = el.getBoundingClientRect();
-            return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + parseInt(offset));
-        };
-
-        var _pollImages = function() {
-            for (var i = store.length; i--;) {
-                var self = store[i];
-                if (_inView(self)) {
-                    self.src = self.getAttribute('data-echo');
-                    store.splice(i, 1);
-                }
-            }
-        };
-
-        var _throttle = function() {
-            clearTimeout(poll);
-            poll = setTimeout(_pollImages, throttle);
-        };
-
-        var init = function(obj) {
-            var nodes = document.querySelectorAll('[data-echo]');
-            var opts = obj || {};
-            offset = opts.offset || 0;
-            throttle = opts.throttle || 250;
-
-            for (var i = 0; i < nodes.length; i++) {
-                store.push(nodes[i]);
-            }
-
-            _throttle();
-
-            if (document.addEventListener) {
-                window.addEventListener('scroll', _throttle, false);
-            } else {
-                window.attachEvent('onscroll', _throttle);
-            }
-        };
-
-        return {
-            init: init,
-            render: _throttle
-        };
-
-        })(window, document);
-    Echo.init({
-        offset: 0,//离可视区域多少像素的图片可以被加载
-    　　throttle: 0 //图片延时多少毫秒加载
-    });
-</script>
-
 </html>

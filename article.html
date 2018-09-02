@@ -2,133 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WeiBin的个人主页</title>
-    <link rel="icon" href="./image/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
-    <script src="./js/jquery-3.3.1.min.js"></script>
-
+    <script src="./js/head.js" type="text/javascript"></script>
     <style>
-        .float {
-            position: fixed;
-            top: 0px;
-        }
-
-        #listswitch {
-            width: 250px;
-        }
-
-        #article-title {
+        #article-title{
             position: relative;
             top: 0px;
             height: 50px;
             background: var(--backcolor);
-            border-bottom: 1px solid var(--titlecolor);
+            border-bottom: 1px solid var(--huise);
+            width: 100%;
+        }
+        h3{
+            border: none;
         }
     </style>
 </head>
 
 <body>
-    <section id="public-menu-content">
-        <div style="background: #ffffff" id="public-menu-content-div1">
-            <p>菜单</p>
-            <ul>
-                <li>这是内容一部分</li>
-                <li>这是内容一部分</li>
-            </ul>
-        </div>
-        <div style="background: #ffffff" id="public-menu-content-div2">
-            <p>菜单</p>
-            <ul>
-                <li> <a href="./index.html" class=""> 首页</a> </li>
-                <li><a href="./article.html"> 文章</a></li>
-                <li><a href="./video.html"> 视频</a></li>
-                <li><a href="./image.html"> 图像</a></li>
-                <li><a href="./video-live.html"> 电视</a></li>
-                <li><a href="./timeline.html"> 时间线</a></li>
-            </ul>
-        </div>
-        <p>点击菜单外区域将关闭</p>
-    </section>
-    <div id="coolsites-list">
+    <div id="nav">
 
     </div>
-    <nav>
-        <div id="logo">
-            <span id="public-menu"></span>
-            <a href="./index.html"> <img src="./image/wblogo2.svg" alt="logo" width="100"></a>
-            <a href="#">goodluckwb</a>
-        </div>
-
-        <ul id="mainmenu">
-            <li> <a href="./index.html">首页</a> <span class=''></span><i></i></li>
-            <li><a href="./article.html"> 文章</a><span class=''></span><i></i></li>
-            <li><a href="./video.html"> 视频</a><span class=''></span><i></i></li>
-            <li><a href="./image.html"> 图像</a><span class=''></span><i></i></li>
-            <li><a href="./video-live.html"> 电视</a><span class=''></span><i></i></li>
-            <li><a href="./timeline.html"> 时间线</a><span class=''></span></li>
-        </ul>
-
-
-        <div id="smallpart">
-
-            <div id="search">
-                <form action="https://www.baidu.com/baidu" method="GET" target="_blank">
-                    <input class="search-input" type="text" name="word" placeholder="请输入关键字">
-                    <input class="search-submit" type="submit" value="百度">
-                </form>
-            </div>
-            <div id="jisuanqi">
-            </div>
-            <ul>
-                <li id="coolsites">酷站</li>
-                <li id="click-jsq">计算器</li>
-
-                <li id="theme">
-                    <p id="theme-select" value="">主题</p>
-                    <span class="fas fa-angle-down"></span>
-                    <ol>
-                        <li>喜红</li>
-                        <li>深蓝</li>
-                        <li>豆绿</li>
-                        <li>橙色</li>
-                        <li>夜色</li>
-                        <li>紫色</li>
-                        <li>随机</li>
-                    </ol>
-                </li>
-            </ul>
-
-        </div>
-
-
-    </nav>
-    <div id="go-to-top" style="display: none;">
-        <div class="gototop">
-            <i class=""></i>
-        </div>
-        <div class="gototop">
-            <i class=""></i>
-        </div>
-        <div class="gototop">
-            <i class=""></i>
-        </div>
-        <div class="gototop">
-            <i id="gototop-up" onmousedown="scrolltop();"></i>
-            <span class='totoptip'>返回顶部</span>
-
-        </div>
-    </div>
-    <header>
-        <img src="./image/headerl.png" alt="">
-        <h1>心随你的步调</h1>
-        <h3><i>一个平凡人的自语</i></h3>
-
-    </header>
     <div id="main">
         <div id="lside">
 
@@ -138,58 +31,47 @@
         </div>
         <div id=rside>
 
-            <aside id="asidefixed">
+            <aside>
                 <div class="title-div">
                     <h2 class="fas fa-book-open"> 文章列表</h2>
                 </div>
                 <ul id="listswitch">
                     <li>
-                        <a href="javascript:">9种JS原生动画效果</a>
-                        <span class="littleicon">新</span>
+                        <a href="javascript:void(0);">9种JS原生动画效果</a>
+                        <span class="badge badge-primary">新</span>
                     </li>
                     <li>
-                        <a href="javascript:">AJAX文档加载处理</a>
+                        <a href="javascript:void(0);">AJAX文档加载处理</a>
                     </li>
                     <li>
-                        <a href="javascript:">Markdown语法手册</a>
+                        <a href="javascript:void(0);">Markdown语法手册</a>
                     </li>
                     <li>
-                        <a href="javascript:">JQuery方法手册</a>
+                        <a href="javascript:void(0);">JQuery方法手册</a>
                     </li>
                     <li>
-                        <a href="javascript:">CSS中使用变量</a>
+                        <a href="javascript:void(0);">CSS中使用变量</a>
                     </li>
                     <li>
-                        <a href="javascript:">图片lazyload的方法</a>
+                        <a href="javascript:void(0);">图片lazyload的方法</a>
                     </li>
                     <li>
-                        <a href="javascript:">Canvas的基本用法</a>
+                        <a href="javascript:void(0);">Canvas的基本用法</a>
                     </li>
                     <li>
-                        <a href="javascript:">JS中的监听事件</a>
+                        <a href="javascript:void(0);">JS中的监听事件</a>
                     </li>
                     <li>
-                        <a href="javascript:">JS对象封装的方法</a>
+                        <a href="javascript:void(0);">JS对象封装的方法</a>
                     </li>
                 </ul>
 
             </aside>
         </div>
     </div>
-    <footer>
-        <div class="footer_top">
-            <h4>
-                <span>WeiBin</span>
-            </h4>
-        </div>
-        <div class="footer_bottom">
-            <span>
-                &copy;版权所有, 2018-2020 All Rights Reserved.
-            </span>
-            <div class="footer_line"></div>
-        </div>
+    <footer id="footer">
+        
     </footer>
-    <script src="./js/common.js"></script>
     <script>
         var $li = $('#listswitch li');
 
@@ -238,14 +120,13 @@
         document.addEventListener('scroll', function (event) {
             var scrollDistance = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
             var aa = document.getElementsByTagName('aside')[0];
-            var titlediv = document.getElementById('article-title');
+            titlediv=$('#article-title')[0];
             if (scrollDistance >= 150) {    // 触发的位置
                 aa.style.position = 'fixed';
                 aa.style.top = '50px';
-
                 titlediv.style.position = 'fixed';
                 titlediv.style.top = '46px';
-                titlediv.style.width = '800px';
+                titlediv.style.width = '805px';
             } else {
                 aa.style.position = 'relative';
                 aa.style.top = '0px';
