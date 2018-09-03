@@ -165,8 +165,8 @@ h4 {
     100% {opacity: 1; width:100%; }
 }
 @keyframes nav{
-    0%{background:none;}
-    100%{background: var(--hovercolor)}
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 #go-to-top{
     position: fixed;
@@ -325,7 +325,8 @@ nav{
     nav img{
 		position:relative;
 		width: 50px;
-		top:-5px;
+        top:-5px;
+        animation: nav infinite 20s linear;
     }
 
 	#mainmenu li{
