@@ -12,7 +12,7 @@ html+='<script src="./js/jquery-3.3.1.min.js"></script>';
 html+='<script src="./js/react.development.js"></script>';
 html+='<script src="./js/react-dom.development.js"></script>';
 html+='<script src="./js/babel.min.js"></script>';
-html+='<script src="./js/nav.jsx" type="text/babel"></script>';
+html+='<script src="./js/nav.js" type="text/babel"></script>';
 html+='<script src="./js/common.js"></script>';
 html+='<script src="./js/jisuanqi.js"></script>';
 document.open();

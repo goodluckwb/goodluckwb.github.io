@@ -11,12 +11,7 @@ $(document).ready(function () {
             $(this).removeClass('fa-angle-down').addClass('fa-angle-up').text('收起');
         }
     });
-    //加载计算器    
-    $('#jisuanqi').load("./source/html/jisuanqi.html");
-    //计算器消隐与出现       
-    $('#click-jsq').click(function(){
-        $('#jisuanqi').slideToggle(500);
-    })
+    //加载热点模块
     $('#focus-content').load('./source/html/focus.html');
     //自动加载刷新股票
     function refreshPrice() {
