@@ -146,6 +146,7 @@ a:hover {
 }
 .badge {
     display: inline-block;
+    position: absolute;
     padding: 0.25em 0.4em;
     font-size: 75%;
     font-weight: 700;
@@ -154,10 +155,9 @@ a:hover {
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 0.25rem;
-    position: absolute;
   }
     .badge-primary {
-        top: 0.7em;
+        top: 0.75em;
         right: 2em;
         color: #fff;
         background-color: var(--fontcolor);
@@ -168,10 +168,10 @@ a:hover {
         background-color: #0062cc;
     }
     .badge-index{
-        top: 0.25em;
+        top: 0.75em;
         left: 0px;
         color: #fff;
-        background-color: var(--anniucolor);
+        background-color: var(--huise);
     }
     .index-0{
         background: #FF0066;
@@ -224,3 +224,39 @@ a:hover {
     background-color: var(--success);
     transition: width 0.6s ease;
     }
+.pagination{
+    position: relative;
+    display: flex;
+    width: 35%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+    .pagination-fixed{
+        position: relative;
+        width: 100%;
+        height: 18px;
+        overflow: hidden;
+    }
+    .pagination ul{
+        position: absolute;
+        left: 0px;
+        top: 0;
+        width: 300%;
+        height: 18px;
+       
+    }
+    .pagination ul li,.pagination .previouspage,.pagination .nextpage{
+        color: white;
+        padding: 0 10px;
+        list-style: none;
+        float: left;
+        margin-right: 5px;
+        background: var(--partcolor);
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    .pagination ul li:hover,.pagination .previouspage:hover,.pagination .nextpage:hover{
+        color:var(--anniucolor);
+    }
+  

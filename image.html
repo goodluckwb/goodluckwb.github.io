@@ -17,36 +17,25 @@
         }
 
         .imglist{
-            box-sizing: border-box;
             margin: 20px auto;
             width: 32%;
             float: left;
             /* background: linear-gradient( rgba(255,255,255,0.5) ,rgba(167, 236, 245, 0.719)); */
         }
 
-        .imglist::after{
-            content: "";
-            height: 20px;
-            display:block;
-            clear:both;
-        }
         .imglist li{
             position: relative;
             margin-top: 15px;
             width: 100%;
             overflow: hidden;
             box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.28);
-            /* height: 350px; */
+            cursor: pointer;
         }
         .imglist li:hover{
             box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.58);
             transition: all 0.3s;
         }
-        .imglist img{
-            position: relative;
-            display: inline-block;
-            width: 110%;
-        }
+
         figure:nth-child(2),figure:nth-child(3){
             margin-right:2%;
         }
@@ -55,8 +44,7 @@
             top: -70px;
             width: 90%;
             margin: 0 auto;
-
-            background: #ffffff9c;
+            background: rgba(255, 255, 255, 0.541);
         }
         #wrapper::after{
             content: "";
@@ -74,8 +62,6 @@
             font-size: 18px;
             background:#ffffff;
             border-radius: 15px;
-
-
         }
         .blur{
             -webkit-filter: blur(5px);
@@ -108,7 +94,7 @@
         <div class="title-div">
             <h2 class="far fa-image"> 精美图片</h2>
         </div>
-        <figure class="imglist">
+        <figure class="imglist clear">
             <ul>
                 <li class="imgl2r"><img src="" data-echo="./image/08.jpg" alt="">
                     <p>扬帆,出征</p>
@@ -152,7 +138,7 @@
                 <li class="imgl2r"><img src="" data-echo="http://photo.tuchong.com/4063120/f/561840542.jpg" alt="">
                     <p>美女</p>
                 </li>
-                <li class="imgl2r"><img src="" data-echo="http://i7.hexunimg.cn/2014-12-08/171203249.jpg" alt="">
+                <li class="imgl2r"><img src="" data-echo="https://b-ssl.duitang.com/uploads/item/201202/05/20120205092808_satSd.jpg" alt="">
                     <p>南笙</p>
                 </li>
                 <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/9aa96cf1c380e437e79321a6a501e87f517f95a9e61e-WuHSav_fw658" alt="">
@@ -186,9 +172,6 @@
                 <li class="imgl2r"><img src="" data-echo="http://attachments.gfan.com/forum/attachments2/201410/31/000919r8u9o9b5pt1iz5rj.jpg" alt="">
                     <p>小兔子</p>
                 </li>
-                <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/5218f21c8e33bcaabfaba2224a6839431ab3d75924c240-XgfKYB_fw658" alt="">
-                    <p>美女</p>
-                </li>
                 <li class="imgl2r"><img src="" data-echo="http://pic.ffpic.com/files/2015/0425/0423xrqlbbsjbz7.jpg" alt="">
                     <p>雪糕</p>
                 </li>
@@ -204,9 +187,7 @@
                 <li class="imgl2r"><img src="" data-echo="http://img.hb.aicdn.com/08ced054fbf9e124415c49c5313377d49cd9c48131de7-aXpVkL_fw658" alt="">
                     <p>美女</p>
                 </li>
-                <li class="imgl2r"><img src="" data-echo="http://img1.gamersky.com/image2018/09/20180901_ddw_459_10/gamersky_02small_04_2018911620FEB.jpg" alt="">
-                    <p>风景</p>
-                </li>
+               
             </ul>
         </figure>
     </div>
@@ -214,92 +195,95 @@
     <footer id="footer">
        
     </footer>
-
+    <script src="./js/imgzoom.js"></script>
 	<script>
-		//图片分页用大图轮播
-		//定义方法函数
+        $(function(){
+            //图片分页用大图轮播
+            //定义方法函数
+            !function imgSwicth() {
+                var d = document.getElementById("bigimg").firstElementChild;
+                var k = 0
+                var imgsrc = new Array();
+                imgsrc[0] = "./image/01.jpg";
+                imgsrc[1] = "./image/02.jpg";
+                imgsrc[2] = "./image/03.jpg";
+                imgsrc[3] = "./image/04.jpg";
+                imgsrc[4] = "./image/05.jpg";
+                setInterval(function () {
+                    if (k > imgsrc.length - 1) {
+                        k = 0;
+                    }
+                    for (var i = 0; i < imgsrc.length; i++) {
+                        if (i == k) {
+                            d.src = imgsrc[i];
+                        }
+                    }
+                    k++;
+                }, 3000)
+            }();
+            //图片lazyload
+            //https://github.com/helijun/documents/blob/master/plugin/echo/js/echo.js
+            window.Echo = (function(window, document, undefined) {
 
-		!function imgSwicth() {
-			var d = document.getElementById("bigimg").firstElementChild;
-			var k = 0
-			var imgsrc = new Array();
-			imgsrc[0] = "./image/01.jpg";
-			imgsrc[1] = "./image/02.jpg";
-			imgsrc[2] = "./image/03.jpg";
-			imgsrc[3] = "./image/04.jpg";
-			imgsrc[4] = "./image/05.jpg";
-			setInterval(function () {
-				if (k > imgsrc.length - 1) {
-					k = 0;
-				}
-				for (var i = 0; i < imgsrc.length; i++) {
-					if (i == k) {
-						d.src = imgsrc[i];
-					}
-				}
-				k++;
-			}, 3000)
-		}();
-		//图片lazyload
-		//https://github.com/helijun/documents/blob/master/plugin/echo/js/echo.js
-		window.Echo = (function(window, document, undefined) {
+                'use strict';
 
-			'use strict';
+                var store = [],
+                offset,
+                throttle,
+                poll;
 
-			var store = [],
-			offset,
-			throttle,
-			poll;
+                var _inView = function(el) {
+                    var coords = el.getBoundingClientRect();
+                    return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + parseInt(offset));
+                };
 
-			var _inView = function(el) {
-				var coords = el.getBoundingClientRect();
-				return ((coords.top >= 0 && coords.left >= 0 && coords.top) <= (window.innerHeight || document.documentElement.clientHeight) + parseInt(offset));
-			};
+                var _pollImages = function() {
+                    for (var i = store.length; i--;) {
+                        var self = store[i];
+                        if (_inView(self)) {
+                            self.src = self.getAttribute('data-echo');
+                            store.splice(i, 1);
+                        }
+                    }
+                };
 
-			var _pollImages = function() {
-				for (var i = store.length; i--;) {
-					var self = store[i];
-					if (_inView(self)) {
-						self.src = self.getAttribute('data-echo');
-						store.splice(i, 1);
-					}
-				}
-			};
+                var _throttle = function() {
+                    clearTimeout(poll);
+                    poll = setTimeout(_pollImages, throttle);
+                };
 
-			var _throttle = function() {
-				clearTimeout(poll);
-				poll = setTimeout(_pollImages, throttle);
-			};
+                var init = function(obj) {
+                    var nodes = document.querySelectorAll('[data-echo]');
+                    var opts = obj || {};
+                    offset = opts.offset || 0;
+                    throttle = opts.throttle || 250;
 
-			var init = function(obj) {
-				var nodes = document.querySelectorAll('[data-echo]');
-				var opts = obj || {};
-				offset = opts.offset || 0;
-				throttle = opts.throttle || 250;
+                    for (var i = 0; i < nodes.length; i++) {
+                        store.push(nodes[i]);
+                    }
 
-				for (var i = 0; i < nodes.length; i++) {
-					store.push(nodes[i]);
-				}
+                    _throttle();
 
-				_throttle();
+                    if (document.addEventListener) {
+                        window.addEventListener('scroll', _throttle, false);
+                    } else {
+                        window.attachEvent('onscroll', _throttle);
+                    }
+                };
 
-				if (document.addEventListener) {
-					window.addEventListener('scroll', _throttle, false);
-				} else {
-					window.attachEvent('onscroll', _throttle);
-				}
-			};
+                return {
+                    init: init,
+                    render: _throttle
+                };
 
-			return {
-				init: init,
-				render: _throttle
-			};
-
-			})(window, document);
-		Echo.init({
-			offset: 0,//离可视区域多少像素的图片可以被加载
-		　　throttle: 0 //图片延时多少毫秒加载
-		});
+                })(window, document);
+            Echo.init({
+                offset: 0,//离可视区域多少像素的图片可以被加载
+            　　throttle: 0 //图片延时多少毫秒加载
+            });
+            var photo=new ImgPerview('#wrapper img');
+            photo.init();
+        })
 	</script>
 </body>
 </html>

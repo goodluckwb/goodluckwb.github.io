@@ -1,0 +1,100 @@
+<article >
+    <h3> 声声慢·寻寻觅觅</h3>
+    <i class="fas fa-angle-down">展开阅读</i>
+    <div class="fas fa-address-book signature">
+        2018/7/22 宋·李清照
+    </div>
+    <div class="artmain-zhuye">
+        <img src="http://t2.hddhhn.com/uploads/tu/201707/115/57.jpg" alt="img" />
+        <p>
+            <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
+            寻寻觅觅，冷冷清清，凄凄惨惨戚戚。乍暖还寒时候，最难将息。三杯两盏淡酒，怎敌他、晚来风急？雁过也，正伤心，却是旧时相识。
+            满地黄花堆积。憔悴损，如今有谁堪摘？守着窗儿，独自怎生得黑？梧桐更兼细雨，到黄昏、点点滴滴。这次第，怎一个愁字了得！（守着窗儿 一作：守著窗儿）
+          
+        </p>
+    </div>
+</article>
+<article >
+    <h3> 雨霖铃·寒蝉凄切</h3>
+    <i class="fas fa-angle-down">展开阅读</i>
+    <div class="fas fa-address-book signature">
+        2018/7/22 宋·柳永
+    </div>
+    <div class="artmain-zhuye">
+        <img src="http://t2.hddhhn.com/uploads/tu/201707/115/56.jpg" alt="img" />
+        <p>
+            <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
+            寒蝉凄切，对长亭晚，骤雨初歇。都门帐饮无绪，留恋处，兰舟催发。执手相看泪眼，竟无语凝噎。念去去，千里烟波，暮霭沉沉楚天阔。
+多情自古伤离别，更那堪，冷落清秋节！今宵酒醒何处？杨柳岸，晓风残月。此去经年，应是良辰好景虚设。便纵有千种风情，更与何人说？(好景 一作：美景)
+           
+        </p>
+    </div>
+</article>
+<article >
+    <h3> 钗头凤·红酥手</h3>
+    <i class="fas fa-angle-down">展开阅读</i>
+    <div class="fas fa-address-book signature">
+        2018/7/22 宋·陆游
+    </div>
+    <div class="artmain-zhuye">
+        <img src="http://t2.hddhhn.com/uploads/tu/201707/115/54.jpg" alt="img" />
+        <p>
+            <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
+            红酥手，黄縢酒，满城春色宫墙柳。东风恶，欢情薄。一怀愁绪，几年离索。错、错、错。
+            春如旧，人空瘦，泪痕红浥鲛绡透。桃花落，闲池阁。山盟虽在，锦书难托。莫、莫、莫！
+        </p>
+    </div>
+</article>
+<article >
+    <h3> 念奴娇·赤壁怀古</h3>
+    <i class="fas fa-angle-down">展开阅读</i>
+    <div class="fas fa-address-book signature">
+        2018/7/22 宋·陆游
+    </div>
+    <div class="artmain-zhuye">
+        <img src="http://t2.hddhhn.com/uploads/tu/201707/115/53.jpg" alt="img" />
+        <p>
+            <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
+            大江东去，浪淘尽，千古风流人物。
+            故垒西边，人道是，三国周郎赤壁。
+            乱石穿空，惊涛拍岸，卷起千堆雪。
+            江山如画，一时多少豪杰。
+            遥想公瑾当年，小乔初嫁了，雄姿英发。
+            羽扇纶巾，谈笑间，樯橹灰飞烟灭。(樯橹 一作：强虏)
+            故国神游，多情应笑我，早生华发。
+            人生如梦，一尊还酹江月。(人生 一作：人间；尊 通：樽)
+        </p>
+    </div>
+</article>
+<article >
+    <h3> 满江红·写怀</h3>
+    <i class="fas fa-angle-down">展开阅读</i>
+    <div class="fas fa-address-book signature">
+        2018/7/22 宋·岳飞
+    </div>
+    <div class="artmain-zhuye">
+        <img src="http://t2.hddhhn.com/uploads/tu/201707/115/52.jpg" alt="img" />
+        <p>
+            <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
+            怒发冲冠，凭栏处、潇潇雨歇。抬望眼，仰天长啸，壮怀激烈。三十功名尘与土，八千里路云和月。莫等闲，白了少年头，空悲切！(栏 通：阑)
+            靖康耻，犹未雪。臣子恨，何时灭！驾长车，踏破贺兰山缺。壮志饥餐胡虏肉，笑谈渴饮匈奴血。待从头、收拾旧山河，朝天阙。(壮志 一作：壮士；兰山缺 一作：兰山阙)
+        </p>
+    </div>
+</article>
+<script>
+    //文章点击按钮展开和收缩功能
+    $('article i.fas').each(function(index){
+      
+      $($('article i.fas')[index]).on('click',
+      function (){
+          var pp = $($('.artmain-zhuye')[index]);
+          if (pp.css('max-height') == '200px') {
+              pp.animate({'max-height':'500px'},500);
+              $(this).removeClass('fa-angle-down').addClass('fa-angle-up').text('收起文章');
+          } else {
+              pp.animate({'max-height':'200px'},500);
+              $(this).removeClass('fa-angle-up').addClass('fa-angle-down').text('展开阅读');
+          }
+      })
+    })
+</script>

@@ -2,7 +2,8 @@
     {
         "topMenu":"精品视频",
         "subMenu":[
-            {"type":"ckplayer","title":"《名侦探柯南》","class":"『动漫』","imgsrc":"https://www.chinanews.com/cr/2015/0109/1661910731.jpg","url":"http://hdl1901.plures.net/onlive/508ddc63dcaf4d3b9f5c8b7ff77f2b9d_550.flv?yfSecret=3786f9290588729ddc78184752427267&yfTime=5b471d45"},
+            {"type":"ckplayer","title":"《名侦探柯南》","class":"『动漫』","imgsrc":"https://www.chinanews.com/cr/2015/0109/1661910731.jpg","url":"https://flv.quanmin.tv/live/1505295658.flv"},
+            {"type":"h5video","title":"少女时代《LilTouch》","class":"『MV』","imgsrc":"https://img3.c.yinyuetai.com/video/mv/180905/0/-M-5a54fb3418adf44d9157cd6af15a2255_240x135.jpg","url":"https://hc.yinyuetai.com/uploads/videos/common/E9B40165A8FC7544DB34697FA6F050EB.mp4"},
             {"type":"ckplayer","title":"CCTV-9","class":"『电视』","imgsrc":"./image/video-03.jpg","url":"http://202.107.188.149:5002/cctv9_hdcq.m3u8?token=guoziyun"},
             {"type":"ckplayer","title":"全民直播","class":"『电影』","imgsrc":"./image/video-02.jpg","url":"https://flv.quanmin.tv/live/2046540092.flv"},
             {"type":"ckplayer","title":"蔡徐坤《Pull Up》","class":"『MV』","imgsrc":"https://img1.c.yinyuetai.com/video/mv/180802/0/-M-0027c85e0bbc17ad7f82e716de6b478d_240x135.jpg","url":"https://hc.yinyuetai.com/uploads/videos/common/DDF20164F9DE80A0F99EEB14FC34DDD6.mp4"},
@@ -35,6 +36,7 @@
     {
         "topMenu":"MV",
         "subMenu":[
+            {"type":"h5video","title":"少女时代《LilTouch》","class":"『MV』","imgsrc":"https://img3.c.yinyuetai.com/video/mv/180905/0/-M-5a54fb3418adf44d9157cd6af15a2255_240x135.jpg","url":"https://hc.yinyuetai.com/uploads/videos/common/E9B40165A8FC7544DB34697FA6F050EB.mp4"},
             {"type":"h5video","title":"邓紫棋《倒数》","class":"『MV』","imgsrc":"https://img2.c.yinyuetai.com/video/mv/180829/0/-M-b5afad06a48cfca36b508aacb3a11302_240x135.jpg","url":"https://hc.yinyuetai.com/uploads/videos/common/7363016584F5AA7E2C25A21951442614.mp4"},
             {"type":"h5video","title":"Zedd《Beautiful now》","class":"『MV』","imgsrc":"https://img2.c.yinyuetai.com/video/mv/150613/2307995/-M-e9a07e92fbc8f6c7dffbc8814257948d_240x135.jpg","url":"https://hc.yinyuetai.com/uploads/videos/common/26E40156079190972EBF2341ACCAB8A5.flv?sc=1d212a0649e78bda&br=784&vid=2307995&aid=25764&area=US&vst=0"},
             {"type":"ckplayer","title":"蔡徐坤《Pull Up》","class":"『MV』","imgsrc":"https://img1.c.yinyuetai.com/video/mv/180802/0/-M-0027c85e0bbc17ad7f82e716de6b478d_240x135.jpg","url":"https://hc.yinyuetai.com/uploads/videos/common/DDF20164F9DE80A0F99EEB14FC34DDD6.mp4"},

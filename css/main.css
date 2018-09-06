@@ -498,16 +498,15 @@ nav{
             float: left;
             /* border: 1px solid var(--anniucolor); */
             width: 100%;
-            margin:0px 10px 10px 0px;
+            /* margin:0px 10px 10px 0px; */
             overflow:hidden;
-            /* box-sizing: border-box; */
         }
         .imgl2r img{
+            display: block;
             opacity: 0.7;
             transform: translate3d(-30px,0,0) ;
             transition: all .4s ease-in-out;
-            border: 0px;
-            box-sizing: border-box;
+            width: 110%;
         }
         .imgl2r:hover img{
             opacity: 1;
@@ -525,7 +524,7 @@ nav{
             font-size: 24px;
             line-height: 50px;
             color: var(--huise);
-            transform: translate3d(0,20px,0);
+            transform: translate3d(0,24px,0);
             transition: all .35s ease-in-out;
             opacity: 0;
             background:linear-gradient(to bottom,rgba(255, 255, 255, 0),#fff);
@@ -718,51 +717,52 @@ article{
     /* border: 1px solid red; */
     /* box-shadow: 5px 5px 5px #b99696e5; */
 }
+
 article i{
-    display: block;
-    width:80px;
-    height: 20px;
-    /* border-radius: 50%; */
+    position: relative;
+    width:90px;
+    /* height: 25px; */
+    line-height: 26px;
     color: var(--huise);
-    /* border-style: solid; */
-    position: absolute;
+    position: absolute; 
     right: 25px;
     top:30px;
-    /* border-width: 2px; */
-    font-size: 14px;
-    text-align: center;
+    border: 1px solid var(--anniucolor);
+    border-radius: 13px;
+    font-size: 16px;
+    justify-content: center;
     cursor: pointer;
+    font-weight: 400;
+    padding: 5px ;
 }
 article i::before{
-    /* font-family:"FontAwesome"; */
-    /* content: "\f103"; */
-    display: block;
-    width:20px;
-    height: 20px;
-    /* border-radius: 50%; */
-    color: var(--huise);
-    /* border-style: solid; */
     position: absolute;
-    right: 0px;
-    top:-2px;
-    /* border-width: 2px; */
-    z-index:100;
-    font-size: 20px;
-    text-align: center;
-    cursor: pointer;
+    top:5px;
+    right: 5px;
 }
-.artmain{
+.artmain-zhuye{
     margin: 0px;
     white-space: 1px;
+    max-height: 200px;
+    overflow: hidden;
 }
+
 article p{
+    
     padding: 0px 10px;
     margin:10px 0;
     /* text-indent: -32px; */
     background: var(--backcolor);
-    border-left: 4px solid var(--huise);
+    /* border-left: 4px solid var(--huise); */
     font: 16px/30px '微软雅黑','宋体';   
 }
+    article img{
+        width: 40%;
+        margin: 10px 10px 5px 5px;
+        display: block;
+        float: left;
+        box-shadow: 0px 0px 5px #333;
+    }
 .signature{
     position: relative;
     top: 10px;
@@ -794,7 +794,7 @@ table{
 #focus{
     position: relative;
     width: 100%;
-    /* height: 300px; */
+    height: 320px;
     /* border-bottom: 2px solid #b3b3b3; */
     box-sizing: border-box;
     margin: 15px 0;
@@ -1286,8 +1286,9 @@ blockquote ol li{
 }
 	#current_price li{
 		position: relative;
-        line-height: 25px;
+        line-height: 30px;
         padding-left: 30px;
+        border-bottom: 2px solid var(--huise);
 	}
 
 #smallpart{

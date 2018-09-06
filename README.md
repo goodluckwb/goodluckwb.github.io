@@ -2,6 +2,9 @@ This is weibin’s personal homepage.
 ===
 ## Update history
 ---
+### v1.18.6
+>* 增加了分页代码,增加图片放大预览代码.
+>* 一些小细节的变动.
 ### v1.18.5
 >* 小修订,正在学习中.
 ### v1.18.2

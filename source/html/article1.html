@@ -1,0 +1,103 @@
+<article>
+    <h3> 凉州词</h3>
+    <i class="fas fa-angle-down">展开阅读</i>
+    <div class="fas fa-address-book signature">
+        2018/7/22 唐·王翰
+    </div>
+    <div class="artmain-zhuye">
+        <img src="http://t2.hddhhn.com/uploads/tu/201707/115/60.jpg" alt="img" />
+        <p>
+            <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
+            【其一】<br/>
+            葡萄美酒夜光杯，欲饮琵琶马上催。
+            醉卧沙场君莫笑，古来征战几人回。<br/>
+            【其二】<br/>
+            秦中花鸟已应阑，塞外风沙犹自寒。
+            夜听胡笳折杨柳，教人意气忆长安。
+          
+        </p>
+    </div>
+</article>
+<article>
+    <h3> 枫桥夜泊</h3>
+    <i class="fas fa-angle-down">展开阅读</i>
+    <div class="fas fa-address-book signature">
+        2018/7/22 唐·张继
+    </div>
+    <div class="artmain-zhuye">
+        <img src="http://t2.hddhhn.com/uploads/tu/201707/200/3.jpg" alt="img" />
+        <p>
+            <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
+            月落乌啼霜满天，江枫渔火对愁眠。
+            <br> 姑苏城外寒山寺，夜半钟声到客船。
+        
+        </p>
+    </div>
+</article>
+<article>
+    <h3> 送杜少府之任蜀州</h3>
+    <i class="fas fa-angle-down">展开阅读</i>
+    <div class="fas fa-address-book signature">
+        2018/7/22 唐·王勃
+    </div>
+    <div class="artmain-zhuye">
+        <img src="http://t2.hddhhn.com/uploads/tu/201707/115/58.jpg" alt="img" />    
+        <p>
+            <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
+            城阙辅三秦，风烟望五津。
+            <br> 与君离别意，同是宦游人。
+            <br> 海内存知己，天涯若比邻。
+            <br> 无为在歧路，儿女共沾巾。
+         
+        </p>
+    </div>
+</article>
+<article>
+    <h3> 水调歌头·明月几时有</h3>
+    <i class="fas fa-angle-down">展开阅读</i>
+    <div class="fas fa-address-book signature">
+        2018/7/22 宋·苏轼
+    </div>
+    <div class="artmain-zhuye">
+        <img src="http://t2.hddhhn.com/uploads/tu/201707/115/59.jpg" alt="img" />
+        <p>
+            <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
+            明月几时有？把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间？
+转朱阁，低绮户，照无眠。不应有恨，何事长向别时圆？人有悲欢离合，月有阴晴圆缺，此事古难全。但愿人长久，千里共婵娟。
+        </p>
+    </div>
+</article>
+<article>
+    <h3> 卜算子·咏梅</h3>
+    <i class="fas fa-angle-down">展开阅读</i>
+    <div class="fas fa-address-book signature">
+        2018/7/22 宋·陆游
+    </div>
+    <div class="artmain-zhuye">
+        <img src="http://t2.hddhhn.com/uploads/tu/201707/115/55.jpg" alt="img" />
+        <p>
+            <span class="fa fa-quote-left fa-2x" style='background:none;color:var(--huise);'></span>
+            驿外断桥边，寂寞开无主。已是黄昏独自愁，更著风和雨。 
+            无意苦争春，一任群芳妒。零落成泥碾作尘，只有香如故。
+        </p>
+    </div>
+</article>
+<script>
+//文章点击按钮展开和收缩功能
+    $('article i.fas').each(function(index){
+      
+        $($('article i.fas')[index]).on('click',
+        function (){
+            var pp = $($('.artmain-zhuye')[index]);
+            if (pp.css('max-height') == '200px') {
+                pp.animate({'max-height':'500px'},500);
+                $(this).removeClass('fa-angle-down').addClass('fa-angle-up').text('收起文章');
+            } else {
+                pp.animate({'max-height':'200px'},500);
+                $(this).removeClass('fa-angle-up').addClass('fa-angle-down').text('展开阅读');
+            }
+        })
+    })
+    
+
+</script>

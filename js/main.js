@@ -1,16 +1,4 @@
 $(document).ready(function () {
-    //文章点击按钮展开和收缩功能
-    $("article i.fas").click(function () {
-        var $pp = $(this).siblings('div:last')
-        
-        if ($pp.css('display') == 'block') {
-            $pp.hide(500);
-            $(this).removeClass('fa-angle-up').addClass('fa-angle-down').text('展开');
-        } else {
-            $pp.show(500);
-            $(this).removeClass('fa-angle-down').addClass('fa-angle-up').text('收起');
-        }
-    });
     //加载热点模块
     $('#focus-content').load('./source/html/focus.html');
     //自动加载刷新股票
@@ -29,7 +17,7 @@ $(document).ready(function () {
         }).done((data) => {
             $("#current_price").empty();
             for (let i = 0; i < x.length; i++) {
-                let price = '<li><span class="badge badge-index">'+(i+1)+'</span> ' + data[x[i]].name + " " + data[x[i]].price + " " + (data[x[i]].percent * 100).toFixed(2) + '%' + data[x[i]].arrow + "</li>"
+                let price = '<li><span class="badge badge-index'+' index-'+i+'">'+(i+1)+'</span> ' + data[x[i]].name + " " + data[x[i]].price + " " + (data[x[i]].percent * 100).toFixed(2) + '%' + data[x[i]].arrow + "</li>"
                 $("#current_price").append(price);
     
                 $("#current_price li")[i].style.color = data[x[i]].percent < 0 ? "#99cc33" : "#CC0706";
@@ -48,7 +36,6 @@ $(document).ready(function () {
         next = $('#musicnext'),
         title = $('#musictitle'),
         cover = $('#musiccover img'),
-
         wyurl="https://music.163.com/song/media/outer/url?id=";
     var obj = {
         "sites": [
