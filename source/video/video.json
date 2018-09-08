@@ -49,6 +49,8 @@
     {
         "topMenu":"游戏",
         "subMenu":[
+            {"type":"iframe","title":"《COD15》吃鸡预告片","class":"『游戏』","imgsrc":"http://img2.dwstatic.com/newgame/1808/398337104980/1534382035578.jpeg","url":"https://player.youku.com/embed/XMzgxMzkyNDU2MA=="},
+            {"type":"iframe","title":"《漫威蜘蛛侠》开场25分钟游戏演示","class":"『游戏』","imgsrc":"http://img.mp.itc.cn/upload/20170329/bac34151ac774683873dc0e794606ffb_th.jpeg","url":"https://player.youku.com/embed/XMzgxMzA4MzE3Ng=="},
             {"type":"iframe","title":"《赛博朋克2077》游戏演示","class":"『游戏』","imgsrc":"https://vthumb.ykimg.com/054101015B843B628B3C46A367A3855E","url":"https://player.youku.com/embed/XMzgwMDQ4OTY3Ng=="},
             {"type":"iframe","title":"守望先锋人气女生D.Va短片","class":"『游戏』","imgsrc":"https://img3.dwstatic.com/vhuyatv/1706/362764089954/1498816985442.jpg","url":"https://player.youku.com/embed/XMzc5Mjk3NTQyOA=="},
             {"type":"iframe","title":"战地5演示","class":"『游戏』","imgsrc":"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1706078330,3680306569&fm=85&s=E107D2141A74548AD82C63D5030070AA","url":"https://player.youku.com/embed/XMzgwMzM4NTY2NA=="},

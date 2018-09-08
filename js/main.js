@@ -39,6 +39,7 @@ $(document).ready(function () {
         wyurl="https://music.163.com/song/media/outer/url?id=";
     var obj = {
         "sites": [
+            { 'title': '倒数', 'name': 'G.E.M.邓紫棋', 'url': wyurl+'1299550532','coverurl':'http://p1.music.126.net/tXCIFsVDK6IKcQ9YWxwOEg==/109951163523944497.jpg?param=300x300' },
             { 'title': '只要平凡', 'name': '张杰 张碧晨', 'url': wyurl+'574919767','coverurl':'https://p1.music.126.net/CjGoliP3xOB0gcCUaeTTBg==/109951163375727336.jpg?param=300x300' },
             { 'title': 'I Do', 'name': '911', 'url': wyurl+'28256115','coverurl':'https://p1.music.126.net/ZNnDcq2-b_An3_ag3H5XhQ==/5980243743520718.jpg?param=300x300' },
             { 'title': '我好像在哪见过你', 'name': '薛之谦', 'url': wyurl+'417859631','coverurl':'https://p1.music.126.net/hti_a0LADoFMBHvOBwAtRA==/1369991500930171.jpg?param=300x300' },
@@ -52,94 +53,92 @@ $(document).ready(function () {
     };
     var mt = obj.sites[0].title + ' / ' + obj.sites[0].name;
     title.text(mt);
-    // music.loop = true;
-    play.click(function () {
+    var current=0;
+    var len=obj.sites.length;
+    var list=$('#bofanglist ul');
+    var ss=obj.sites;
+    var timer1;
+    //播放列表刷新
+    !function refreshplaylist(){
+        for(let i=0;i<len;i++){
+            var number=i+1;
+            if(i<9){
+                number="0"+number;
+            }else{number=number}
+            var li='<li> '+number +' '+ss[i].title+" "+ss[i].name+'</li>';
+            list.append(li);
+    }}()
+    var lii=$('#bofanglist li');
+    function playMusic() {
+        play.removeClass('normal').addClass('pushdown');
+        music.src = ss[current].url;
+        mt = ss[current].title + ' / ' + ss[current].name;
+        title.text(mt);
+        changeCover(current);
+        imagePause();
+        music.play();
+        $('#bofanglist li').eq(current).addClass('active')
+        $('#bofanglist li').eq(current).siblings().removeClass('active')
+        rotate();
+    };
+    play.click(function(){
         if (!music.paused) {
             music.pause();
             imagePause();
             play.removeClass('pushdown').addClass('normal');
         } else {
-            play.removeClass('normal').addClass('pushdown');
-            music.src = obj.sites[0].url;
-            changeCover(0);
-            music.play();
-            rotate();
+            playMusic();
         }
-    });
+    })
     pre.click(function () {
-        imagePause();
-        var first = obj.sites[obj.sites.length - 1];
-        obj.sites.pop();
-        obj.sites.unshift(first);
-        music.src = obj.sites[0].url;
-        mt = obj.sites[0].title + ' / ' + obj.sites[0].name;
-        play.removeClass('normal').addClass('pushdown');
-        music.play();
-        changeCover(0);
-        title.text(mt);
-        rotate();
+        --current;
+        playMusic();
+        if(current===0){
+            return current=lii.length;
+        }else{
+            return current;
+        }
     })
     next.click(function () {
-        imagePause();
-        var first = obj.sites[0];
-        obj.sites.shift();
-        obj.sites.push(first);
-        music.src = obj.sites[0].url;
-        mt = obj.sites[0].title + ' / ' + obj.sites[0].name;
-        play.removeClass('normal').addClass('pushdown');
-        music.play();
-        title.text(mt);
-       
-        changeCover(0);
-        rotate();
+        ++current;
+        playMusic();
+        if(current===lii.length-1){
+            return current=-1;
+        }else{
+            return current;
+        }
     })
     //进度条
     //播放列表
-    var list=$('#bofanglist ul');
-    var len=obj.sites.length;
-    var ss=obj.sites;
-    var timer1;
     $('#jindutiao span').click(function(){
-    refreshplaylist();
-    list.slideToggle(500); 
+        list.slideToggle(500); 
+        var lii=$('#bofanglist li');
         //闭包输出点击播放列表的歌曲
-        function sequnce(arrLi){
-            for(var i = 0; i < arrLi.length; i++){
+        !function sequnce(arr){
+            for(var i = 0; i < arr.length; i++){
+                arr[i].index=i;
                 (function(j){
-                    arrLi[j].onclick = function(){
-                        
-                       imagePause();
-                        music.src=obj.sites[j].url;
-                        mt = obj.sites[j].title + ' / ' + obj.sites[j].name;
+                    arr[j].onclick = function(){
+                        imagePause();
+                        music.src=ss[j].url;
+                        mt = ss[j].title + ' / ' + ss[j].name;
                         play.removeClass('normal').addClass('pushdown');
                         music.play();
                         changeCover(j);
-                        
                         title.text(mt);
                         rotate();
-                      
+                        $(this).addClass('active');
+                        $(this).siblings().removeClass('active');
+                        return current=arr[j].index;
                     }	
                 }(i))
             }
-           
-        }
-        var lii=$('#bofanglist li')
-        sequnce(lii);
-       
+        }(lii)
     })
-    //播放列表刷新
-    function refreshplaylist(){
-        list.empty();
-        for(let i=0;i<len;i++){
-            var li='<li> '+ 0+(i+1) +' '+ss[i].title+" "+ss[i].name+'</li>';
-            list.append(li);
-        }}
-       
-     //图片旋转，每30毫米旋转5度 和进度条
-     function rotate(){
-        
+    
+    //图片旋转，每30毫米旋转5度 和进度条
+    function rotate(){
         var deg=0;
-        
         timer1=setInterval(function(){
             var jdt=$('#jindutiao-current')[0];
             var jdttxt=$('#jindutiao-current h5')[0];
@@ -154,15 +153,12 @@ $(document).ready(function () {
             }else{
                 jdttxt.innerHTML=""+minute+":"+second+"";
             }           
-            
-                      
             cover[0].style.transform="rotate("+deg+"deg)";
             deg+=1;
             if(deg>360){
                 deg=0;
             }
         },30);
-      
     }
     //图片暂停旋转
     function imagePause(){
@@ -175,9 +171,9 @@ $(document).ready(function () {
         }
     },1000)
     //换封面
-    function changeCover(x){
+    function changeCover(current){
         // cover[0].src="";
-        cover[0].src=obj.sites[x].coverurl;
+        cover[0].src=ss[current].coverurl;
     }
     //设置风格
     
@@ -194,13 +190,9 @@ $(document).ready(function () {
             ctx.linJion='round';
             ctx.strokeStyle='white';
             ctx.stroke();
-        
-
     }
 
     //天气预报
-    
-    
     $('#select-city').change(function () {
         switch ($(this).val()) {
             case "苏州":

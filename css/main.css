@@ -669,15 +669,37 @@ aside{
 }
     aside li{
         position: relative;
-        height: 35px; 
+        height: 50px; 
         border-left: 1px solid var(--blinecolor); 
         border-bottom: 1px solid var(--blinecolor); 
         transition: all .3s ease-in-out;
         cursor:pointer;
+        font:15px/25px "微软雅黑","宋体",serif;
+        font-weight: bold;  
+        color:  #333;
+        background: #f9f9f9;
+    }
+    #newupload{
+        z-index: 999;
+    }
+    .newupload-image{
+        position: relative;
+        height:100%; 
+    }
+    .newupload-title{
+        position: absolute;
+        top: calc(50% - 13px);
+        left: 30px;
+        font:15px/26px "微软雅黑","宋体",serif;
+        font-weight: bold;  
+        color:  #333;
     }
     aside li:hover{
-        height:70px;
+        height:100px;
         transition: all .3s ease-in-out;
+        /* background: linear-gradient( white #333); */
+        background-repeat: no-repeat;
+        background-position: right bottom;
     }
     aside a{      
         color:  #333;
@@ -687,23 +709,30 @@ aside{
         font:15px/25px "微软雅黑","宋体",serif;
         font-weight: bold;        
     }
-    aside li:hover,aside li:hover a,aside li:hover a::before{
+    aside li:hover,aside li:hover a,aside li:hover a::before,aside li:hover::before,aside li:hover .newupload-title{
         color: #e22200;
     }
-    aside a::before{
+    aside a::before,aside li::before{
         content:"";
         display: inline-block;
         width: 6px;
         height: 6px;
-        position:relative;
-        left: -23px;
+        position:absolute;
+        left: -3px;
+        top: calc(50% - 3px);
         border-width:3px;
         border-style: solid;
         color:  #ccc;
         box-sizing: border-box;
         border-radius: 50%;
+        z-index: 1000;
     }
-    
+    .playlist-fixed{
+        position: fixed;
+        top: 10%;
+        right: 6%;
+        width: 20%;
+    }
 article{
     position: relative;
     /* margin: 15px 0px; */

@@ -15,6 +15,7 @@ html+='<script src="./js/babel.min.js"></script>';
 html+='<script src="./js/nav.js" type="text/babel"></script>';
 html+='<script src="./js/common.js"></script>';
 html+='<script src="./js/jisuanqi.js"></script>';
+html+='<script src="./js/ckplayer.js"></script>';
 document.open();
 document.write(html);
 

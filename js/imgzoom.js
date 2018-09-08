@@ -6,7 +6,7 @@
     ImgPerview.prototype={
         init:function(){
             var that=this;
-            var heightY=$(window).height();
+            var heightY=$(window).height()||document.body.clientHeight;
             var html='<div class="mask" style="display:none;position:fixed;top:0;left:0;width:100%;height:'+heightY+'px;background:#333;z-index:2000">'
                 html+='<span class="fas fa-times fa-3x" style="position:absolute;top:50px;right:60px;color:white;cursor:pointer;"></span>'
                 html+='<div style="display:flex;justify-content:center;align-items:center;width:80%;height:100%;margin:0 auto;">'

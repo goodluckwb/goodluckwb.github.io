@@ -93,6 +93,7 @@ ReactDOM.render(
     element_nav,
     document.getElementById('nav')
 );
+/*
 const element_footer=(
     <div className="wrapper">
         <div className="footer_top">
@@ -112,7 +113,7 @@ ReactDOM.render(
     element_footer,
     document.getElementById('footer')
 );
-
+*/
 window.onscroll = function () {
     var totop = document.getElementById("go-to-top");
     var sc = document.documentElement.scrollTop || document.body.scrollTop;
